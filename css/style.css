@@ -1,0 +1,110 @@
+/*-------------Bootstrapular-----------*/
+body {
+      padding-top: 20px;
+      padding-bottom: 40px;
+}
+
+/* Custom container */
+.container-narrow {
+      margin: 0 auto;
+      max-width: 1000px;
+}
+.container-narrow > hr {
+      margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+      max-width: 850px;
+      margin: 60px 0;
+      text-align: center;
+      margin: 0 auto;
+}
+.jumbotron h1 {
+      font-size: 60px;
+      line-height: 1;
+}
+.jumbotron .btn {
+      font-size: 21px;
+      padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+      margin: 60px 0;
+}
+
+.marketing p + h4 {
+      margin-top: 28px;
+}
+
+
+/*------------------Le Real Deal-------------*/
+
+#logo {
+      margin-bottom: 23px;
+}
+
+#bg {
+      padding: 55px 0px 55px 0px;
+      color: #fff;
+      text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+      background: #6ca4ff;
+      background: -moz-linear-gradient(45deg, #4f91ff 0%, #b4feaf 100%);
+      background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#4f91ff), color-stop(100%,#8efe85));
+      background: -webkit-linear-gradient(45deg, #4f91ff 0%,#8efe85 100%);
+      background: -o-linear-gradient(45deg, #4f91ff 0%,#8efe85 100%);
+      background: -ms-linear-gradient(45deg, #4f91ff 0%,#8efe85 100%);
+      background: linear-gradient(45deg, #4f91ff 0%,#8efe85 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f91ff', endColorstr='#8efe85',GradientType=1 );
+      -webkit-box-shadow: inset 1px 0px 1px rgba(0,0,0,.6), inset 0px 0px 1px rgba(0,0,0,.6);
+      -moz-box-shadow: inset 1px 0px 1px rgba(0,0,0,.6), inset 0px 0px 1px rgba(0,0,0,.6);
+      box-shadow: inset 1px 0px 1px rgba(0,0,0,.6), inset 0px 0px 1px rgba(0,0,0,.6);
+}
+
+.navigation {
+      margin-top: 22px;
+}
+
+.navigation a {
+      color: #222;
+}
+
+.icon-fix {
+      margin-top: 8px;
+}
+
+.gitButtons {
+      background-color: #f5f5f5;
+      border-bottom: 1px solid #ddd;
+      padding: 15px 0px 10px 0px;
+}
+
+.gitButtons .center {
+      width: 400px;
+      margin: 0 auto;
+}
+
+.users {
+      background-color: #f5f5f5;
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 3px;
+      height: 330px;
+}
+
+.users h4 {
+      display: inline;
+      margin-left: 10px;
+}
+
+.users hr {
+      margin: 10px 0px 10px 0px;
+      border-bottom-color: #ccc;
+      border-top: none;
+}
+
+#whoitsfor {
+      margin-bottom: -30px;
+      text-align: center;
+}
