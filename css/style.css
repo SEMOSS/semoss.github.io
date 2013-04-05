@@ -15,9 +15,14 @@ body {
 
 /* Main marketing message and sign up button */
 .jumbotron {
+      max-width: 1000px;
+      margin: 60px 0;  
+      margin: 0 auto;
+}
+
+.home .jumbotron {
       max-width: 850px;
-      margin: 60px 0;
-      text-align: center;
+      margin: 60px 0;  
       margin: 0 auto;
 }
 .jumbotron h1 {
@@ -46,7 +51,7 @@ body {
 }
 
 #bg {
-      padding: 55px 0px 55px 0px;
+      padding: 20px 0px 20px 0px;
       margin-left: -20px;
       margin-right: -20px;
       color: #fff;
@@ -64,6 +69,11 @@ body {
       box-shadow: inset 1px 0px 1px rgba(0,0,0,.6), inset 0px 0px 1px rgba(0,0,0,.6);
 }
 
+#bg.home{
+     text-align: center;
+     padding: 55px 0px 55px 0px;
+}
+
 .navigation {
       margin-top: 22px;
 }
@@ -76,7 +86,7 @@ body {
       margin-top: 8px;
 }
 
-.gitButtons {
+.socialButtons {
       background-color: #f5f5f5;
       border-bottom: 1px solid #ddd;
       padding: 15px 0px 10px 0px;
@@ -84,7 +94,7 @@ body {
       margin-right: -20px;
 }
 
-.gitButtons .center {
+.socialButtons .center {
       width: 270px;
       margin: 0 auto;
 }
@@ -111,4 +121,17 @@ body {
 #whoitsfor {
       margin-bottom: -30px;
       text-align: center;
+}
+
+
+.contact {
+      display: block;
+      clear: both;
+}
+
+.team {
+      border: 1px solid #ccc;
+      padding: 4px;
+      background-color: #eee;
+      
 }
