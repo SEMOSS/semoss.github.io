@@ -36,7 +36,7 @@ body {
 
 /* Supporting marketing content */
 .marketing {
-      margin: 60px 0;
+      margin: 60px 0px;
 }
 
 .marketing p + h4 {
@@ -171,9 +171,10 @@ body {
 }
 
 .graphScreen {
-      margin-bottom: -500px;
+      margin-bottom: -400px;
 }
 
 hr.1 {
+      padding-top: 0px;
       margin-top: 0px;
 }
