@@ -50,6 +50,7 @@ body {
       margin-bottom: 23px;
 }
 
+
 #bg {
       padding: 20px 0px 20px 0px;
       margin-left: -20px;
@@ -170,6 +171,34 @@ body {
       background-repeat:no-repeat; 
 }
 
+.circle.location {
+      background: #7bddaa;
+      background-image: url(../img/location.png);
+      background-position:50% 50%;
+      background-repeat:no-repeat; 
+}
+
+.circle.gitfollow {
+      background: #70cabe;
+      background-image: url(../img/gitfollow.png);
+      background-position:50% 50%;
+      background-repeat:no-repeat; 
+}
+
+.circle.issue {
+      background: #66b9d2;
+      background-image: url(../img/issue.png);
+      background-position:50% 50%;
+      background-repeat:no-repeat; 
+}
+
+.circle.email {
+      background: #5aa4ea;
+      background-image: url(../img/mail.png);
+      background-position:50% 50%;
+      background-repeat:no-repeat; 
+}
+
 .graphScreen {
       margin-bottom: -400px;
 }
@@ -183,4 +212,8 @@ hr.1 {
       border: 1px solid #ccc;
       padding: 3px;
       background-color: #eee;
+}
+
+p.lineFix {
+      line-height: 1.9;
 }

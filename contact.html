@@ -33,7 +33,7 @@
           <li><a href="index.html"><i class="icon-home"></i> Home</a></li>
           <!--<li><a href="#"><i class="icon-book"></i> Docs</a></li>-->
           <li><a href="about.html"><i class="icon-user"></i> About</a></li>
-          <li class="active"><a href="contact.php"><i class="icon-envelope"></i> Contact</a></li>
+          <li class="active"><a href="contact.html"><i class="icon-envelope"></i> Contact</a></li>
         </ul>
         <a href="index.html"><img src="img/logo.png" id="logo"></a>
       </div>
@@ -42,7 +42,7 @@
     <div id="bg">
         <div class="jumbotron">
           <h1>Contact Us.</h1>
-          <p class="lead">Send us a message and we'll get back to you as soon as we can!</p>
+          <p class="lead">Don't be shy. Send us a message and we'll get back to you as soon as we can!</p>
         </div>
     </div>
     
@@ -55,46 +55,42 @@
 
         </div>
     </div>-->
-    <?php  
-  
-        // check for a successful form post  
-        if (isset($_GET['s'])) echo "<div class=\"alert alert-center alert-success\">".$_GET['s']."</div>";  
-  
-        // check for a form error  
-        elseif (isset($_GET['e'])) echo "<div class=\"alert alert-center alert-error\">".$_GET['e']."</div>";  
-  
-    ?> 
     
     <div class="container-narrow">
         <div class="row-fluid marketing">
-            <div class="span6">
-                <form method="POST" action="contact-form-submission.php" class="form-horizontal">  
-                    <div class="control-group">  
-                        <label class="control-label" for="input1">Name</label>  
-                        <div class="controls">  
-                            <input type="text" name="contact_name" id="input1" placeholder="Your name">  
-                        </div>  
-                    </div>  
-                    <div class="control-group">  
-                        <label class="control-label" for="input2">Email Address</label>  
-                        <div class="controls">  
-                            <input type="text" name="contact_email" id="input2" placeholder="Your email address">  
-                        </div>  
-                    </div>  
-                    <div class="control-group">  
-                        <label class="control-label" for="input3">Message</label>  
-                        <div class="controls">  
-                            <textarea name="contact_message" id="input3" rows="8" class="span8" placeholder="The message you want to send to me."></textarea>  
-                        </div>  
-                    </div>  
-                    <div class="form-actions">  
-                        <input type="hidden" name="save" value="contact">  
-                        <button type="submit" class="btn btn-primary">Send</button>  
-                    </div>  
-                </form>  
-            </div>
+            
+                <div class="span3 users" >
+                    <div class="circle blue email" >
+                    </div>
+                    <h4><a href="mailto:info@semoss.org">info@semoss.org</a></h4>
+                    <hr>
+                    <p>Email us with questions and we will reply as soon as we can.</p>
+                   
+                </div>
+                <div class="span3 users">
+                    <div class="circle red issue" >
+                    </div>
+                    <h4><a href="https://github.com/semoss/semoss/issues">Submit Issue</a></h4>
+                    <hr>
+                    <p>Find an issue with Semoss? Report it using GitHub's issue tracker.</p>
+                </div>
+                <div class="span3 users">
+                    <div class="circle green gitfollow" >
+                    </div>
+                    <h4><a href="https://github.com/semoss">Follow Repository</a></h4>
+                    <hr>
+                        <p>You can follow the repository on GitHub for updates.</p>
+                </div>
+                <div class="span3 users">
+                    <div class="circle purple location" >
+                    </div>
+                    <h4>Coordinates</h4>
+                    <hr>
+                    <p>
+                        We're located deep in the heart of Falls Church Virginia.
+                    </p>
+                </div><!-- End Span-->
         </div><!-- End Row-->
-
         
     
         <hr>
