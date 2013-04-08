@@ -33,7 +33,7 @@
           <li><a href="index.html"><i class="icon-home"></i> Home</a></li>
           <!--<li><a href="#"><i class="icon-book"></i> Docs</a></li>-->
           <li><a href="about.html"><i class="icon-user"></i> About</a></li>
-          <li class="active"><a href="contact.html"><i class="icon-envelope"></i> Contact</a></li>
+          <li class="active"><a href="contact.php"><i class="icon-envelope"></i> Contact</a></li>
         </ul>
         <a href="index.html"><img src="img/logo.png" id="logo"></a>
       </div>
@@ -55,23 +55,43 @@
 
         </div>
     </div>-->
+    <?php  
+  
+        // check for a successful form post  
+        if (isset($_GET['s'])) echo "<div class=\"alert alert-center alert-success\">".$_GET['s']."</div>";  
+  
+        // check for a form error  
+        elseif (isset($_GET['e'])) echo "<div class=\"alert alert-center alert-error\">".$_GET['e']."</div>";  
+  
+    ?> 
     
     <div class="container-narrow">
         <div class="row-fluid marketing">
             <div class="span6">
-                <form>
-                    <div class="controls controls-row">
-                        <input id="name" name="name" type="text" class="span6" placeholder="Name"> 
-                        <input id="email" name="email" type="email" class="span6" placeholder="Email address">
-                    </div>
-                    <div class="controls">
-                        <textarea id="message" name="message" class="span12" placeholder="Your Message" rows="5"></textarea>
-                    </div>
-                    
-                    <div class="controls">
-                        <button id="contact-submit" type="submit" class="btn btn-primary input-medium pull-right">Send</button>
-                    </div>
-                </form>
+                <form method="POST" action="contact-form-submission.php" class="form-horizontal">  
+                    <div class="control-group">  
+                        <label class="control-label" for="input1">Name</label>  
+                        <div class="controls">  
+                            <input type="text" name="contact_name" id="input1" placeholder="Your name">  
+                        </div>  
+                    </div>  
+                    <div class="control-group">  
+                        <label class="control-label" for="input2">Email Address</label>  
+                        <div class="controls">  
+                            <input type="text" name="contact_email" id="input2" placeholder="Your email address">  
+                        </div>  
+                    </div>  
+                    <div class="control-group">  
+                        <label class="control-label" for="input3">Message</label>  
+                        <div class="controls">  
+                            <textarea name="contact_message" id="input3" rows="8" class="span8" placeholder="The message you want to send to me."></textarea>  
+                        </div>  
+                    </div>  
+                    <div class="form-actions">  
+                        <input type="hidden" name="save" value="contact">  
+                        <button type="submit" class="btn btn-primary">Send</button>  
+                    </div>  
+                </form>  
             </div>
         </div><!-- End Row-->
 
