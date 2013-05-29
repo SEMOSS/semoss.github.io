@@ -53,8 +53,7 @@ body {
 
 #bg {
       padding: 20px 0px 20px 0px;
-      margin-left: -20px;
-      margin-right: -20px;
+     
       color: #fff;
       text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
       background: #6ca4ff;
@@ -65,9 +64,9 @@ body {
       background: -ms-linear-gradient(45deg, #4f91ff 0%,#8efe85 100%);
       background: linear-gradient(45deg, #4f91ff 0%,#8efe85 100%);
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f91ff', endColorstr='#8efe85',GradientType=1 );
-      -webkit-box-shadow: inset 1px 0px 1px rgba(0,0,0,.6), inset 0px 0px 1px rgba(0,0,0,.6);
-      -moz-box-shadow: inset 1px 0px 1px rgba(0,0,0,.6), inset 0px 0px 1px rgba(0,0,0,.6);
-      box-shadow: inset 1px 0px 1px rgba(0,0,0,.6), inset 0px 0px 1px rgba(0,0,0,.6);
+      -webkit-box-shadow: inset 0px 1px 0px rgba(0,0,0,.2), inset 0px -1px 0px rgba(0,0,0,.2);
+      -moz-box-shadow: inset 0px 1px 0px rgba(0,0,0,.2), inset 0px -1px 0px rgba(0,0,0,.2);
+      box-shadow: inset 0px 1px 0px rgba(0,0,0,.2), inset 0px -1px 0px rgba(0,0,0,.2);
 }
 
 #bg.home{
@@ -83,6 +82,10 @@ body {
       color: #222;
 }
 
+.nav a {
+      text-decoration: none;
+}
+
 .icon-fix {
       margin-top: 8px;
 }
@@ -91,8 +94,6 @@ body {
       background-color: #f5f5f5;
       border-bottom: 1px solid #ddd;
       padding: 15px 0px 10px 0px;
-      margin-left: -20px;
-      margin-right: -20px;
 }
 
 .socialButtons .center {
@@ -216,4 +217,74 @@ hr.1 {
 
 p.lineFix {
       line-height: 1.9;
+}
+
+p#version {
+      text-shadow: 0px 1px 0px rgba(0,0,0,.4);
+      color: #fff;
+      font-size: 0.9em;
+      text-transform: uppercase;
+      padding: none;
+      margin: 25px 0px 0px 0px;
+      line-height: 0;
+      font-weight: bold;
+}
+
+.donate {
+      margin-top: -8px;
+}
+
+.license {
+      margin-top: -6px;
+}
+
+
+/*-----------------Docs----------------*/
+
+.docContainer {
+      width: 1000px;
+      margin: 0 auto;
+}
+
+.docs h1 {
+      color: white;
+      font-family: helvetica, arial, sans-serif;
+      font-weight: bold;
+      line-height: .62;
+}
+
+.docs p {
+      color: white;
+      font-family: helvetica, arial, sans-serif;
+      margin-top: 20px;
+}
+
+.docs li a:link {
+      text-decoration: none;
+      color: black;
+}
+.docs li a:visited {
+      text-decoration: none;
+      color: black;
+}
+
+.docs li.active a:link{
+      color: white;
+}
+
+.docs li.active a:visited{
+      color: white;
+}
+
+.docs li.active .unselected a:visited {
+      color: #000;
+}
+
+.docs li.active .unselected a:hover {
+      color: #fff;
+}
+
+.nav .dropdown-toggle .caret {
+      border-top-color: #000;
+      border-bottom-color: #000;
 }
