@@ -128,8 +128,19 @@ body {
 
 .team {
       border: 1px solid #ccc;
-      padding: 4px;
+      padding: 2px;
       background-color: #eee;
+      width: 132px;
+      margin-right: 0px;
+}
+
+.teamRow {
+      margin-top: 35px;
+     
+}
+
+
+.aboutText{
       
 }
 
