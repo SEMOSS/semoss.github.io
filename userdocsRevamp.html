@@ -56,11 +56,11 @@
     
     
     <div class="container-narrow">
-        
+        <br>
         <h1>Introduction</h1>
         <p>SEMOSS is a data-driven application that enables users to explore relationships and connections in an interactive format through intermediate conduits, i.e. transitive relationships.
             This document provides general usage instructions and guidance in deployment of the open source components of SEMOSS,
-            in contrast to the developer guide, which provides instructions and guidance in terms of development "on top of" the tool.
+            in contrast to the developer guide, which provides instructions and guidance in terms of development "on top of" the tool.</br>
         </p>
         <h3>Overview</h3>
         
@@ -68,23 +68,131 @@
             <li><a href="#">An overview of the out-of-the-box SEMOSS user interface (Section 1).</a></li>
             <li>Instructions for creating and loading a new database and developing the ontological structure (metamodel) for the database (Section 2).</li>
             <li>Limited guidance in querying databases to understand advanced relationships using the SPARQL query language (Section 3).</li>
-            <li>A use case in deploying “out of the box” SEMOSS to analyze the sample security database (Section 4).</li>
+            <li>A use case in deploying <em>out of the box</em> SEMOSS to analyze the sample security database (Section 4).</li>
         </ul>
-        <h1>1: Getting Started</h1>
-        <p>In order to begin working on SEMOSS, there are a number of files that must be downloaded and programs that must be installed.</p>
-        <p></p>This section lays out what each of the steps are that must be taken to begin editing the code.</p>
+        <h3>1: Getting Started</h3>
+        <p>In order to begin working on SEMOSS, there are a number of files that must be downloaded and programs that must be installed. This section lays out what each of the steps are that must be taken to begin editing the code.</p>
         <h5>1.1 Installation</h5>
-        <p>SEMOSS has been built using the Eclipse integrated development environment and it is therefore advisable to use the latest version of Eclipse for editing the code.</p>
-        <p>Eclipse is available for download at http://www.eclipse.org/downloads/index-developer.php</p>
-        <p>A Java Development Kit (JDK) is also necessary to open SEMOSS for editing.</p>
-        <p>While most of the SEMOSS functionality works with a 64-bit JDK, it is recommended to use 32-bit to ensure all of the features work correctly.</p>
-        <p>The latest JDK is available for download at http://www.oracle.com/technetwork/java/javase/downloads/index.html</p>
-        <p>The source code of SEMOSS is available for download from GitHub which can be accessed through the site http://semoss.org/</p>
+        <p>SEMOSS has been built using the Eclipse integrated development environment and it is therefore advisable to use the latest version of Eclipse for editing the code. Eclipse is available for download at http://www.eclipse.org/downloads/index-developer.php. A Java Development Kit (JDK) is also necessary to open SEMOSS for editing. While most of the SEMOSS functionality works with a 64-bit JDK, it is recommended to use 32-bit to ensure all of the features work correctly.</p>The latest JDK is available for download at http://www.oracle.com/technetwork/java/javase/downloads/index.html. The source code of SEMOSS is available for download from GitHub which can be accessed through the site http://semoss.org/</p>
         <p>OTHER DETAILS ABOUT DOWNLOAD FROM GITHUB</p>
         <h5>1.2 Source Code Directory Structure</h5>
         <p>The following lays out the hierarchy used to organize the directory of SEMOSS and gives a brief overview of what each folder contains.</p>
+        <h5>1.2.1 src/</h5>
+        <p>Java source folders that SEMOSS uses to build the user interface and handle most of the functionality. There are a number of packages within the src folder to further organize the code. To better understand the organization of the various packages, please consult the Javadoc that can be found here.</p>
+        <h5>1.2.2 db/</h5>
+        <p> All database information, including how to access a given database and the data itself. The data generally takes the form of a .jnl file (though many other file types can be used such as .xml, .rdf, and .ttl) while the properties of the database are stored in a .properties file. The files in this folder are referenced in the RDF_Map.prop file.</p>
+        <h5>1.2.3 help/</h5>
+        <p>Version information displayed on the Help tab of SEMOSS.</p>
+        <h5>1.2.4 pictures/</h5>
+        <p>Images used throughout the application.</p>
+        <h5>1.2.5 questions/</h5>
+        <p>Properties files that contain all information surrounding the perspectives and questions that are displayed for a given engine (database). This information includes what perspectives and questions to display for an engine as well as details about how to process a given question such as what SPARQL query to run and what play sheet to display it on. The files in this folder also are referenced in the RDF_Map.prop file.</p>
+        <h5>1.2.6 RDFGraphLib/</h5>
+        <p>All of the JAR files that are referenced in the source code.</p>
+        <h5>1.2.7 training/</h5>
+        <p>All of the training material displayed on the Help tab of SEMOSS is contained in this folder.</p>
+        <h5>1.3: External Dependencies</h5>
+        <p>SEMOSS uses numerous JAR files from a wide variety various sources, including Apache, Jena, Sesame, and Jung. All of the JAR files can be found in the RDFGraphLib folder of the SEMOSS source code.</p>
+        <h5>1.4: Configuration Files</h5>
+        <p>Directly in the main directory there are also a couple of important files regarding the configuration of SEMOSS. These files get run on Startup and play a crucial role in determining how the application functions.</p>
+        <h5>1.4.1 RDF_Map.prop</h5>
+        <p>This is the central properties sheet that is read by the Starter class on startup. All of the information contained in this file is critical to the loading of data into SEMOSS and its general functioning. Many of the pieces of this file can be found referenced in Section 6 of this document, but the following is a high level overview of what this file contains:</p>
+        <em><a href=#">Engine Information</a></em>
+        <br>
+            <p>This section of the Map file specifies what engines should be started when the application is first run as well as what other files (questions file, database properties file) are related to that specific engine.</br>
+        <em><b>Model-View-Controller Bindings</b></em>
+        <p>Lays out what listeners are connected to what Java Swing components on the main PlayPane. This section also details some default settings for the listeners, such as their view and right panel components. All of this information is read on startup and is necessary for the correct functioning of the buttons.</p>
+        <b></em>Shape and Color Maps</em></b>
+        <p>Contains information regarding how different node types are displayed by default on the graph play sheet, including the nodes' shape and color.</p>
+        <b>Base Objects and Base Predicates</b>
+        <p>Lays out how SEMOSS should translate Excel data to RDF.  This section specifies the full RDF URI to be used for each of the different node and relationship types. More information on this can be found in Section 6 of this document.</p><div class="footer">
+        <em><b>Meta and Core Data</b></em>
+        <p>This section contains additional RDF triples that are included in every RDF database created through SEMOSS. These triples specify mainly subclass relationships of the node and relationship types and are used for SPARQL inference.</p>
+        <em><a href="#">1.4.2 log4.prop</a></em>
+        <p>This file contains initiation information for the logger that is used throughout the application.</p>
+        <h3>2: Sequence Diagrams</h3>
+        <p>This section contains a number of sequence diagrams that lay out some of the most critical processes of SEMOSS.</p>
+        <h5>2.1: Starter Process</h5>
+        <p>This lays out the sequence of events that occur when the SEMOSS starter is run which calls perna.ui.main.Starter.main(String[]).</p>
+        <p>A PDF version of this diagram is available for download at _________</p>
+        <img src="#" alt="Insert Image" height="" width="">
+        <h5>2.2: Query Processing</h5>
+        <p>This lays out the sequence of steps that are taken to process a query. This action occurs when the Create button is pushed and the function exists in perna.ui.main.listener.imple.ProcessQueryListener.actionPerformed(ActionEvent). A PDF version of this diagram is available for download at _______________________.</p>
+        <img src="#" alt="insert image 2" height="" width="">
+        <h3>3: Component Diagrams</h3>
+        <p>This section lays out the component diagrams for some of the most critical components of SEMOSS</p>
+        <h5>3.1: Play Sheets</h5>
+        <p>This is the component diagrams of the current play sheets in SEMOSS. There are three implementing classes &#8212; GraphPlaySheet, GridPlaySheet, and GridRAWPlaySheet &#8212; of the interface IPlaySheet. A PDF version of this diagram is available for download at _______________________.</p>
+        <img src="#" alt="insert image 2" height="" width="">
+        <h5>3.2: Swing Layout</h5>
+        <p>This component diagram lays out how our current Java Swing UI components are currently laid out. This is the foundation of the applications interface. A PDF version of this diagram is available for download at _______________________.</p
+        <img src="#" alt="insert image 2" height="" width="">
+        <h5>3.3: Graph Popup</h5>
+        <p>This diagram lays out the layout of the popup that is used currently by the GraphPlaySheet. A PDF version of this diagram is available for download at _______________________.</p>
+        <img src="#" alt="insert image 2" height="" width="">
+        <h3>4: Databases and Engines</h3>
+        <p>SEMOSS has the ability to perform analysis across multiple databases at runtime through the use of various engines. Each engine is connected to a specific RDF triple store and has the ability to extract, import, or update the data connected to it.</p>
+        <p>The specific type of engine to connect to a given RDF triple store depends on a number of attributes, including size and format, but the functionality of all engine types is similar. The interface IEngine is used to standardize the core functionalities of an engine and allows them to be used without first considering their specific types. This section will give an overview of this functionality that has been included in IEngine as well as explain the different types of engines that SEMOSS currently uses to access various triple stores.</p>
+        <h5>4.1: IEngine</h5>
+        <p>The <b>IEngine.java</b> class is the interface class of SEMOSS used to standardize the functionality of the unique engine classes. As of version 1.0, SEMOSS has only implemented engines that connect to RDF triple stores, but an engine in SEMOSS can be written to take in any database.
+        <p>The following table provides a brief description of the most commonly used functions of IEngine.</p>
+            <table class="">
+    <tbody>table</tbody>
+    </table>
+        <p>There are other other functions associated with each engine as well. Please refer to Javadoc at ___________________________ for additional information.</p>
+        <h5>4.2: Types of Engines</h5>
+        <p>Version 1.0 of SEMOSS contains a number of different engine types that provide the ability to handle data in a number of different formats. The biggest differentiator between the engine classes is that some support local data repositories while others connect to remote repositories.</p>
+        <h5>4.2.1 Local Data Repository</h5>
+        <p>Local repositories are databases that reside in the "db" folder of the SEMOSS tool. There are a few local repository engine classes that are supported as of Version 1.0. SEMOSS at any given time can have multiple engines running of the same type, but each engine must connect to a unique data store. The data stores that these local data engine classes connect to must be local to a given user's application.</p>
+        <p>The following table lays out the different engine classes that connect to local repositories:</p>
+        <table class="">
+    <tbody>table</tbody>
+    </table>
+        <h5>4.2.2 Remote Server Repository (NEED TO LOOK AT THIS SECTION)</h5>
+        <p>Remote repositories are databases that reside on another server and require a live connection for the engine to access it. These databases usually require a REST API on the remote Apache server and there can be multiple access entries. The following table lays out the current engines that connect to remote data stores:</p>
+        <table class="">
+    <tbody>table</tbody>
+    </table>
+        <h3>5: SEMOSS Play Sheets</h3>
+        <p>Play sheets in SEMOSS are the components that filter, analyze and visualize data. There are a number of different play sheets with unique visualization components, allowing for the same data to be displayed and manipulated in very different ways.</p>
+        <p>Play sheets are setup similarly to the way engines are set up. The following section takes an in-depth look at the play sheet interface as well as each of the play sheet classes currently implemented in SEMOSS.</p>
+        <h5>5.2: IPlaySheet</h5>
+        <p>The IPlaySheet.java class is the play sheet interface for SEMOSS. All play sheets implement this interface which includes the basic functions of a data visualizer.</p>
+        <p>Here's a table of some of the most important functions of this interface.</p>
+        <table class="">
+    <tbody>table</tbody>
+    </table>
+        <p>There are other functions associated with play sheets as well. Please refer to the Javadoc at ___________________________ for additional information.</p>
+        <h5>5.3: Types of Play Sheets</h5>
+        <p>SEMOSS 1.0 is packaged with three different play sheet types.  Two of the play sheets are very similar in the way they display data&#8212;GridPlaySheet and GridRAWPlaysheet &#8212; but differ in the way they process the data.</p>
+        <p>The third play sheet, GraphPlaySheet, visualizes and processes the data very differently than the first two, creating a network graph rather than a grid.  The following section briefly describes each play sheet.</p>
+        <h5>5.3.1 GridPlaySheet</h5>
+        <p>GridPlaySheet.java is the component class that generates a table as the means of visualizing the data. This play sheet currently requires a SELECT SPARQL query to process the data correctly.</p>
+        <p>The table can be sorted by clicking on a column header and the data can easily be copied and pasted into Excel.  More information on this play sheet's functionality can be found in the SEMOSS User Guide.</p>
+        <p>The following is a print screen of what the results look like in a GridPlaySheet.</p>
+        <h5>5.3.2 GridRAWPlaySheet</h5>
+        <p>GridRAWPlaySheet.java is similar to GridPlaySheet in that they both generate tables as data visualization.</p>
+        <p>The main distinction is in the processing of the data&#8212;GridRAWPlaySheet stores and displays full URI's whereas GridPlaySheet only deals with the instance level of each RDF component.</p>
+        <p>Like GridPlaySheet, this play sheet requires a SPARQL SELECT query to correctly process the data.</p>
+        <p>The following is a print screen of what the results look like in a GridPlaySheet.</p>
+        <img src="#" alt="insert image 2" height="" width="">
+        <h5>5.3.3 GraphPlaySheet</h5>
+        <p>GraphPlaySheet.java is the play sheet class that generates a graph network for its data visualization.</p>
+        <p>This play sheet processes the data very differently than the grid play sheets because it must get the data into a format that is recognized by the graphing component, Jung. This play sheet generally uses a CONSTRUCT SPARQL query. GraphPlaySheet has a lot of peripheral functionality as well that is accessible through the right click menu. Please reference the SEMOSS User Guide for further information on these functionalities.</p>
+        <p>The following is a print screen of what the results look like in a GraphPlaySheet:</p>
+        <img src="#" alt="insert image 2" height="" width="">
+        <h3>6: Understanding Ontology</h3></a>
+        <p>The value of insights derived from SEMOSS is directly correlated to properness of the semantic ontologies that has been developed for the structure of the data. Ontologies are the structural frameworks for organizing the pieces of information in a database.</p>
+        <p>A proper domain-specific metamodel can be an ontology. Creating metamodels involve the construction of concepts (data) and their relationships (how data pieces relate to each other).</p>
+        <p>By learning how to effectively create and use metamodels, analysts can explore databases and identify meaningful insights inside SEMOSS. Usually, a metamodel is displayed as a map, as shown below for our security database in Figure 6.1.1.</p>
+        <p>Development of the metamodel is one of the <em><b>most important and complex task</b></em> that needs to be completed in order to be able to efficiently and effectively extract data from the engine.</p>
+        <p>If the metamodel is not thorough, straightforward, and comprehensive, it will be very difficult to extract insights from any set of data. The most important paradigm to consider is that the metamodel should be constructed based on the fundamental relationships between the data, as opposed to a structure that is based on answering specific, known, questions from the data.</p>
+        <p>This allows the database to be queried based on prospective insights (as opposed to modifying the database to allow for this to happen).</p>
+        <p>Figure 2.1.1 below contains the base metamodel for our sample security metamodel. The metamodel is constructed such that each of the node types and its relationships with other node types is represented by boxes and lines.</p>
+        <img src="#" alt="insert image 2" height="" width="">
         <hr>
-        <div class="footer">
+            <br></br>
+        <h2><p><a href="#"</a>About</a></p></h2>
             <p>Licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a></p>
         </div>
 
