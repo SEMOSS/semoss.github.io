@@ -40,7 +40,7 @@
             </li>
           <li><a href="about.html"><i class="icon-user"></i> About</a></li>
           <li class="active"><a href="contact.html"><i class="icon-envelope"></i> Contact</a></li>
-          <li><a href="http://blog.semoss.org" target="_blank"><i class="icon-comment"></i> Blog</a></li>
+          <li><a href="http://blog.Semoss.org" target="_blank"><i class="icon-comment"></i> Blog</a></li>
           
         </ul>
         <a href="index.html"><img src="img/logo.png" id="logo"></a>
@@ -50,7 +50,7 @@
     <div id="bg">
         <div class="jumbotron">
           <h1>User Documentation</h1>
-          <p class="lead">Getting up and running with your analytics enviroment</p>
+          <p class="lead">Getting up and running with your analytics environment</p>
         </div>
     </div>
     
@@ -58,7 +58,7 @@
     <div class="container-narrow">
         <br>
         <h1>Introduction</h1>
-        <p>SEMOSS is a data-driven application that enables users to explore relationships and connections in an interactive format through intermediate conduits, i.e. transitive relationships.
+        <p>SEMOSS is a data-driven application that enables users to <em></em>explore relationships and connections in an interactive format through intermediate conduits, i.e. transitive relationships.
             This document provides general usage instructions and guidance in deployment of the open source components of SEMOSS,
             in contrast to the developer guide, which provides instructions and guidance in terms of development "on top of" the tool.</br>
         </p>
@@ -70,73 +70,87 @@
             <li>Limited guidance in querying databases to understand advanced relationships using the SPARQL query language (Section 3).</li>
             <li>A use case in deploying <em>out of the box</em> SEMOSS to analyze the sample security database (Section 4).</li>
         </ul>
-        <h3>1: Getting Started</h3>
-        <p>In order to begin working on SEMOSS, there are a number of files that must be downloaded and programs that must be installed. This section lays out what each of the steps are that must be taken to begin editing the code.</p>
-        <h5>1.1 Installation</h5>
-        <p>SEMOSS has been built using the Eclipse integrated development environment and it is therefore advisable to use the latest version of Eclipse for editing the code. Eclipse is available for download at http://www.eclipse.org/downloads/index-developer.php. A Java Development Kit (JDK) is also necessary to open SEMOSS for editing. While most of the SEMOSS functionality works with a 64-bit JDK, it is recommended to use 32-bit to ensure all of the features work correctly.</p>The latest JDK is available for download at http://www.oracle.com/technetwork/java/javase/downloads/index.html. The source code of SEMOSS is available for download from GitHub which can be accessed through the site http://semoss.org/</p>
-        <p>OTHER DETAILS ABOUT DOWNLOAD FROM GITHUB</p>
-        <h5>1.2 Source Code Directory Structure</h5>
-        <p>The following lays out the hierarchy used to organize the directory of SEMOSS and gives a brief overview of what each folder contains.</p>
-        <h5>1.2.1 src/</h5>
-        <p>Java source folders that SEMOSS uses to build the user interface and handle most of the functionality. There are a number of packages within the src folder to further organize the code. To better understand the organization of the various packages, please consult the Javadoc that can be found here.</p>
-        <h5>1.2.2 db/</h5>
-        <p> All database information, including how to access a given database and the data itself. The data generally takes the form of a .jnl file (though many other file types can be used such as .xml, .rdf, and .ttl) while the properties of the database are stored in a .properties file. The files in this folder are referenced in the RDF_Map.prop file.</p>
-        <h5>1.2.3 help/</h5>
-        <p>Version information displayed on the Help tab of SEMOSS.</p>
-        <h5>1.2.4 pictures/</h5>
-        <p>Images used throughout the application.</p>
-        <h5>1.2.5 questions/</h5>
-        <p>Properties files that contain all information surrounding the perspectives and questions that are displayed for a given engine (database). This information includes what perspectives and questions to display for an engine as well as details about how to process a given question such as what SPARQL query to run and what play sheet to display it on. The files in this folder also are referenced in the RDF_Map.prop file.</p>
-        <h5>1.2.6 RDFGraphLib/</h5>
-        <p>All of the JAR files that are referenced in the source code.</p>
-        <h5>1.2.7 training/</h5>
-        <p>All of the training material displayed on the Help tab of SEMOSS is contained in this folder.</p>
-        <h5>1.3: External Dependencies</h5>
-        <p>SEMOSS uses numerous JAR files from a wide variety various sources, including Apache, Jena, Sesame, and Jung. All of the JAR files can be found in the RDFGraphLib folder of the SEMOSS source code.</p>
-        <h5>1.4: Configuration Files</h5>
-        <p>Directly in the main directory there are also a couple of important files regarding the configuration of SEMOSS. These files get run on Startup and play a crucial role in determining how the application functions.</p>
-        <h5>1.4.1 RDF_Map.prop</h5>
-        <p>This is the central properties sheet that is read by the Starter class on startup. All of the information contained in this file is critical to the loading of data into SEMOSS and its general functioning. Many of the pieces of this file can be found referenced in Section 6 of this document, but the following is a high level overview of what this file contains:</p>
-        <em><a href=#">Engine Information</a></em>
+        <h3>1: User Interface Overview</h3>
+        <p>The SEMOSS user interface features the main tab to the left, and a workspace that displays the data outputs in the center of the screen.</p>
+        <h5>1.1 Tabs Overview</h5>
+        <p>There are five default tabs that exist on the setup pane. The main tab appears when the application is started; the others (Graph Labels, Graph Cosmetics, SUDOWL, and Graph Filter) can be toggled.</p>
+        <br><img src="image002.png" alt="Image 002" height="" width=""></br>
+        <br><img src="image003.png" alt="Image 003" height="" width=""></br>
         <br>
-            <p>This section of the Map file specifies what engines should be started when the application is first run as well as what other files (questions file, database properties file) are related to that specific engine.</br>
-        <em><b>Model-View-Controller Bindings</b></em>
-        <p>Lays out what listeners are connected to what Java Swing components on the main PlayPane. This section also details some default settings for the listeners, such as their view and right panel components. All of this information is read on startup and is necessary for the correct functioning of the buttons.</p>
-        <b></em>Shape and Color Maps</em></b>
-        <p>Contains information regarding how different node types are displayed by default on the graph play sheet, including the nodes' shape and color.</p>
-        <b>Base Objects and Base Predicates</b>
-        <p>Lays out how SEMOSS should translate Excel data to RDF.  This section specifies the full RDF URI to be used for each of the different node and relationship types. More information on this can be found in Section 6 of this document.</p><div class="footer">
-        <em><b>Meta and Core Data</b></em>
-        <p>This section contains additional RDF triples that are included in every RDF database created through SEMOSS. These triples specify mainly subclass relationships of the node and relationship types and are used for SPARQL inference.</p>
-        <em><a href="#">1.4.2 log4.prop</a></em>
-        <p>This file contains initiation information for the logger that is used throughout the application.</p>
-        <h3>2: Sequence Diagrams</h3>
-        <p>This section contains a number of sequence diagrams that lay out some of the most critical processes of SEMOSS.</p>
-        <h5>2.1: Starter Process</h5>
-        <p>This lays out the sequence of events that occur when the SEMOSS starter is run which calls perna.ui.main.Starter.main(String[]).</p>
-        <p>A PDF version of this diagram is available for download at _________</p>
-        <img src="#" alt="Insert Image" height="" width="">
-        <h5>2.2: Query Processing</h5>
-        <p>This lays out the sequence of steps that are taken to process a query. This action occurs when the Create button is pushed and the function exists in perna.ui.main.listener.imple.ProcessQueryListener.actionPerformed(ActionEvent). A PDF version of this diagram is available for download at _______________________.</p>
-        <img src="#" alt="insert image 2" height="" width="">
-        <h3>3: Component Diagrams</h3>
-        <p>This section lays out the component diagrams for some of the most critical components of SEMOSS</p>
-        <h5>3.1: Play Sheets</h5>
-        <p>This is the component diagrams of the current play sheets in SEMOSS. There are three implementing classes &#8212; GraphPlaySheet, GridPlaySheet, and GridRAWPlaySheet &#8212; of the interface IPlaySheet. A PDF version of this diagram is available for download at _______________________.</p>
-        <img src="#" alt="insert image 2" height="" width="">
-        <h5>3.2: Swing Layout</h5>
-        <p>This component diagram lays out how our current Java Swing UI components are currently laid out. This is the foundation of the applications interface. A PDF version of this diagram is available for download at _______________________.</p
-        <img src="#" alt="insert image 2" height="" width="">
-        <h5>3.3: Graph Popup</h5>
-        <p>This diagram lays out the layout of the popup that is used currently by the GraphPlaySheet. A PDF version of this diagram is available for download at _______________________.</p>
-        <img src="#" alt="insert image 2" height="" width="">
-        <h3>4: Databases and Engines</h3>
-        <p>SEMOSS has the ability to perform analysis across multiple databases at runtime through the use of various engines. Each engine is connected to a specific RDF triple store and has the ability to extract, import, or update the data connected to it.</p>
-        <p>The specific type of engine to connect to a given RDF triple store depends on a number of attributes, including size and format, but the functionality of all engine types is similar. The interface IEngine is used to standardize the core functionalities of an engine and allows them to be used without first considering their specific types. This section will give an overview of this functionality that has been included in IEngine as well as explain the different types of engines that SEMOSS currently uses to access various triple stores.</p>
-        <h5>4.1: IEngine</h5>
-        <p>The <b>IEngine.java</b> class is the interface class of SEMOSS used to standardize the functionality of the unique engine classes. As of version 1.0, SEMOSS has only implemented engines that connect to RDF triple stores, but an engine in SEMOSS can be written to take in any database.
-        <p>The following table provides a brief description of the most commonly used functions of IEngine.</p>
+        <p><em><b>Main Tab</b></em></p>
+        <p>The main tab is on the left once the application is started. It provides the core functionality of SEMOSS. The components of the main tab include:</p>
+        <p>1. Database Selection<p>
+        <p>2. Perspective Categories</p>
+        <p>3. Question Selections</p>
+        <p>4. Constraints</p>
+        <p>5. Create Button</p>
+        <p>6. Undo/Remove Button</p>
+        <p>7. Augment Graph</p>
+        <p>8. Custom SPARQL Query</p>
+        <em><h5>Database Selection (1)</h5></em>
+        <p>This is the area where the active database is selected. The map sheet contains indexes to the available databases. The map sheet is essentially an index of all of the data and information that is available within the application (more instructions on loading databases and the map sheet are contained in Section 2: Loading a Database).</p>
+        <p>SEMOSS allows exploration of data residing in these databases as it is a single database.</p>
+        <em><h5>Perspective Categories (2)</h5></em>
+        <p>This section contains the available perspectives or different "point of views" of the data stored in the databases. A perspective allows a user to examine in detail data from a particular point of view. These details are formulated as questions pertaining to a specific perspective.</p>
+        <em><h5>Question Selection (3)</h5></em>
+        <p>This is where the specific question is selected to dive into details of a perspective. This question is translated by SEMOSS into a SPARQL query that will be performed to provide the answer. Section D describes how an advanced user can create a custom SPARQL query to provide an ad hoc report.</p>
+        <em><h5>Constraints (4)</h5></em>
+        <p>Sometimes a question (SPARQL query) requires an input parameter (such as IP Address); in this case a drop-down box will appear allowing the user to select the appropriate constraint. Additional information is deferred to the section on writing SPARQL queries.</p>
+        <em><h5>Create Button (5)</h5></em>
+        <p>This button executes the constructed SPARQL query and displays the result either as a graph or as a grid.</p>
+        <br>
+        <img src="image005.png" alt="Image005.png" height="" width=""></br>
+        </br>
+        <em><h5>Undo/Remove (6)</h5></em>
+        <p>The undo button undoes the last action the user has taken. The first time the button is pressed, it removes relevant properties. The second time it is pressed, it removes nodes from the graph.</p>
+        <p>Consequently, to completely undo the prior action, <b>this button needs to be pressed twice</b>.</p>
+        <em><h5>Augment Graph (7)</h5></em>
+        <p>The augment graph function allows the user to overlay components of an additional query onto a graph. This is useful when comparing connections between two comparative objects.</p>
+        <em><h5>Custom SPARQL Query (8)</h5></em>
+        <em><p>Editor's Note: Additional Analysis surrounding creating SPARQL queries in SEMOSS is deferred to the 'Writing SPARQL Queries in SEMOSS' Section.</p></em>
+        <p>This component, when the "Custom" button is toggled, allows the user to (a) modify the current SPARQL query and (b) change the type of play sheet that the data is displayed on.  Not all query types are able to be displayed on all play sheet types, so slight query modifications are often required in order to change the play sheet.</p>
+        <p>Further information about the play sheets can be found in the Developer's Guide.</p>
+        <h5><a href="#">Graph Labels Tab</a></h5>
+        <p>The graph labels tab allows the user to customize the labels and tooltips that are displayed on a graph. Toggling the select button for an item on or off will determine whether it is displayed. The label toggle displays the information on the graph and the tooltip displays information on a mouse-over event. Edges and nodes can both have labels attached to them.</p>
+        <p>Various options exist, including the ability to display the instance name, the node type, and the URI of the node.</p>
+        <h5><a href="#">Graph Cosmetics Tab</a></h5>
+        <p>The graph cosmetics tab allows the user to modify the color and shape of a given node in the database. Selecting the first instance for a given node (the Select All Instance) allows a user to modify all of the instances of that node type. Default shapes and colors for a given node type can be set in the map sheet (more information is located in the database setup section of the manual).</p>
+        <h5><a href="#">Graph Filter Tab</a></h5>
+        <p>The graph filter tab allows the user to toggle the display of various nodes within the graph.</p>
+        <p>In the middle of the filter tab is a properties window that displays the properties associated with a given node instance or edge. This is useful in exploration of properties attached to a given node.</p>
+        <p>The bottom section of the filter tab contains the ability to filter the graph for various relationships or verbs within the graph. Again, selecting the first instance of a given relation (the select all instance) toggles all of the relations associated with a given node.</p>
+        <h5><a href="#">SUDOWL Tab</a></h5>
+        <p>The SUDOWL tab allows the user to explore the graph in the display pane without the presence of a metamodel. The property column describes each of the relationships that are displayed.</p>
+        <h5>1.2: Display Pane</h5>
+        <p>When the "create" button is toggled and a graph is created, a window within the display pane appears showing either a graph or a grid sheet. These sheets are where the insights are generated for future analysis.</p> 
+        <h5><a href="#">Graph Play Sheet Functionality</a></h5>
+        <p>The graph play sheet has a number of ways to manipulate a graph after it is created, most of which are accessible from the right click menu.  It is important to note that the right click functionality is highly dependent on whether or not a node or a group of nodes is selected as well as which node(s) is selected.  </p>
+        <img src="image007.png" alt="Image007.png" height="" width=""></br>
+        <h5>Show Minium Spanning Tree</h5>
+        <p>This feature essentially determines the minimum amount of edges necessary to connect all of the vertices of the graph.  This functionality is useful in identification of redundancies within the network.</p>
+        <h5>Highlight Adjacent</h5>
+        <p>This feature highlights all of the nodes that are adjacent to a selected node. This can be useful in identification of connections in a cluttered graph. </p>
+        <h5>Move Graph</h5>
+        <p>Move graph allows the user to move the whole graph as a single image about the canvas. To revert back to the default selection after a graph is moved to the preferred location, select the pick graph mode.</p>
+        <h5>Pick Graph</h5>
+        <p>Pick Graph allows the user to select specific nodes on the graph and move them about the canvas. This option is the default selection when the tool is opened.</p>
+        <h5>Convert to Table</h5>
+        <p>This feature creates a table of all of the triples that are currently being used to display the graph.</p>
+        <h5>Traverse Freely From Node</h5>
+        <p>This feature allows the user to extend the graph from the selected node(s) to any of the node types that are upstream or downstream of it (them).  This will connect all nodes of the same type to their respective node instances.</p
+        <h5>Traverse Freely from Selected Instance</h5>
+        <p>This feature allows the user to connect to various upstream and downstream nodes that are connected to this particular instance in the RDF store. This will connect only the selected instance to its respective node instances.</p>
+        <h5>Extend Graph</h5>
+        <p>Extend graph allows the user to add in additional components based on a given set of constraints.</p>
+        <h5>Perform Algorithms</h5>
+        <p>Various algorithms are included in the initial open source version of SEMOSS. These algorithms provide insights into various components of the graph. Currently the following algorithms are included:
             <table class="">
+         <ul><li>NodeRank Algorithm: Ranks the nodes based on the number of times the node is referenced/used.</li>
+         <li>Distance Downstream: Provides the number of ‘hops’ downstream data travels across systems.</li>
+         <li>Loop Identifier: Identifies instances where certain data is sent to and from the same system.</li>
+         <li>Island Identifier: Identifies instances where the flow of a data object is interrupted. In other words, islands of data exist. In some cases this could be a requirement. In others this could highlight areas of data management issues.</li>
+         <li>Data Latency Analysis: Allows user to manually adjust the time bar to track data through the network of systems.</li>
+         <li>Data Latency Scenario: Automatically distributes the data based on the data frequency of interfaces.</li></ul>
     <tbody>table</tbody>
     </table>
         <p>There are other other functions associated with each engine as well. Please refer to Javadoc at ___________________________ for additional information.</p>
