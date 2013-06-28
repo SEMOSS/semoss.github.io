@@ -13,6 +13,10 @@ body {
       margin: 30px 0;
 }
 
+.container-narrow.doc-container {
+
+}
+
 /* Main marketing message and sign up button */
 .jumbotron {
       max-width: 1000px;
