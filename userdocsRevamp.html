@@ -58,27 +58,27 @@
     <div class="container-narrow doc-container">
         <br>
         <h1>Introduction</h1>
-        <p>SEMOSS is a data-driven application that enables users to <em></em>explore relationships and connections in an interactive format through intermediate conduits, i.e. transitive relationships.
-            This document provides general usage instructions and guidance in deployment of the open source components of SEMOSS,
+        <p>Semoss is a data-driven application that enables users to <em></em>explore relationships and connections in an interactive format through intermediate conduits, i.e. transitive relationships.
+            This document provides general usage instructions and guidance in deployment of the open source components of Semoss,
             in contrast to the developer guide, which provides instructions and guidance in terms of development "on top of" the tool.</br>
         </p>
         <h3>Overview</h3>
         
         <ul>This document contains:
-            <li><a href="#">An overview of the out-of-the-box SEMOSS user interface (Section 1).</a></li>
+            <li><a href="#">An overview of the out-of-the-box Semoss user interface (Section 1).</a></li>
             <li>Instructions for creating and loading a new database and developing the ontological structure (metamodel) for the database (Section 2).</li>
             <li>Limited guidance in querying databases to understand advanced relationships using the SPARQL query language (Section 3).</li>
-            <li>A use case in deploying <em>out of the box</em> SEMOSS to analyze the sample security database (Section 4).</li>
+            <li>A use case in deploying <em>out of the box</em> Semoss to analyze the sample security database (Section 4).</li>
         </ul>
         <h3>1: User Interface Overview</h3>
-        <p>The SEMOSS user interface features the main tab to the left, and a workspace that displays the data outputs in the center of the screen.</p>
+        <p>The Semoss user interface features the main tab to the left, and a workspace that displays the data outputs in the center of the screen.</p>
         <h5>1.1 Tabs Overview</h5>
         <p>There are five default tabs that exist on the setup pane. The main tab appears when the application is started; the others (Graph Labels, Graph Cosmetics, SUDOWL, and Graph Filter) can be toggled.</p>
         <br><img src="image002.png" alt="Image 002" height="" width=""></br>
         <br><img src="image003.png" alt="Image 003" height="" width=""></br>
         <br>
         <p><em><b>Main Tab</b></em></p>
-        <p>The main tab is on the left once the application is started. It provides the core functionality of SEMOSS. The components of the main tab include:</p>
+        <p>The main tab is on the left once the application is started. It provides the core functionality of Semoss. The components of the main tab include:</p>
         <p>1. Database Selection<p>
         <p>2. Perspective Categories</p>
         <p>3. Question Selections</p>
@@ -89,11 +89,11 @@
         <p>8. Custom SPARQL Query</p>
         <em><h5>Database Selection (1)</h5></em>
         <p>This is the area where the active database is selected. The map sheet contains indexes to the available databases. The map sheet is essentially an index of all of the data and information that is available within the application (more instructions on loading databases and the map sheet are contained in Section 2: Loading a Database).</p>
-        <p>SEMOSS allows exploration of data residing in these databases as it is a single database.</p>
+        <p>Semoss allows exploration of data residing in these databases as it is a single database.</p>
         <em><h5>Perspective Categories (2)</h5></em>
         <p>This section contains the available perspectives or different "point of views" of the data stored in the databases. A perspective allows a user to examine in detail data from a particular point of view. These details are formulated as questions pertaining to a specific perspective.</p>
         <em><h5>Question Selection (3)</h5></em>
-        <p>This is where the specific question is selected to dive into details of a perspective. This question is translated by SEMOSS into a SPARQL query that will be performed to provide the answer. Section D describes how an advanced user can create a custom SPARQL query to provide an ad hoc report.</p>
+        <p>This is where the specific question is selected to dive into details of a perspective. This question is translated by Semoss into a SPARQL query that will be performed to provide the answer. Section D describes how an advanced user can create a custom SPARQL query to provide an ad hoc report.</p>
         <em><h5>Constraints (4)</h5></em>
         <p>Sometimes a question (SPARQL query) requires an input parameter (such as IP Address); in this case a drop-down box will appear allowing the user to select the appropriate constraint. Additional information is deferred to the section on writing SPARQL queries.</p>
         <em><h5>Create Button (5)</h5></em>
@@ -107,7 +107,7 @@
         <em><h5>Augment Graph (7)</h5></em>
         <p>The augment graph function allows the user to overlay components of an additional query onto a graph. This is useful when comparing connections between two comparative objects.</p>
         <em><h5>Custom SPARQL Query (8)</h5></em>
-        <em><p>Editor's Note: Additional Analysis surrounding creating SPARQL queries in SEMOSS is deferred to the 'Writing SPARQL Queries in SEMOSS' Section.</p></em>
+        <em><p>Editor's Note: Additional Analysis surrounding creating SPARQL queries in Semoss is deferred to the 'Writing SPARQL Queries in Semoss' Section.</p></em>
         <p>This component, when the "Custom" button is toggled, allows the user to (a) modify the current SPARQL query and (b) change the type of play sheet that the data is displayed on.  Not all query types are able to be displayed on all play sheet types, so slight query modifications are often required in order to change the play sheet.</p>
         <p>Further information about the play sheets can be found in the Developer's Guide.</p>
         <h5><a href="#">Graph Labels Tab</a></h5>
@@ -143,69 +143,222 @@
         <h5>Extend Graph</h5>
         <p>Extend graph allows the user to add in additional components based on a given set of constraints.</p>
         <h5>Perform Algorithms</h5>
-        <p>Various algorithms are included in the initial open source version of SEMOSS. These algorithms provide insights into various components of the graph. Currently the following algorithms are included:
-            <table class="">
+        <p>Various algorithms are included in the initial open source version of Semoss. These algorithms provide insights into various components of the graph. Currently the following algorithms are included:
          <ul><li>NodeRank Algorithm: Ranks the nodes based on the number of times the node is referenced/used.</li>
-         <li>Distance Downstream: Provides the number of ‘hops’ downstream data travels across systems.</li>
+         <li>Distance Downstream: Provides the number of "hops" downstream data travels across systems.</li>
          <li>Loop Identifier: Identifies instances where certain data is sent to and from the same system.</li>
          <li>Island Identifier: Identifies instances where the flow of a data object is interrupted. In other words, islands of data exist. In some cases this could be a requirement. In others this could highlight areas of data management issues.</li>
          <li>Data Latency Analysis: Allows user to manually adjust the time bar to track data through the network of systems.</li>
          <li>Data Latency Scenario: Automatically distributes the data based on the data frequency of interfaces.</li></ul>
-    <tbody>table</tbody>
-    </table>
-        <p>There are other other functions associated with each engine as well. Please refer to Javadoc at ___________________________ for additional information.</p>
-        <h5>4.2: Types of Engines</h5>
-        <p>Version 1.0 of SEMOSS contains a number of different engine types that provide the ability to handle data in a number of different formats. The biggest differentiator between the engine classes is that some support local data repositories while others connect to remote repositories.</p>
-        <h5>4.2.1 Local Data Repository</h5>
-        <p>Local repositories are databases that reside in the "db" folder of the SEMOSS tool. There are a few local repository engine classes that are supported as of Version 1.0. SEMOSS at any given time can have multiple engines running of the same type, but each engine must connect to a unique data store. The data stores that these local data engine classes connect to must be local to a given user's application.</p>
-        <p>The following table lays out the different engine classes that connect to local repositories:</p>
-        <table class="">
-    <tbody>table</tbody>
-    </table>
-        <h5>4.2.2 Remote Server Repository (NEED TO LOOK AT THIS SECTION)</h5>
-        <p>Remote repositories are databases that reside on another server and require a live connection for the engine to access it. These databases usually require a REST API on the remote Apache server and there can be multiple access entries. The following table lays out the current engines that connect to remote data stores:</p>
-        <table class="">
-    <tbody>table</tbody>
-    </table>
-        <h3>5: SEMOSS Play Sheets</h3>
-        <p>Play sheets in SEMOSS are the components that filter, analyze and visualize data. There are a number of different play sheets with unique visualization components, allowing for the same data to be displayed and manipulated in very different ways.</p>
-        <p>Play sheets are setup similarly to the way engines are set up. The following section takes an in-depth look at the play sheet interface as well as each of the play sheet classes currently implemented in SEMOSS.</p>
-        <h5>5.2: IPlaySheet</h5>
-        <p>The IPlaySheet.java class is the play sheet interface for SEMOSS. All play sheets implement this interface which includes the basic functions of a data visualizer.</p>
-        <p>Here's a table of some of the most important functions of this interface.</p>
-        <table class="">
-    <tbody>table</tbody>
-    </table>
-        <p>There are other functions associated with play sheets as well. Please refer to the Javadoc at ___________________________ for additional information.</p>
-        <h5>5.3: Types of Play Sheets</h5>
-        <p>SEMOSS 1.0 is packaged with three different play sheet types.  Two of the play sheets are very similar in the way they display data&#8212;GridPlaySheet and GridRAWPlaysheet &#8212; but differ in the way they process the data.</p>
+        <h5>Modify Shape</h5>
+        <p>Similar to the Graph cosmetics tab, this function allows the user to customize the shape of the particular selected instance(s)/</p>
+        <h5>Modify Color</h5>
+        <p>Similar to the Graph cosmetics tab, this function allows the user to customize the color of the particular selected instance(s).</p>
+        <h5>Modify Layout</h5>
+        <p>This feature allows the user to select the graph layout. Various graph layouts may be useful for various purposes and all graphs are force-directed layout algorithms. The tree layout will work so long as there are no loops within the graph.</p>
+        <h5>Hide/Unhide Nodes</h5>
+        <p>Hide Nodes allows the user to hide the selected instance on the graph. This is similar to the graph filter tab.</p>
+        <p>Play sheets are setup similarly to the way engines are set up. The following section takes an in-depth look at the play sheet interface as well as each of the play sheet classes currently implemented in Semoss.</p>
+        <h5><a href="#">Grid Play Sheet Functionality</a></h5>
+        <p>While not as robust as the graph sheet functionality, there are additional capabilities within the graph sheet.</p>
+        <h5>Sort</h5>
+        <p>Selecting a column header will allow the user to sort the graph alphabetically or numerically, depending on what type of data is present in the column.  Clicking again will reverse the order.</p>
         <p>The third play sheet, GraphPlaySheet, visualizes and processes the data very differently than the first two, creating a network graph rather than a grid.  The following section briefly describes each play sheet.</p>
-        <h5>5.3.1 GridPlaySheet</h5>
-        <p>GridPlaySheet.java is the component class that generates a table as the means of visualizing the data. This play sheet currently requires a SELECT SPARQL query to process the data correctly.</p>
-        <p>The table can be sorted by clicking on a column header and the data can easily be copied and pasted into Excel.  More information on this play sheet's functionality can be found in the SEMOSS User Guide.</p>
-        <p>The following is a print screen of what the results look like in a GridPlaySheet.</p>
-        <h5>5.3.2 GridRAWPlaySheet</h5>
-        <p>GridRAWPlaySheet.java is similar to GridPlaySheet in that they both generate tables as data visualization.</p>
-        <p>The main distinction is in the processing of the data&#8212;GridRAWPlaySheet stores and displays full URI's whereas GridPlaySheet only deals with the instance level of each RDF component.</p>
-        <p>Like GridPlaySheet, this play sheet requires a SPARQL SELECT query to correctly process the data.</p>
-        <p>The following is a print screen of what the results look like in a GridPlaySheet.</p>
+        <h5>Copy and Paste</h5>
+        <p>To copy and paste from a grid sheet to an Excel workbook, press Ctrl +A then Ctrl + C to select and copy all objects in the table.  The data can then be paste in Excel using the right-click or Ctrl + V.</p>
+        <h3>2: Creating a New Database Engine</h3>
+        <p>This is the set of steps that must be completed in order to create a new database engine and to load new data to the engine from Excel. Note that some of these steps may be done simultaneously, but all of the steps must be completed to create a fully functional engine.</p>
+        <p>There are other ways to create an engine and connect it to a data store, but this is the easiest way, assuming that the data is not already structured and formatted.</p>
+        <img src="#" alt="image008" height="" width="">
+        <img src="#" alt="image009" height="" width="">
+        <img src="#" alt="image010" height="" width="">
+        <img src="#" alt="image011" height="" width="">
+        <img src="#" alt="image012" height="" width="">
+        <img src="#" alt="image013" height="" width="">
+        <ul><p>1. Identify and understand the data and the relationships within the data.</p>
+        <p>2. Develop the metamodel</p>
+        <p>3. Load the metamodel objects and their relationships into Semoss' properties sheet</p>
+        <p>4. Identify the engine used to generate the database</p>
+        <ul><p>a. If using big data engine, develop the excel-based loading sheets and set up the reader</p></ul>
+        <p>5. Load the loading sheets and generate the database</p>
+        <p>6. Create and maintain the questions sheet</p></ul>
+        <p>A tutorial video can be accessed at this link depicting how to create a new database engine: <a href="http://www.youtube.com/watch?v=rY1aOGH7VU4">YouTube</a></p>
         <img src="#" alt="insert image 2" height="" width="">
-        <h5>5.3.3 GraphPlaySheet</h5>
-        <p>GraphPlaySheet.java is the play sheet class that generates a graph network for its data visualization.</p>
-        <p>This play sheet processes the data very differently than the grid play sheets because it must get the data into a format that is recognized by the graphing component, Jung. This play sheet generally uses a CONSTRUCT SPARQL query. GraphPlaySheet has a lot of peripheral functionality as well that is accessible through the right click menu. Please reference the SEMOSS User Guide for further information on these functionalities.</p>
-        <p>The following is a print screen of what the results look like in a GraphPlaySheet:</p>
-        <img src="#" alt="insert image 2" height="" width="">
-        <h3>6: Understanding Ontology</h3></a>
-        <p>The value of insights derived from SEMOSS is directly correlated to properness of the semantic ontologies that has been developed for the structure of the data. Ontologies are the structural frameworks for organizing the pieces of information in a database.</p>
-        <p>A proper domain-specific metamodel can be an ontology. Creating metamodels involve the construction of concepts (data) and their relationships (how data pieces relate to each other).</p>
-        <p>By learning how to effectively create and use metamodels, analysts can explore databases and identify meaningful insights inside SEMOSS. Usually, a metamodel is displayed as a map, as shown below for our security database in Figure 6.1.1.</p>
-        <p>Development of the metamodel is one of the <em><b>most important and complex task</b></em> that needs to be completed in order to be able to efficiently and effectively extract data from the engine.</p>
-        <p>If the metamodel is not thorough, straightforward, and comprehensive, it will be very difficult to extract insights from any set of data. The most important paradigm to consider is that the metamodel should be constructed based on the fundamental relationships between the data, as opposed to a structure that is based on answering specific, known, questions from the data.</p>
+        <h5>2.1: Develop the Metamodel</h5>
+        <p>The creation of a metamodel involves the construction of concepts (data) and their relationships (how data pieces relate to each other) and consequently provides analysts with a framework through which to explore the database and identify meaningful insights.</p>
+        <p>Usually, the metamodel is displayed as a map, as shown below for our security database in Figure 2.1.1.</p>
+        <p>Development of the metamodel is one of the most important and complex tasks that needs to be completed in order to be able to efficiently and effectively extract data from the engine. If the metamodel is not thorough, straightforward, and comprehensive, it will be very difficult to extract insights from any set of data. The most important paradigm to consider is that the metamodel should be constructed based on the fundamental relationships between the data, as opposed to a structure that is based on answering specific, known, questions from the data.</p>
         <p>This allows the database to be queried based on prospective insights (as opposed to modifying the database to allow for this to happen).</p>
-        <p>Figure 2.1.1 below contains the base metamodel for our sample security metamodel. The metamodel is constructed such that each of the node types and its relationships with other node types is represented by boxes and lines.</p>
-        <img src="#" alt="insert image 2" height="" width="">
-        <hr>
-            <br></br>
+        <p>Figure 2.1.1 below contains the base metamodel for our sample security database. The metamodel is constructed such that each of the node types and its relationships with other node types is represented by boxes and lines.</p><img src="#" alt="insert image 2" height="" width="">
+       
+        <h5>2.2 Load the Metamodel relationships into the Map Sheet</h5>
+        <em><p>Note: This section only applies if loading from an Excel loading sheet.</p></em>
+        <p>Once the metamodel is created, the base objects and relationships must be loaded into the RDF map sheet, named in the initial open-source release RDF_Map.prop.  This step ensures that the data loads successfully and correctly aligns with the previously designed metamodel.</p>
+        <p>Note that all components are case sensitive. Therefore case must be consistent across all instances for matches to work correctly.</p>
+        <h5>Base Objects</h5>
+        <p>Here all of the base objects are add <img src="#" alt="insert image014" height="" width="">ed (i.e. the individual nodes in the metamodel that represent a node type within SEMOSS).</p>
+        <p>First, Navigate to the ##Base Objects## Section of the map sheet.</p>
+        <p>Then, for each new base object (e.g. type AssetID) enter the name, tab over, and enter the URI for the base object. The base objects for the security database (based on the metamodel identified above) would be:</p>
+        <table>
+            <ul><p>##Base Objects##
+            <p>AssetID http://Sdb.com/ontologies/Concept/AssetID</p>
+            <p>IPAddress http://Sdb.com/ontologies/Concept/IPAddress</p>
+            <p>UserName http://Sdb.com/ontologies/Concept/UserName</p>
+            <p>Employee http://Sdb.com/ontologies/Concept/Employee</p>
+            <p>Server http://Sdb.com/ontologies/Concept/Server</p>
+            <p>Site http://Sdb.com/ontologies/Concept/Site</p>
+        </ul></table>
+        <h5>Base Relations</h5>
+        <p>Here the relationships that exist in the metamodel are added.</p>
+        <p>First, navigate to the ##Base Predicates## Section of the prop sheet.</p>
+        <p>Then, for each predicate (e.g. UserName_AssignedTo_AssetID) enter the name, tab over, and enter the URI for the relation.</p>
+        <p>The base objects for the security database (based on the metamodel identified above) would be:</p>
+        <table><ul><p>##Base Predicates##</p>
+        <p>AssetID_Accesses_IPAddress    http://Sdb.com/ontologies/Relation/Accesses</p>
+        <p>UserName_AssignedTo_AssetID   http://Sdb.com/ontologies/Relation/AssignedTo</p>
+        <p>Employee_Has_UserName         http://Sdb.com/ontologies/Relation/Has</p>
+        <p>Employee_AssignedTo_Site      http://Sdb.com/ontologies/Relation/AssignedTo</p>
+        <p>AssetID_Accesses_Server       http://Sdb.com/ontologies/Relation/Accesses</p></ul></table>
+        <h5>Base Relationships</h5>
+        <p>For each of the new node types and verbs, the base relationship is added to denote what type of object it is. For this first component, BaseMetaRelationships, all of the nodes that are of type concept (i.e. a node) are added. The structure is such that the node types in question (http://Sdb.com/ontologies/Concept/IPAddress) are first, the standards-based predicate (http://www.w3.org/2000/01/rdf-schema#subClassOf) to denote the subclass is second, and the class (http://Sdb.com/ontologies/Concept) is the final component.</p>
+        <p>In our example, the addition of all of the base meta relationships necessary to create the security database are shown.</p>
+        <table>
+            <ul><p>BaseMetaRelationships=http://Sdb.com/ontologies/Concept+http://www.w3.org/1999/02/22-rdf-syntax-ns#type+http://www.w3.org/2000/01/rdf-schema#Class;http://Sdb.com/ontologies/Concept/AssetID+http://www.w3.org/2000/01/rdf-schema#subClassOf+http://Sdb.com/ontologies/Concept;http://Sdb.com/ontologies/Concept/IPAddress+http://www.w3.org/2000/01/rdf-schema#subClassOf+http://Sdb.com/ontologies/Concept;http://Sdb.com/ontologies/Concept/UserName+http://www.w3.org/2000/01/rdf-schema#subClassOf+http://Sdb.com/ontologies/Concept;http://Sdb.com/ontologies/Concept/Employee+http://www.w3.org/2000/01/rdf-schema#subClassOf+http://Sdb.com/ontologies/Concept;http://Sdb.com/ontologies/Concept/Site+http://www.w3.org/2000/01/rdf-schema#subClassOf+http://Sdb.com/ontologies/Concept;</p>
+                <p>http://Sdb.com/ontologies/Concept/Server+http://www.w3.org/2000/01/rdf-schema#subClassOf+http://Sdb.com/ontologies/Concept;</p>
+            </ul></table>
+        <p>The same task is then completed for BaseMetaProperties, thus, each of the new relationships is loaded into the prop sheets. The structure is such that the node types in question (http://Sdb.com/ontologies/Relation/AssignedTo) are first, the standards-based predicate (http://www.w3.org/2000/01/rdf-schema#subPropertyOf) to denote the subclass is second, and the property (http://Sdb.com/ontologies/Relation) is the final component. This is the example for the security database:</p>
+        <table>
+            <ul><p>BaseMetaProperties=http://Sdb.com/ontologies/Relation+http://www.w3.org/1999/02/22-rdf-syntax-ns#type+http://www.w3.org/1999/02/22-rdf-syntax-ns#Property; http://Sdb.com/ontologies/Relation/AssignedTo+http://www.w3.org/2000/01/rdf-schema#subPropertyOf+http://Sdb.com/ontologies/Relation;http://Sdb.com/ontologies/Relation/Accesses+http://www.w3.org/2000/01/rdf-schema#subPropertyOf+http://Sdb.com/ontologies/Relation; http://Sdb.com/ontologies/Relation/Has+http://www.w3.org/2000/01/rdf-schema#subPropertyOf+http://Sdb.com/ontologies/Relation;</p>
+        </ul>
+        </table>
+        <h5>Setting the Engine</h5>
+        <p>The final task that needs to be completed is the engine setup. Completion of this step requires a decision to be made in identification of the engine to be used and creation of the questions sheet; explanation of this process is deferred to their respective process step sections.</p>
+        <p>The code that needs to be added simply specifies the engine and database locations that are used to setup the database to be shown, so once decided, this can be added.</p>
+        <p>At the top of the prop sheet, modify it such that the engine and locations are selected. Consider this example for the security database. The first component specifies the databases that are loaded; multiple databases can be loaded and are delimited by semicolons.</p>
+        <p>The second component is the engine used to read the database, the third is the prop sheet location (more on the prop sheet in future steps), and the final sheet is the questions sheet.</p><hr>
+        <table>
+            <ul>ENGINES     Security
+            Security    prerna.rdf.engine.impl.BigDataEngine
+            Security_PROP     db/demo/Security.properties
+            Security_DREAMER  questions/Security_Questions.properties</ul>
+        </table>
+        <h5>Other Functionalities (Optional)</h5>
+        <p>Other functionalities in the prop sheet can be added, included entering default colors and shapes for nodes. The base colors for the security database are entered as below:</p>
+        <table>
+            <ul>#Shape maps</p>
+            <p>Site_SHAPE        SQUARE</p>
+            <p>IPAddress_SHAPE   TRIANGLE</p>
+            <p>UserName_SHAPE    HEXAGON</p>
+            <p>AssetID_SHAPE     DIAMOND</p>
+            <p>Employee_SHAPE    CIRCLE</p>
+            <p>#Shape Colors</p>
+            <p>Site_COLOR        BLUE</p>
+            <p>IPAddress_COLOR   ORANGE</p>
+            <p>UserName_COLOR    RED</p>
+            <p>AssetID_COLOR     BROWN</p>
+            <p>Employee_COLOR    GREEN</p></ul>
+        </table>
+        <h5>2.3  Generate loading sheets</h5>
+        <p>Selecting the engine defines the process through which the database is read into SEMOSS.  This manual documents the use of the Big Data Engine, which provides the added functionality of converting Excel-based inputs into the database.</p>
+        <p>The loading sheets are setup such that there is an introductory loader tab, and a tab that contains an individual set of triples (e.g. all of the AssetID to IP Address relationships).</p>
+        <em><b>Loader Tab</em></b>
+        <p>The <b>Loader</b> tab essentially contains the name of the sheets that are read into the database. The name of the tab must be "Loader", and adjacent in column B to each of the tabs that are loaded should be the text "Usual."</p>
+        <p>Cell A1 should contain the text "SheetName" and Cell B1 must contain the text "Type."</p>
+        <p>The tab should be constructed as follows (example for the security database):</p>
+        <img src="#" alt="image015" height="" width="">
+        <h5><em>Relation Tabs: Loading Triples</em></h5>
+        <p>The other tabs should individually contain specific information surrounding an individual triple store that is to be loaded into the database. For example, <UserName><AssignedTo><AssetID>. Cell A1 should contain the text "Relation", Cell A2 should contain the predicate (AssignedTo in this case), Cell B1 should contain the first node type (e.g. UserName), and cell C1 should contain the second node type (e.g. AssetID).</p>
+        <p>Column B should contain the actual first node instances, and column C should contain the second node instances. Properties on the edges (e.g. not triples, but data that may be relevant as a property such as a cost) can be attached in adjacent columns. Note that the property is not added to the node, but rather, the edge. To add properties to nodes a separate type of sheet is required (as documented below). Properties do not need to be added in the prop sheet, but are more difficult to visualize and query (example shown in figure 2.3.2 for the security database).</p>
+        <img src="#" alt="insert image 016.png" height="" width="">
+        <h5><em>Node Property Tabs: Loading Properties</em></h5>
+        <p>In the case where a property is desired to be added onto a node as opposed to a node edge (as above), a separate tab is necessary to be created to show this information. The structure of the sheet is displayed below for the Site property sheet for the security database, where city and state are denoted as properties of an individual site name.</p>
+        <img src="#" alt="image017" height="" width="">    
+        <h5>2.4 Building the database</h5>
+        <p>Once the excel files are generated, the database needs to be created.</p>
+        <p>There are two options to create a database: using the user interface import functionality or using the POIReader java file (POIReader is explained in the developer guide). The user interface is somewhat more intuitive, and does not require manual modification of the java code. However, it is not as efficient in processing multiple workbooks or debugging potential loading sheet data issues.</p>
+        <p>When updating a database (i.e. modifying the data in a current data), the best mechanism to ensure that duplicates do not exist is to delete the old .jnl file and then reload all of the new loading sheets from the workspace. This process tends to lend itself better to POIReader than the UI update.</p>    
+        <h5><a href=#">UI Import</a></h5>
+        <p>The user interface on the DB Modification Tab provides the capability to generate a new database engine without having to process through code. However, it is difficult to debug loading sheets with errors in the UI Import, and does not streamline the import of multiple files simultaneously.</p>
+        <p>Within the user interface import, there are two options: add to existing database, and create a new database</p>
+        <h5><em>Add to Existing Database</em></h5>
+        <p>This option will load all triples specified in the Excel workbook on top of an already running database. Nothing will be overwritten in the previously existing database. If an exact triple specified in the workbook already exists in the database, the triple will remain but will not be duplicated (in this instance, <Subject>, <Predicate> and <Object> all must match).</p>
+        <p>The database to be augmented must be selected in the database selection main tab on the left.</p>
+        <h5><em>Create New Database</em></h5>
+        <p>This option will create a completely new database and automatically have it populated on the left panel. The name of the new database cannot contain any spaces. All objects types and predicate types must be contained in the Base Objects and Base Predicates of the map file. The map file cannot be open when the import is running.</p>
+        <p>The files that are created (Assuming that the inputted name is "NewDBName"):</p>
+        <p><ul>1. <NewDBName> BigDataProp.properties. This prop file will be created in the db folder; It specifies all of the Big Data Engine properties.</p>
+        <p>2. <NewDBName>.jnl. This file will be created in the db folder and is the triple store with all of the new created triples.</p>
+        <p>3. <NewDBName>_Questions.properties. This file will be created in the questions folder. It specifies what perspectives, questions, and associated queries are populated when the new engine is selected. It uses the basic default question sheet, and provides the user with the capability to add in additional questions on top of this database.</p>
+        </ul>
+        <p>In addition, the map sheet is edited directly in the project folder to contain the new databases such that when the new db is created, it will appear in the navigation menu. </p>
+        <h5>2.5  The Questions Sheet</h5>
+        <p>The questions sheet contains the base SPARQL queries that can be queried out of the box by SEMOSS.</p>
+        <p>The question sheet contains the queries that are specific to the database. Below the question sheet for the security database is explored. Note that the bottom components of other question sheets should be pulled through when creating new question sheets to permit functionalities such as traverse freely. </p>
+        <p>If using POIReader to create a new database, the question sheet must be created manually. If using the UI import, the question sheet will be created automatically using a base subset of "generic" questions. </p>
+        <p>First, the available perspectives are denoted. Perspectives are essentially a grouping of questions. The generic perspective is included as a base in a question sheet, and the security perspective in this case is specific to our security database, and provides queries specific to the database. </p>
+        <table>
+            <ul>PERSPECTIVE Generic-Perspective;Security-Perspective</ul>
+        </table>
+        <p>Next, the questions within each perspective are denoted, as shown below, there are four questions for the generic perspective (GQ1 through GQ4) and six base questions for the security perspective (SQ1 to SQ6).</p>
+        <table>
+            <ul><p>Generic-Perspective GQ1;GQ2;GQ3;GQ4</p>
+            <p>Security-Perspective SQ1;SQ2;SQ3;SQ4;SQ5;SQ6</p></ul>
+        </table>
+        <p>Next, the text of the questions is denoted for the user to select when the query is selected. The Questions for the security database are denoted below, and this output in the tool is denoted in figure 2.5.1.</p>
+        <table>
+            <ul><p>SQ1 What workstations have accessed this IP address?</p>
+            <p>SQ2 What IP addresses has this workstation accessed?</p>
+            <p>SQ3 What IP addresses has this Employee accessed?</p>
+            <p>SQ4 What IP addresses have touched this site?</p>
+            <p>SQ5 What employees are located at this site?</p>
+            <p>SQ6 What sites has this IP Address touched?</p></ul>
+        </table>
+        <img src="#" alt="insert image018" height="" width="">
+        <p>Finally, the text of the individual queries is denoted. A stock query requires two components, first the specification of the layout (e.g. graph or grid play sheet) and then the actual query text.</p>
+        <p>Consider the SQ1 Query (What Workstations have accessed this IP Address?).</p>
+        <table>
+            <ul><p>SQ1_LAYOUT  prerna.ui.components.GraphPlaySheet</p>
+                <p>SQ1_QUERY   CONSTRUCT {?AssetID ?Accesses ?IPAddress} WHERE {{?IPAddress <http://www.w3.org/2000/01/rdf-schema#label> "@IPAddress-IPAddress@";}{?IPAddress <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://Sdb.com/ontologies/Concept/IPAddress>;}{?Accesses <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://Sdb.com/ontologies/Relation/Accesses> ;}{?AssetID <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://Sdb.com/ontologies/Concept/AssetID>;}{?AssetID ?Accesses ?IPAddress}}</p></ul>
+        </table>
+        <p>Note that the play sheet specific for a grid (i.e. table-based) sheet is:</p>
+        <table>
+            <ul>SQ1_LAYOUT  prerna.ui.components.GridPlaySheet</ul>
+        </table>
+        <p>In addition, grid queries begin with SELECT as opposed to CONSTRUCT.</p>
+        <p>Additional information and guidance surrounding creating SPARQL queries within SEMOSS is deferred to the SPARQL Queries within SEMOSS section.</p>
+        <h3>3: SPARQL Queries within SEMOSS</h3>
+        <p>SPARQL is the query language used to query different databases within SEMOSS. Querying in SPARQL is a means of retrieving or creating meaningful data from an RDF triple store.</p>
+        <p>This document does not provide in-depth guidance in generating SPARQL queries, for additional guidance, it is suggested to purchase Learning SPRAQL by Bob DuCharme. More information can be found at <a href="www.learningsparql.com">www.learningsparql.com</a>, and the book can be purchased on Amazon <a href="http://www.amazon.com/exec/obidos/ISBN=1449306594/bobducharmeA/"</a> here. More information can be found at <a href="www.SEMOSS.org">www.SEMOSS.org</a>.</p>
+        <p>In the semantics-based RDF ontology, this high-level framework provides the context through which data is structured. The Resource Description Framework (RDF) is a data model for encoding, gathering, and representing information about resources. Elements in RDF are stored as Uniform Resource Identifiers (URIs) and are always part of a triple. Constructed like a sentence (with a subject, predicate, and object) the triple structure is relational in form. A triple is defined as <Subject> <Predicate> <Object> where "< >" denotes a URI. For example, an Employee has a UserName (constructed as <Employee><Has><UserName>. These categories (e.g. Employee) are called types, which contain specific instances (e.g. John Smith).</p>
+        <p>Thus, John Smith has J_Smith, or, <John Smith> <John Smith:J_Smith><J_Smith>.</p>
+        <p>There are multiple types of queries available to SPARQL, however only the SELECT (which results in grids) and CONSTRUCT (which results in graphs) queries are used.</p>
+        <p>A query has three major parts: The Query Type (SELECT or CONSTRUCT), the return variables (what is to be returned from the query), and the pattern that the triples must follow, in other words as structured:</p>
+        <img src="#" alt="insert image020" height="" width="">
+        <p>To query the database it is important to note the URI (Uniform Resource Index) of the particular types(s) that are to be queried. The query below is a simple query for the Security database, which traverses from the Asset ID to IP Address, based on a specified IP Address. This query would be used to identify what assets (computers) have visited a particular website, in identification of the cause of a particular virus. Additionally, the user can then extend from that particular object (traverse freely) through to other nodes to identify additional insights. This is performed by right clicking on the node in question and traversing to the desired additional node.</p>
+        <p>Here, a CONSTRUCT query is used because a graph is generated. Second, since only one relationship is traversed, from AccessID to IP Address, the result set is:</p>
+        <table>
+            <ul>{?AssetID ?Accesses ?IPAddress}</ul>
+        </table>
+        <p>Next, the patterns to be traversed are added. First, the components the user will select are added (denoted by two variables encapsulated by '@' signs:</p>
+        <table>
+            <ul>{{?IPAddress <http://www.w3.org/2000/01/rdf-schema#label> "@IPAddress-IPAddress@";}</ul>
+        </table>
+        <p>Then, the URIs of the types to be traversed are added. It is populated with the URI’s of the components. The URIs are found in the mapping file and are thus added.</p>
+        <table>
+            <ul>{?IPAddress <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://Sdb.com/ontologies/Concept/IPAddress>;}{?Accesses <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://Sdb.com/ontologies/Relation/Accesses> ;}{?AssetID <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://Sdb.com/ontologies/Concept/AssetID>;}</ul>
+        </table>
+        <p>Finally, the core relationship is added:</p>
+        <table>
+            <ul>{?AssetID ?Accesses ?IPAddress}}</ul>
+        </table>
+        <p>Thus, the completed query is generated and loaded into the question sheet:</p>
+        <table>
+            CONSTRUCT {?AssetID ?Accesses ?IPAddress} WHERE {{?IPAddress <http://www.w3.org/2000/01/rdf-schema#label> "@IPAddress-IPAddress@";}{?IPAddress <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://Sdb.com/ontologies/Concept/IPAddress>;}{?Accesses <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://Sdb.com/ontologies/Relation/Accesses> ;}{?AssetID <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://Sdb.com/ontologies/Concept/AssetID>;}{?AssetID ?Accesses ?IPAddress}}</ul>
+        </table>
+        <p>Again, this document does not include extensive SPARQL instructions or details. Additional documentation surrounding writing SPARQL queries can be found at SEMOSS.org and through Bob DuCharme’s book, <b>Learning SPARQL</b>.</p>
+        <h5>4:  Security Use-Case</h5>
+        
+        <br></br>
         <h2><p><a href="#"</a>About</a></p></h2>
             <p>Licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a></p>
         </div>
@@ -223,7 +376,7 @@
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       
-        ga('create', 'UA-40789022-1', 'semoss.org');
+        ga('create', 'UA-40789022-1', 'Semoss.org');
         ga('send', 'pageview');
       
     </script>
