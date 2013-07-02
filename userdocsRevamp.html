@@ -191,65 +191,53 @@
         <p>Here all of the base objects are added (i.e. the individual nodes in the metamodel that represent a node type within SEMOSS).</p>
         <p>First, Navigate to the ##Base Objects## Section of the map sheet.</p>
         <p>Then, for each new base object (e.g. type AssetID) enter the name, tab over, and enter the URI for the base object. The base objects for the security database (based on the metamodel identified above) would be:</p>
-        <table>
-            <ul><p>##Base Objects##
-            <p>AssetID http://Sdb.com/ontologies/Concept/AssetID</p>
-            <p>IPAddress http://Sdb.com/ontologies/Concept/IPAddress</p>
-            <p>UserName http://Sdb.com/ontologies/Concept/UserName</p>
-            <p>Employee http://Sdb.com/ontologies/Concept/Employee</p>
-            <p>Server http://Sdb.com/ontologies/Concept/Server</p>
-            <p>Site http://Sdb.com/ontologies/Concept/Site</p>
-        </ul></table>
+        <pre>##Base Objects##
+            AssetID http://Sdb.com/ontologies/Concept/AssetID
+            IPAddress http://Sdb.com/ontologies/Concept/IPAddress
+            UserName http://Sdb.com/ontologies/Concept/UserName
+            Employee http://Sdb.com/ontologies/Concept/Employee
+            Server http://Sdb.com/ontologies/Concept/Server
+            Site http://Sdb.com/ontologies/Concept/Site</pre>
         <h5>Base Relations</h5>
         <p>Here the relationships that exist in the metamodel are added.</p>
         <p>First, navigate to the ##Base Predicates## Section of the prop sheet.</p>
         <p>Then, for each predicate (e.g. UserName_AssignedTo_AssetID) enter the name, tab over, and enter the URI for the relation.</p>
         <p>The base objects for the security database (based on the metamodel identified above) would be:</p>
-        <table><ul><p>##Base Predicates##</p>
-        <p>AssetID_Accesses_IPAddress    http://Sdb.com/ontologies/Relation/Accesses</p>
-        <p>UserName_AssignedTo_AssetID   http://Sdb.com/ontologies/Relation/AssignedTo</p>
-        <p>Employee_Has_UserName         http://Sdb.com/ontologies/Relation/Has</p>
-        <p>Employee_AssignedTo_Site      http://Sdb.com/ontologies/Relation/AssignedTo</p>
-        <p>AssetID_Accesses_Server       http://Sdb.com/ontologies/Relation/Accesses</p></ul></table>
+        <pre>##Base Predicates##
+        AssetID_Accesses_IPAddress    http://Sdb.com/ontologies/Relation/Accesses
+        UserName_AssignedTo_AssetID   http://Sdb.com/ontologies/Relation/AssignedTo
+        Employee_Has_UserName         http://Sdb.com/ontologies/Relation/Has
+        Employee_AssignedTo_Site      http://Sdb.com/ontologies/Relation/AssignedTo
+        AssetID_Accesses_Server       http://Sdb.com/ontologies/Relation/Accesses</pre>
         <h5>Base Relationships</h5>
         <p>For each of the new node types and verbs, the base relationship is added to denote what type of object it is. For this first component, BaseMetaRelationships, all of the nodes that are of type concept (i.e. a node) are added. The structure is such that the node types in question (http://Sdb.com/ontologies/Concept/IPAddress) are first, the standards-based predicate (http://www.w3.org/2000/01/rdf-schema#subClassOf) to denote the subclass is second, and the class (http://Sdb.com/ontologies/Concept) is the final component.</p>
         <p>In our example, the addition of all of the base meta relationships necessary to create the security database are shown.</p>
-        <table>
-            <ul><p>BaseMetaRelationships=http://Sdb.com/ontologies/Concept+http://www.w3.org/1999/02/22-rdf-syntax-ns#type+http://www.w3.org/2000/01/rdf-schema#Class;http://Sdb.com/ontologies/Concept/AssetID+http://www.w3.org/2000/01/rdf-schema#subClassOf+http://Sdb.com/ontologies/Concept;http://Sdb.com/ontologies/Concept/IPAddress+http://www.w3.org/2000/01/rdf-schema#subClassOf+http://Sdb.com/ontologies/Concept;http://Sdb.com/ontologies/Concept/UserName+http://www.w3.org/2000/01/rdf-schema#subClassOf+http://Sdb.com/ontologies/Concept;http://Sdb.com/ontologies/Concept/Employee+http://www.w3.org/2000/01/rdf-schema#subClassOf+http://Sdb.com/ontologies/Concept;http://Sdb.com/ontologies/Concept/Site+http://www.w3.org/2000/01/rdf-schema#subClassOf+http://Sdb.com/ontologies/Concept;</p>
-                <p>http://Sdb.com/ontologies/Concept/Server+http://www.w3.org/2000/01/rdf-schema#subClassOf+http://Sdb.com/ontologies/Concept;</p>
-            </ul></table>
+        <pre>BaseMetaRelationships=http://Sdb.com/ontologies/Concept+http://www.w3.org/1999/02/22-rdf-syntax-ns#type+http://www.w3.org/2000/01/rdf-schema#Class;http://Sdb.com/ontologies/Concept/AssetID+http://www.w3.org/2000/01/rdf-schema#subClassOf+http://Sdb.com/ontologies/Concept;http://Sdb.com/ontologies/Concept/IPAddress+http://www.w3.org/2000/01/rdf-schema#subClassOf+http://Sdb.com/ontologies/Concept;http://Sdb.com/ontologies/Concept/UserName+http://www.w3.org/2000/01/rdf-schema#subClassOf+http://Sdb.com/ontologies/Concept;http://Sdb.com/ontologies/Concept/Employee+http://www.w3.org/2000/01/rdf-schema#subClassOf+http://Sdb.com/ontologies/Concept;http://Sdb.com/ontologies/Concept/Site+http://www.w3.org/2000/01/rdf-schema#subClassOf+http://Sdb.com/ontologies/Concept;http://Sdb.com/ontologies/Concept/Server+http://www.w3.org/2000/01/rdf-schema#subClassOf+http://Sdb.com/ontologies/Concept;</pre>
         <p>The same task is then completed for BaseMetaProperties, thus, each of the new relationships is loaded into the prop sheets. The structure is such that the node types in question (http://Sdb.com/ontologies/Relation/AssignedTo) are first, the standards-based predicate (http://www.w3.org/2000/01/rdf-schema#subPropertyOf) to denote the subclass is second, and the property (http://Sdb.com/ontologies/Relation) is the final component. This is the example for the security database:</p>
-        <table>
-            <ul><p>BaseMetaProperties=http://Sdb.com/ontologies/Relation+http://www.w3.org/1999/02/22-rdf-syntax-ns#type+http://www.w3.org/1999/02/22-rdf-syntax-ns#Property; http://Sdb.com/ontologies/Relation/AssignedTo+http://www.w3.org/2000/01/rdf-schema#subPropertyOf+http://Sdb.com/ontologies/Relation;http://Sdb.com/ontologies/Relation/Accesses+http://www.w3.org/2000/01/rdf-schema#subPropertyOf+http://Sdb.com/ontologies/Relation; http://Sdb.com/ontologies/Relation/Has+http://www.w3.org/2000/01/rdf-schema#subPropertyOf+http://Sdb.com/ontologies/Relation;</p>
-        </ul>
-        </table>
+        <pre>BaseMetaProperties=http://Sdb.com/ontologies/Relation+http://www.w3.org/1999/02/22-rdf-syntax-ns#type+http://www.w3.org/1999/02/22-rdf-syntax-ns#Property; http://Sdb.com/ontologies/Relation/AssignedTo+http://www.w3.org/2000/01/rdf-schema#subPropertyOf+http://Sdb.com/ontologies/Relation;http://Sdb.com/ontologies/Relation/Accesses+http://www.w3.org/2000/01/rdf-schema#subPropertyOf+http://Sdb.com/ontologies/Relation; http://Sdb.com/ontologies/Relation/Has+http://www.w3.org/2000/01/rdf-schema#subPropertyOf+http://Sdb.com/ontologies/Relation;</pre>
         <h5>Setting the Engine</h5>
         <p>The final task that needs to be completed is the engine setup. Completion of this step requires a decision to be made in identification of the engine to be used and creation of the questions sheet; explanation of this process is deferred to their respective process step sections.</p>
         <p>The code that needs to be added simply specifies the engine and database locations that are used to setup the database to be shown, so once decided, this can be added.</p>
         <p>At the top of the prop sheet, modify it such that the engine and locations are selected. Consider this example for the security database. The first component specifies the databases that are loaded; multiple databases can be loaded and are delimited by semicolons.</p>
         <p>The second component is the engine used to read the database, the third is the prop sheet location (more on the prop sheet in future steps), and the final sheet is the questions sheet.</p><hr>
-        <table>
-            <ul>ENGINES     Security
+        <pre>ENGINES     Security
             Security    prerna.rdf.engine.impl.BigDataEngine
             Security_PROP     db/demo/Security.properties
-            Security_DREAMER  questions/Security_Questions.properties</ul>
-        </table>
+            Security_DREAMER  questions/Security_Questions.properties</pre>
         <h5>Other Functionalities (Optional)</h5>
         <p>Other functionalities in the prop sheet can be added, included entering default colors and shapes for nodes. The base colors for the security database are entered as below:</p>
-        <table>
-            <ul>#Shape maps</p>
-            <p>Site_SHAPE        SQUARE</p>
-            <p>IPAddress_SHAPE   TRIANGLE</p>
-            <p>UserName_SHAPE    HEXAGON</p>
-            <p>AssetID_SHAPE     DIAMOND</p>
-            <p>Employee_SHAPE    CIRCLE</p>
-            <p>#Shape Colors</p>
-            <p>Site_COLOR        BLUE</p>
-            <p>IPAddress_COLOR   ORANGE</p>
-            <p>UserName_COLOR    RED</p>
-            <p>AssetID_COLOR     BROWN</p>
-            <p>Employee_COLOR    GREEN</p></ul>
-        </table>
+        <pre>#Shape maps
+        Site_SHAPE        SQUARE
+        IPAddress_SHAPE   TRIANGLE
+        UserName_SHAPE    HEXAGON
+        AssetID_SHAPE     DIAMOND
+        Employee_SHAPE    CIRCLE
+        #Shape Colors
+        Site_COLOR        BLUE
+        IPAddress_COLOR   ORANGE
+        UserName_COLOR    RED
+        AssetID_COLOR     BROWN
+        Employee_COLOR    GREEN</pre>
         <h5>2.3  Generate loading sheets</h5>
         <p>Selecting the engine defines the process through which the database is read into SEMOSS.  This manual documents the use of the Big Data Engine, which provides the added functionality of converting Excel-based inputs into the database.</p>
         <p>The loading sheets are setup such that there is an introductory loader tab, and a tab that contains an individual set of triples (e.g. all of the AssetID to IP Address relationships).</p>
@@ -290,34 +278,28 @@
         <p>The question sheet contains the queries that are specific to the database. Below the question sheet for the security database is explored. Note that the bottom components of other question sheets should be pulled through when creating new question sheets to permit functionalities such as traverse freely. </p>
         <p>If using POIReader to create a new database, the question sheet must be created manually. If using the UI import, the question sheet will be created automatically using a base subset of "generic" questions. </p>
         <p>First, the available perspectives are denoted. Perspectives are essentially a grouping of questions. The generic perspective is included as a base in a question sheet, and the security perspective in this case is specific to our security database, and provides queries specific to the database. </p>
-        <table>
-            <ul>PERSPECTIVE Generic-Perspective;Security-Perspective</ul>
-        </table>
+        <pre>PERSPECTIVE Generic-Perspective;Security-Perspective</pre>
         <p>Next, the questions within each perspective are denoted, as shown below, there are four questions for the generic perspective (GQ1 through GQ4) and six base questions for the security perspective (SQ1 to SQ6).</p>
-        <table>
-            <ul><p>Generic-Perspective GQ1;GQ2;GQ3;GQ4</p>
-            <p>Security-Perspective SQ1;SQ2;SQ3;SQ4;SQ5;SQ6</p></ul>
-        </table>
+        <pre>
+        Generic-Perspective GQ1;GQ2;GQ3;GQ4
+        Security-Perspective SQ1;SQ2;SQ3;SQ4;SQ5;SQ6</pre>
         <p>Next, the text of the questions is denoted for the user to select when the query is selected. The Questions for the security database are denoted below, and this output in the tool is denoted in figure 2.5.1.</p>
-        <table>
-            <ul><p>SQ1 What workstations have accessed this IP address?</p>
-            <p>SQ2 What IP addresses has this workstation accessed?</p>
-            <p>SQ3 What IP addresses has this Employee accessed?</p>
-            <p>SQ4 What IP addresses have touched this site?</p>
-            <p>SQ5 What employees are located at this site?</p>
-            <p>SQ6 What sites has this IP Address touched?</p></ul>
-        </table>
+        <pre>
+        SQ1 What workstations have accessed this IP address?
+        SQ2 What IP addresses has this workstation accessed?
+        SQ3 What IP addresses has this Employee accessed?
+        SQ4 What IP addresses have touched this site?
+        SQ5 What employees are located at this site?
+        SQ6 What sites has this IP Address touched?</pre>
         <img src="img/userDocs/image018.png" alt="insert image018" height="" width="">
         <p>Finally, the text of the individual queries is denoted. A stock query requires two components, first the specification of the layout (e.g. graph or grid play sheet) and then the actual query text.</p>
         <p>Consider the SQ1 Query (What Workstations have accessed this IP Address?).</p>
-        <table>
-            <ul><p>SQ1_LAYOUT  prerna.ui.components.GraphPlaySheet</p>
-                <p>SQ1_QUERY   CONSTRUCT {?AssetID ?Accesses ?IPAddress} WHERE {{?IPAddress <http://www.w3.org/2000/01/rdf-schema#label> "@IPAddress-IPAddress@";}{?IPAddress <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://Sdb.com/ontologies/Concept/IPAddress>;}{?Accesses <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://Sdb.com/ontologies/Relation/Accesses> ;}{?AssetID <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://Sdb.com/ontologies/Concept/AssetID>;}{?AssetID ?Accesses ?IPAddress}}</p></ul>
-        </table>
+        <pre>SQ1_LAYOUT  prerna.ui.components.GraphPlaySheet</p>
+        SQ1_QUERY   CONSTRUCT {?AssetID ?Accesses ?IPAddress} WHERE {{?IPAddress < http://www.w3.org/2000/01/rdf-schema#label > "@IPAddress-IPAddress@";}{?IPAddress < http://www.w3.org/1999/02/22-rdf-syntax-ns#type> < http://Sdb.com/ontologies/Concept/IPAddress>;}{?Accesses < http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+        < http://Sdb.com/ontologies/Relation/Accesses > ;}{?AssetID < http://www.w3.org/1999/02/22-rdf-syntax-ns#type > < http://Sdb.com/ontologies/Concept/AssetID>;}{?AssetID ?Accesses ?IPAddress}}
+        </pre>
         <p>Note that the play sheet specific for a grid (i.e. table-based) sheet is:</p>
-        <table>
-            <ul>SQ1_LAYOUT  prerna.ui.components.GridPlaySheet</ul>
-        </table>
+        <pre>SQ1_LAYOUT  prerna.ui.components.GridPlaySheet</pre>
         <p>In addition, grid queries begin with SELECT as opposed to CONSTRUCT.</p>
         <p>Additional information and guidance surrounding creating SPARQL queries within SEMOSS is deferred to the SPARQL Queries within SEMOSS section.</p>
         <h3>3: SPARQL Queries within SEMOSS</h3>
@@ -331,25 +313,16 @@
         <br></br>
         <p>To query the database it is important to note the URI (Uniform Resource Index) of the particular types(s) that are to be queried. The query below is a simple query for the Security database, which traverses from the Asset ID to IP Address, based on a specified IP Address. This query would be used to identify what assets (computers) have visited a particular website, in identification of the cause of a particular virus. Additionally, the user can then extend from that particular object (traverse freely) through to other nodes to identify additional insights. This is performed by right clicking on the node in question and traversing to the desired additional node.</p>
         <p>Here, a <b>CONSTRUCT</b> query is used because a graph is generated. Second, since only one relationship is traversed, from AccessID to IP Address, the result set is:</p>
-        <table>
-            <ul>{?AssetID ?Accesses ?IPAddress}</ul>
+        <pre>{?AssetID ?Accesses ?IPAddress}</pre>
         </table>
         <p>Next, the patterns to be traversed are added. First, the components the user will select are added (denoted by two variables encapsulated by '@' signs:</p>
-        <table>
-            <ul>{{?IPAddress <http://www.w3.org/2000/01/rdf-schema#label> "@IPAddress-IPAddress@";}</ul>
-        </table>
-        <p>Then, the URIs of the types to be traversed are added. It is populated with the URIs of the components. The URIs are found in the mapping file and are thus added.</p>
-        <table>
-            <ul>{?IPAddress <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://Sdb.com/ontologies/Concept/IPAddress>;}{?Accesses <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://Sdb.com/ontologies/Relation/Accesses> ;}{?AssetID <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://Sdb.com/ontologies/Concept/AssetID>;}</ul>
-        </table>
+        <pre>{{?IPAddress <http://www.w3.org/2000/01/rdf-schema#label> "@IPAddress-IPAddress@";}</pre>
+        Then, the URIs of the types to be traversed are added. It is populated with the URIs of the components. The URIs are found in the mapping file and are thus added.</p>
+        <pre>{?IPAddress <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://Sdb.com/ontologies/Concept/IPAddress>;}{?Accesses <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://Sdb.com/ontologies/Relation/Accesses> ;}{?AssetID <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://Sdb.com/ontologies/Concept/AssetID>;}</pre>
         <p>Finally, the core relationship is added:</p>
-        <table>
-            <ul>{?AssetID ?Accesses ?IPAddress}}</ul>
-        </table>
+        <pre>{?AssetID ?Accesses ?IPAddress}}</pre>
         <p>Thus, the completed query is generated and loaded into the question sheet:</p>
-        <table>
-            CONSTRUCT {?AssetID ?Accesses ?IPAddress} WHERE {{?IPAddress <http://www.w3.org/2000/01/rdf-schema#label> "@IPAddress-IPAddress@";}{?IPAddress <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://Sdb.com/ontologies/Concept/IPAddress>;}{?Accesses <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://Sdb.com/ontologies/Relation/Accesses> ;}{?AssetID <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://Sdb.com/ontologies/Concept/AssetID>;}{?AssetID ?Accesses ?IPAddress}}</ul>
-        </table>
+        <pre>CONSTRUCT {?AssetID ?Accesses ?IPAddress} WHERE {{?IPAddress <http://www.w3.org/2000/01/rdf-schema#label> "@IPAddress-IPAddress@";}{?IPAddress <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://Sdb.com/ontologies/Concept/IPAddress>;}{?Accesses <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://Sdb.com/ontologies/Relation/Accesses> ;}{?AssetID <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://Sdb.com/ontologies/Concept/AssetID>;}{?AssetID ?Accesses ?IPAddress}}</pre>
         <p>Again, this document does not include extensive SPARQL instructions or details.</p>
         <p>Additional documentation surrounding writing SPARQL queries can be found at SEMOSS.org and through Bob DuCharme's book, <b>Learning SPARQL</b>.</p>
         <h3>4:  Security Use-Case</h3>
@@ -364,7 +337,6 @@
         <p>The SEMOSS team has extracted specific, relevant components from these databases and generated a metamodel (more information surrounding metamodels can be found in section 2.1).  However, this data is unfiltered and it must be processed and connected in SEMOSS for actionable insights to be generated. The Security metamodel is located in figure 4.1.2 below.</p>
         <p>Essentially, the three disparate databases are connected through the metamodel and can be combined to generate insights surrounding the attack that occurred.</p>
         <img src="img/userDocs/image024.png">
-        <!--test-->
         <h5>4.2  Generating Insights</h5>
         <p>Traversing through the database is relatively straightforward. Let's imagine that the IP Address is known (for our demo we have used IAmAVirus.Com), and we want to identify insights surrounding what employees have accessed this host.</p>
         <p>First select the (1) WebLog database (since the initial connection surrounds web traffic), then select the (2) Security Perspective, and then select a (3) Specific Question. In this case, the analyst is interested in identifying what workstations (assets) have accessed the particular IP Address.</p>
