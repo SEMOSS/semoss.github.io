@@ -154,9 +154,39 @@
         <h5>5.2: IPlaySheet</h5>
         <p>The IPlaySheet.java class is the play sheet interface for Semoss. All play sheets implement this interface which includes the basic functions of a data visualizer.</p>
         <p>Here's a table of some of the most important functions of this interface.</p>
-        <table class="">
-    <tbody>table</tbody>
-    </table>
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th>Interface Method</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>setQuery(String query);</td>
+                <td>Sets a query to the play sheet which can be later used to populate the play sheet with specific data.</td>
+            </tr>
+            <tr>
+                <td>setRDFEngine(IEngine engine)</td>
+                <td>Sets the RDF engine for the play sheet to run its query against.</td>
+            </tr>
+            <tr>
+                <td>createView()</td>
+                <td>Creates the view based off the data passed in. </td>
+            </tr>
+            <tr>
+                <td>refineView()</td>
+                <td>Recreates the visualizer and the repaints the play sheet without recreating the model or pulling anything from the specified engine.</td>
+            <tr>
+                <td>extendView()</td>
+                <td>Adds additional data to the model that is already associated with the play sheet.</td>
+            </tr>
+            <tr>
+                <td>removeView()</td>
+                <td>Removes data from current model that is associated with the play sheet.</td>
+            </tr>
+            <tr>
+                <td>undoView()</td>
+                <td>Removes from the play sheet's current model everything that was returned from the query the last time the model was augmented.</td>
+            </tr>
+        </table>
         <p>There are other functions associated with play sheets as well. Please refer to the Javadoc at ___________________________ for additional information.</p>
         <h5>5.3: Types of Play Sheets</h5>
         <p>Semoss 1.0 is packaged with three different play sheet types.  Two of the play sheets are very similar in the way they display data&#8212;GridPlaySheet and GridRAWPlaysheet &#8212; but differ in the way they process the data.</p>
