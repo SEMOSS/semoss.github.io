@@ -131,8 +131,33 @@
         <h5>4.1: IEngine</h5>
         <p>The <b>IEngine.java</b> class is the interface class of Semoss used to standardize the functionality of the unique engine classes. As of version 1.0, Semoss has only implemented engines that connect to RDF triple stores, but an engine in Semoss can be written to take in any database.
         <p>The following table provides a brief description of the most commonly used functions of IEngine.</p>
-            <table class="">
-    <tbody>table</tbody>
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th>Interface Method</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td rowspan="1">openDB(String propFile);</td>
+                <td>Opens a database as defined by its properties file.</td>
+            </tr>
+            <tr>
+                <td rowspan="1">closeDB()</td>
+                <td>Closes the data base associated with the engine.</td>
+            </tr>
+            <tr>
+                <td rowspan="1">execGraphQuery(String query)</td>
+                <td>Runs the passed string query against the engine and returns graph query results. The query passed must be in the structure of a CONSTRUCT SPARQL query.</td>
+            <tr>
+                <td rowspan="1">execSelectQuery(String query)</td>
+                <td>Runs the passed string query against the engine as a SELECT query. The query passed must be in the structure of a SELECT SPARQL query.</td>
+            </tr>
+                <td rowspan="1">execInsertQuery(String query)</td>
+                <td>Runs the passed string query against the engine as an INSERT query. The query passed must be in the structure of an INSERT SPARQL query or an INSERT DATA SPARQL query.</td>
+            <tr>
+                <td rowspan="1">getEngineType();</td>
+                <td>Gets the type of the engine. The engine type is often used to determine what API to use while running queries against the engine.</td>
+            </tr>
+            </tr>
     </table>
         <p>There are other other functions associated with each engine as well. Please refer to Javadoc at ___________________________ for additional information.</p>
         <h5>4.2: Types of Engines</h5>
@@ -140,13 +165,70 @@
         <h5>4.2.1 Local Data Repository</h5>
         <p>Local repositories are databases that reside in the "db" folder of the Semoss tool. There are a few local repository engine classes that are supported as of Version 1.0. Semoss at any given time can have multiple engines running of the same type, but each engine must connect to a unique data store. The data stores that these local data engine classes connect to must be local to a given user's application.</p>
         <p>The following table lays out the different engine classes that connect to local repositories:</p>
-        <table class="">
-    <tbody>table</tbody>
-    </table>
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th>Engine Class: Local Repository</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td rowspan="4">BigDataEngine.java</td>
+                <td>Uses BigData SPARQL processing which implements the Sesame API</td>
+            </tr>
+            <tr>
+                <td>Reads a .jnl file as its triple store </td>
+            </tr>
+            <tr>
+                <td>Has superior processing power but customization is difficult</td>
+            </tr>
+            <tr>
+                <td>http://www.systap.com/bigdata.htm</td>
+            </tr>
+            <tr>
+                <td rowspan="4">RDFFileJenaEngine.java</td>
+                <td>Uses Apache Jena processing and API</td>
+            </tr>
+            <tr>
+                <td>Can read a wide array of triple store formats (.rdf, .xml, .ttl, etc.)</td>
+            </tr>
+            <tr>
+                <td>Straightforward customization</td>
+            </tr>
+            <tr>
+                <td>http://jena.apache.org/</td>
+            </tr>
+            <tr>
+                <td rowspan="4">RDFFileSesameEngine.java</td>
+                <td>Uses OpenRDF Sesame processing and API</td>
+            </tr>
+            <tr>
+                <td>Can read a wide array of triple store formats (.rdf, .xml, .ttl, etc.)</td>
+            </tr>
+            <tr>
+                <td>Straightforward customization</td>
+            </tr>
+            <tr>
+                <td>http://www.openrdf.org</td>
+            </tr>
+        </table>
         <h5>4.2.2 Remote Server Repository (NEED TO LOOK AT THIS SECTION)</h5>
         <p>Remote repositories are databases that reside on another server and require a live connection for the engine to access it. These databases usually require a REST API on the remote Apache server and there can be multiple access entries. The following table lays out the current engines that connect to remote data stores:</p>
-        <table class="">
-    <tbody>table</tbody>
+    <table class="table table-bordered table-striped">
+            <tr>
+                <th>Engine Class: Remote Repository</th>
+                <th>Description</th>
+            <tr>
+                <td rowspan="4">RemoteSparqlEngine.java</td>
+                <td>Uses BigData SPARQL processing which implements the Sesame API </td>
+            </tr>
+            <tr>
+                <td>Reads a hosted data store</td>
+            </tr>
+            <tr>
+                <td>Has superior processing power but customization is difficult</td>
+            </tr>
+            <tr>
+                <td>http://www.systap.com/bigdata.htm</td>
+            </tr>      
     </table>
         <h3>5: Semoss Play Sheets</h3>
         <p>Play sheets in Semoss are the components that filter, analyze and visualize data. There are a number of different play sheets with unique visualization components, allowing for the same data to be displayed and manipulated in very different ways.</p>
