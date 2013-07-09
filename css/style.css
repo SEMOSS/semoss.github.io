@@ -13,8 +13,9 @@ body {
       margin: 30px 0;
 }
 
-.container-narrow.doc-container {
-
+.container-narrow.docs {
+      margin-left: auto;
+      margin-right: auto;
 }
 
 /* Main marketing message and sign up button */
@@ -256,9 +257,8 @@ p#version {
 
 /*-----------------Docs----------------*/
 
-.docContainer {
-      width: 1000px;
-      margin: 0 auto;
+body.docs {
+      margin-left: 230px;
 }
 
 .docs h1 {
@@ -269,7 +269,6 @@ p#version {
 }
 
 .docs p {
-      color: white;
       font-family: helvetica, arial, sans-serif;
       margin-top: 20px;
 }
@@ -278,12 +277,13 @@ p#version {
       text-decoration: none;
       color: black;
 }
+
 .docs li a:visited {
       text-decoration: none;
       color: black;
 }
 
-.docs li.active a:link{
+.docs li.active a:link {
       color: white;
 }
 
@@ -302,4 +302,37 @@ p#version {
 .nav .dropdown-toggle .caret {
       border-top-color: #000;
       border-bottom-color: #000;
+}
+
+/*-------------Table of contents------------*/
+
+#secondary {
+      background-color: #eee;
+      padding: 10px;
+      border-right: 1px solid #ccc;
+      position: fixed;
+      top: 0px;
+      bottom: 0px;
+      left: 0px;
+      overflow-y: scroll;
+      width: 230px;
+      z-index: 99999;
+      -webkit-box-shadow: 1px 1px 4px rgba(0,0,0,.1), 1px -1px 4px rgba(0,0,0,.1);
+      -moz-box-shadow: 1px 1px 4px rgba(0,0,0,.1), 1px -1px 4px rgba(0,0,0,.1);
+      box-shadow: 1px 1px 4px rgba(0,0,0,.1), 1px -1px 4px rgba(0,0,0,.1);
+      border-right: 1px solid #999999 ;
+}
+
+#secondary a {
+      display: block;
+      font-family: sans-serif;
+      line-height: 2;
+      border-bottom: 1px solid #ddd;
+      margin-left: -25px;
+}
+
+#secondary h4 {
+      color: #777;
+      border-bottom: 1px solid #ddd;
+      line-height: 2;
 }
