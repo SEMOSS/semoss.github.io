@@ -336,3 +336,15 @@ body.docs {
       border-bottom: 1px solid #ddd;
       line-height: 2;
 }
+
+
+/*------------------Image IDs for documentation--------------*/
+
+img.docs {
+      border: 1px solid #ccc;
+      background-color: #fff;
+      padding: 2px;
+}
+
+
+
