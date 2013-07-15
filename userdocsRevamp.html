@@ -138,7 +138,7 @@
                 <em><h5>Create Button (5)</h5></em>
                 <p>This button executes the constructed SPARQL query and displays the result either as a graph or as a grid.</p>
                 <br>
-                <img src="img/userDocs/image005.jpg" class="imgdocs" />
+                <img src="img/userDocs/image005.jpg" class="docs" />
                 </br>
                 <em><h5>Undo/Remove (6)</h5></em>
                 <p>The undo button undoes the last action the user has taken. The first time the button is pressed, it removes relevant properties. The second time it is pressed, it removes nodes from the graph.</p>
@@ -164,7 +164,7 @@
                 <p>When the "create" button is toggled and a graph is created, a window within the display pane appears showing either a graph or a grid sheet. These sheets are where the insights are generated for future analysis.</p> 
                 <h5 id="GraphPlaySheetFunctionality">Graph Play Sheet Functionality</h5>
                 <p>The graph play sheet has a number of ways to manipulate a graph after it is created, most of which are accessible from the right click menu.  It is important to note that the right click functionality is highly dependent on whether or not a node or a group of nodes is selected as well as which node(s) is selected.  </p>
-                <img src="img/userDocs/image007.png" class="imgdocs" />
+                <img src="img/userDocs/image007.png" class="docs" />
                 <h5>Show Minimum Spanning Tree</h5>
                 <p>This feature essentially determines the minimum amount of edges necessary to connect all of the vertices of the graph.  This functionality is useful in identification of redundancies within the network.</p>
                 <h5>Highlight Adjacent</h5>
@@ -207,7 +207,7 @@
                 <h3 id="NewDatabaseEngine">2: Creating a New Database Engine</h3>
                 <p>This is the set of steps that must be completed in order to create a new database engine and to load new data to the engine from Excel. Note that some of these steps may be done simultaneously, but all of the steps must be completed to create a fully functional engine.</p>
                 <p>There are other ways to create an engine and connect it to a data store, but this is the easiest way, assuming that the data is not already structured and formatted.</p>
-                <img src="img/userDocs/graph.jpg" class="imgdocs" />
+                <img src="img/userDocs/graph.jpg" class="docs" />
                 <ul><p>1. Identify and understand the data and the relationships within the data.</p>
                 <p>2. Develop the metamodel</p>
                 <p>3. Load the metamodel objects and their relationships into Semoss' properties sheet</p>
@@ -221,7 +221,7 @@
                 <p>Usually, the metamodel is displayed as a map, as shown below for our security database in Figure 2.1.1.</p>
                 <p>Development of the metamodel is one of the most important and complex tasks that needs to be completed in order to be able to efficiently and effectively extract data from the engine. If the metamodel is not thorough, straightforward, and comprehensive, it will be very difficult to extract insights from any set of data. The most important paradigm to consider is that the metamodel should be constructed based on the fundamental relationships between the data, as opposed to a structure that is based on answering specific, known, questions from the data.</p>
                 <p>This allows the database to be queried based on prospective insights (as opposed to modifying the database to allow for this to happen).</p>
-                <p>Figure 2.1.1 below contains the base metamodel for our sample security database. The metamodel is constructed such that each of the node types and its relationships with other node types is represented by boxes and lines.</p><img src="img/userDocs/image014.png" class="imgdocs" />
+                <p>Figure 2.1.1 below contains the base metamodel for our sample security database. The metamodel is constructed such that each of the node types and its relationships with other node types is represented by boxes and lines.</p><img src="img/userDocs/image014.png" class="docs" />
                 <h5 id="LoadMetaModel">2.2 Load the Metamodel relationships into the Map Sheet</h5>
                 <em><p>Note: This section only applies if loading from an Excel loading sheet.</p></em>
                 <p>Once the metamodel is created, the base objects and relationships must be loaded into the RDF map sheet, named in the initial open-source release RDF_Map.prop.  This step ensures that the data loads successfully and correctly aligns with the previously designed metamodel.</p>
@@ -285,15 +285,15 @@
                 <p>The <b>Loader</b> tab essentially contains the name of the sheets that are read into the database. The name of the tab must be "Loader", and adjacent in column B to each of the tabs that are loaded should be the text "Usual."</p>
                 <p>Cell A1 should contain the text "SheetName" and Cell B1 must contain the text "Type."</p>
                 <p>The tab should be constructed as follows (example for the security database):</p>
-                <img src="img/userDocs/image015.png" class="imgdocs" />
+                <img src="img/userDocs/image015.png" class="docs" />
                 <h5><em>Relation Tabs: Loading Triples</em></h5>
                 <p>The other tabs should individually contain specific information surrounding an individual triple store that is to be loaded into the database. For example, <UserName><AssignedTo><AssetID>. Cell A1 should contain the text "Relation", Cell A2 should contain the predicate (AssignedTo in this case), Cell B1 should contain the first node type (e.g. UserName), and cell C1 should contain the second node type (e.g. AssetID).</p>
                 <p>Column B should contain the actual first node instances, and column C should contain the second node instances. Properties on the edges (e.g. not triples, but data that may be relevant as a property such as a cost) can be attached in adjacent columns. Note that the property is not added to the node, but rather, the edge. To add properties to nodes a separate type of sheet is required (as documented below). Properties do not need to be added in the prop sheet, but are more difficult to visualize and query (example shown in figure 2.3.2 for the security database).</p>
-                <img src="img/userDocs/image016.png" class="imgdocs" />
+                <img src="img/userDocs/image016.png" class="docs" />
                 <br></br>
                 <h5><em>Node Property Tabs: Loading Properties</em></h5>
                 <p>In the case where a property is desired to be added onto a node as opposed to a node edge (as above), a separate tab is necessary to be created to show this information. The structure of the sheet is displayed below for the Site property sheet for the security database, where city and state are denoted as properties of an individual site name.</p>
-                <img src="img/userDocs/image017.png" class="imgdocs" />    
+                <img src="img/userDocs/image017.png" class="docs" />    
                 <h5 id="BuildingDatabase">2.4 Building the database</h5>
                 <p>Once the excel files are generated, the database needs to be created.</p>
                 <p>There are two options to create a database: using the user interface import functionality or using the POIReader java file (POIReader is explained in the developer guide). The user interface is somewhat more intuitive, and does not require manual modification of the java code. However, it is not as efficient in processing multiple workbooks or debugging potential loading sheet data issues.</p>
@@ -330,7 +330,7 @@
                 SQ4 What IP addresses have touched this site?
                 SQ5 What employees are located at this site?
                 SQ6 What sites has this IP Address touched?</pre>
-                <img src="img/userDocs/image018.png" class="imgdocs" />
+                <img src="img/userDocs/image018.png" class="docs" />
                 <p>Finally, the text of the individual queries is denoted. A stock query requires two components, first the specification of the layout (e.g. graph or grid play sheet) and then the actual query text.</p>
                 <p>Consider the SQ1 Query (What Workstations have accessed this IP Address?).</p>
                 <pre>SQ1_LAYOUT  prerna.ui.components.GraphPlaySheet</p>
@@ -348,7 +348,7 @@
                 <p>There are multiple types of queries available to SPARQL, however only the SELECT (which results in grids) and CONSTRUCT (which results in graphs) queries are used.</p>
                 <p>A query has three major parts: The Query Type (SELECT or CONSTRUCT), the return variables (what is to be returned from the query), and the pattern that the triples must follow, in other words as structured:</p>
                 <br></br>
-                <img src="img/userDocs/image020.jpg" class="imgdocs" />
+                <img src="img/userDocs/image020.jpg" class="docs" />
                 <br></br>
                 <p>To query the database it is important to note the URI (Uniform Resource Index) of the particular types(s) that are to be queried. The query below is a simple query for the Security database, which traverses from the Asset ID to IP Address, based on a specified IP Address. This query would be used to identify what assets (computers) have visited a particular website, in identification of the cause of a particular virus. Additionally, the user can then extend from that particular object (traverse freely) through to other nodes to identify additional insights. This is performed by right clicking on the node in question and traversing to the desired additional node.</p>
                 <p>Here, a <b>CONSTRUCT</b> query is used because a graph is generated. Second, since only one relationship is traversed, from AccessID to IP Address, the result set is:</p>
@@ -371,24 +371,24 @@
                 <h5 id="Concept">4.1 Concept</h5>
                 <p>Like most enterprises this data is located in disparate, disconnected data sets. Likely, there is a PeopleSoft Oracle solution which manages HR information for the company, an active-directory based asset database that contains all of the assets connected to the enterprise, and a web traffic log provided by the network support team. These databases are likely disconnected, and on-face, do not communicate with each other.</p>
                 <p>In order to identify information about the security breach, however, these databases will need to communicate to connect information surrounding the attack.</p>
-                <img src="img/userDocs/image022.png" class="imgdocs" />
+                <img src="img/userDocs/image022.png" class="docs" />
                 <br></br>
                 <p>The SEMOSS team has extracted specific, relevant components from these databases and generated a metamodel (more information surrounding metamodels can be found in section 2.1).  However, this data is unfiltered and it must be processed and connected in SEMOSS for actionable insights to be generated. The Security metamodel is located in figure 4.1.2 below.</p>
                 <p>Essentially, the three disparate databases are connected through the metamodel and can be combined to generate insights surrounding the attack that occurred.</p>
-                <img src="img/userDocs/image024.png" class="imgdocs" />
+                <img src="img/userDocs/image024.png" class="docs" />
                 <h5 id="Generating">4.2  Generating Insights</h5>
                 <p>Traversing through the database is relatively straightforward. Let's imagine that the IP Address is known (for our demo we have used IAmAVirus.Com), and we want to identify insights surrounding what employees have accessed this host.</p>
                 <p>First select the (1) WebLog database (since the initial connection surrounds web traffic), then select the (2) Security Perspective, and then select a (3) Specific Question. In this case, the analyst is interested in identifying what workstations (assets) have accessed the particular IP Address.</p>
-                <img src="img/userDocs/image026.jpg" class="imgdocs" />
+                <img src="img/userDocs/image026.jpg" class="docs" />
                 <p>Once the query is created, the available parameters are selected, in this case the IP Address, and then the create button is pressed to generate the initial graph (figure 4.2.2 below).</p>
-                <img src="img/userDocs/image028.jpg" class="imgdocs" />
+                <img src="img/userDocs/image028.jpg" class="docs" />
                 <p>Now, all of the workstation assets that have accessed that particular IP address have been identified. Next, the analyst might be interested in the usernames associated with those particular asset identifiers. By first selecting the database to traverse to (e.g. the Asset Database) and then by right clicking on the individual node in question, the user can traverse to another node. In this case, the analyst will traverse through to username (figure 4.2.4 below).</p><p>Now, the graph shows the usernames associated with the assets that have been compromised.</p>
-                <img src="img/userDocs/image030.jpg" class="imgdocs" />
-                <img src="img/userDocs/image031.png" class="imgdocs" />
+                <img src="img/userDocs/image030.jpg" class="docs" />
+                <img src="img/userDocs/image031.png" class="docs" />
                 <p>Next, the user may be interested in identifying the names of the employees involved, so by switching to the PeopleSoft database perspective the analyst can traverse through to this question. Next, the user may be interested in where these individuals are located (perhaps the security breach has occurred at a specific location), so the user can traverse through to these locations to identify the specific area where the breach has occurred (as in figure 4.2.5 below).</p>
-                <img src="img/userDocs/image034.jpg" class="imgdocs" />
+                <img src="img/userDocs/image034.jpg" class="docs" />
                 <p>Finally, the analyst may be interested in what servers those assets have accessed, so by switching back to the traffic log, the user can traverse through to server. In addition, highlight adjacent functionality can be used to identify the specific nodes that a particular instance touches; in this case, it appears as if a particular asset has touched an extraordinary amount of servers; possibly suggesting that that particular asset has infected the entire enterprise (as below).</p>
-                <img src="img/userDocs/image035.png" class="imgdocs" />
+                <img src="img/userDocs/image035.png" class="docs" />
                 <p>Through this analysis, we have identified that this particular user has likely gone to a malicious website, identified the party respinsible, as well as all of the servers this particular user has touched to identify what actions need to be taken to reduce the impact to the enterprise. In addition, this analysis has been performed by merging three separate, disparate databases that ordinarily would not communicate with each other.</p>
                 <h3 id="Additional">Additional Sources</h3>
                 <p>Additional Information surrounding SEMOSS is located here:</p>

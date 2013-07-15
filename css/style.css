@@ -339,13 +339,10 @@ body.docs {
 
 /*-------------User Docs Images------------*/
 
-.imgdocs{
+img.docs{
       border-style:solid; 
-      border-width:2px;
-      border-color:#cccccc;
-      margin-bottom: 2px;
-      margin-top: 2px;
-      margin-left:2px;
-      margin-right:2px;
-      padding:5px 5px 5px 5px;
+      border-width:1px;
+      border-color:#ccc;
+      margin: 3px;
+      padding:5px;
 }
