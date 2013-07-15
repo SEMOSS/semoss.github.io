@@ -339,10 +339,17 @@ body.docs {
 
 /*-------------User Docs Images------------*/
 
-img.docs{
-      border-style:solid; 
+.caption{
+      text-align: center;
+      font-style: italic;
+      font-size: 12px;
+}
+.imageDocs{ 
+      border-style:solid;
+      display: inline-block;
       border-width:1px;
       border-color:#ccc;
       margin: 3px;
       padding:5px;
 }
+
