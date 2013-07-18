@@ -13,11 +13,6 @@ body {
       margin: 30px 0;
 }
 
-.container-narrow.docs {
-      margin-left: auto;
-      margin-right: auto;
-}
-
 /* Main marketing message and sign up button */
 .jumbotron {
       max-width: 1000px;
@@ -304,6 +299,16 @@ body.docs {
       border-bottom-color: #000;
 }
 
+.container-narrow.docs {
+      margin-left: auto;
+      margin-right: auto;
+      margin-left: 50px;
+}
+
+.jumbotron.docs {
+      margin-left: 50px;
+}
+
 /*-------------Table of contents------------*/
 
 #secondary {
@@ -315,12 +320,15 @@ body.docs {
       bottom: 0px;
       left: 0px;
       overflow-y: scroll;
-      width: 230px;
       z-index: 99999;
       -webkit-box-shadow: 1px 1px 4px rgba(0,0,0,.1), 1px -1px 4px rgba(0,0,0,.1);
       -moz-box-shadow: 1px 1px 4px rgba(0,0,0,.1), 1px -1px 4px rgba(0,0,0,.1);
       box-shadow: 1px 1px 4px rgba(0,0,0,.1), 1px -1px 4px rgba(0,0,0,.1);
       border-right: 1px solid #999999 ;
+}
+
+#secondary.span3 {
+      margin-left: 0px;
 }
 
 #secondary a {

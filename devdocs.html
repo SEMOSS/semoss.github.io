@@ -3,14 +3,13 @@
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>Semoss</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- The styles we are using -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <!--<link href="css/bootstrap-responsive.css" rel="stylesheet">-->
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -27,7 +26,7 @@
 
   <body class="docs">
 
-    <div class="container-narrow">
+    <div class="container-narrow docs">
       <div class="masthead">
         <ul class="nav nav-pills pull-right navigation">
             <li><a href="index.html"><i class="icon-home"></i> Home</a></li>
@@ -47,55 +46,58 @@
     </div>
     
     <div id="bg">
-        <div class="jumbotron">
+        <div class="jumbotron docs">
           <h1>Developer Documentation</h1>
           <p class="lead">Information regarding Semoss code</p>
         </div>
     </div>
     
+    <div class="container-narrow docs">
+        <div class="row">
+            <div id="secondary" class="span3">
+                   <h4>Table of Contents</h4>
+                   <ul>
+                       <a href="#Introduction">Introduction</a>
+                       <a href="#Overview">Overview</a>
+                       <a href="#GettingStarted">1: Getting Started</a>
+                       <a href="#Installation">1.1: Installation</a>
+                       <a href="#SourceCode">1.2: Source Code Directory Structure</a>
+                       <a href="#src">1.2.1 src/</a>
+                       <a href="#db">1.2.2 db/</a>
+                       <a href="#help">1.2.3 help/</a>
+                       <a href="#pictures">1.2.4 pictures/</a>
+                       <a href="#questions">1.2.5 questions/</a>
+                       <a href="#RDFGraphLib">1.2.6 RDFGraphLib/</a>
+                       <a href="#Training">1.2.7: training/</a>
+                       <a href="#External">1.3: External Dependencies</a>
+                       <a href="#Configuration">1.4: Configuration Files</a>
+                       <a href="#RDF">1.4.1 RDF_Map.prop</a>
+                       <a href="#log4">1.4.2 log4.prop</a>
+                       <a href="#Sequence">2: Sequence Diagrams</a>
+                       <a href="#Starter">2.1: Starter Process</a>
+                       <a href="#Query">2.2: Query Processing</a>
+                       <a href="#Component">3: Component Diagrams</a>
+                       <a href="#Sheets">3.1: Play Sheets</a>
+                       <a href="#Swing">3.2: Swing Layout</a>
+                       <a href="#GraphPopUp">3.3: Graph Popup</a>
+                       <a href="#Database">4: Databases and Engines</a>
+                       <a href="#IEngine">4.1: IEngine</a>
+                       <a href="#Engines">4.2: Types of Engines</a>
+                       <a href="#Local">4.2.1: Local Data Repository</a>
+                       <a href="#Remote">4.2.2: Remote Server Repository</a>
+                       <a href="#PlaySheets">5: SEMOSS Play Sheets</a>
+                       <a href="#IPlaySheet">5.2: IPlaySheet</a>
+                       <a href="#TypesofPlaySheets">5.3: Types of Play Sheets</a>
+                       <a href="#GridPlaySheet">5.3.1: GridPlaySheet</a>
+                       <a href="#GridRAWPlaySheet">5.3.2: GridRAWPlaySheet</a>
+                       <a href="#GraphPlaySheet">5.3.3: GraphPlaySheet</a>
+                       <a href="#section6">6: Understanding Ontology</a>
+                   </ul>
+               </div>
+        </div>
     
-    <div id="secondary">
-        <h4>Table of Contents</h4>
-        <ul>
-            <a href="#Introduction">Introduction</a>
-            <a href="#Overview">Overview</a>
-            <a href="#GettingStarted">1: Getting Started</a>
-            <a href="#Installation">1.1: Installation</a>
-            <a href="#SourceCode">1.2: Source Code Directory Structure</a>
-            <a href="#src">1.2.1 src/</a>
-            <a href="#db">1.2.2 db/</a>
-            <a href="#help">1.2.3 help/</a>
-            <a href="#pictures">1.2.4 pictures/</a>
-            <a href="#questions">1.2.5 questions/</a>
-            <a href="#RDFGraphLib">1.2.6 RDFGraphLib/</a>
-            <a href="#Training">1.2.7: training/</a>
-            <a href="#External">1.3: External Dependencies</a>
-            <a href="#Configuration">1.4: Configuration Files</a>
-            <a href="#RDF">1.4.1 RDF_Map.prop</a>
-            <a href="#log4">1.4.2 log4.prop</a>
-            <a href="#Sequence">2: Sequence Diagrams</a>
-            <a href="#Starter">2.1: Starter Process</a>
-            <a href="#Query">2.2: Query Processing</a>
-            <a href="#Component">3: Component Diagrams</a>
-            <a href="#Sheets">3.1: Play Sheets</a>
-            <a href="#Swing">3.2: Swing Layout</a>
-            <a href="#GraphPopUp">3.3: Graph Popup</a>
-            <a href="#Database">4: Databases and Engines</a>
-            <a href="#IEngine">4.1: IEngine</a>
-            <a href="#Engines">4.2: Types of Engines</a>
-            <a href="#Local">4.2.1: Local Data Repository</a>
-            <a href="#Remote">4.2.2: Remote Server Repository</a>
-            <a href="#PlaySheets">5: SEMOSS Play Sheets</a>
-            <a href="#IPlaySheet">5.2: IPlaySheet</a>
-            <a href="#TypesofPlaySheets">5.3: Types of Play Sheets</a>
-            <a href="#GridPlaySheet">5.3.1: GridPlaySheet</a>
-            <a href="#GridRAWPlaySheet">5.3.2: GridRAWPlaySheet</a>
-            <a href="#GraphPlaySheet">5.3.3: GraphPlaySheet</a>
-            <a href="#section6">6: Understanding Ontology</a>
-        </ul>
-    </div>
     
-    <div class="container-narrow">
+    <div class="container-narrow" class="span10">
         <br>
         <h3 id="Introduction">Introduction</h3></a>
         <p>This guide takes an in depth look at the code behind Semoss and should be used as a jumping point for those interested in modifying features or developing additional features for Semoss.</p>
@@ -342,6 +344,7 @@
             <br></br>
             <p>Licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a></p>
         </div>
+      </div>
 
     </div> <!-- /container -->
 
