@@ -334,7 +334,8 @@
                 <br>
                 <pre>SQ1_LAYOUT  prerna.ui.components.GraphPlaySheet
                 SQ1_QUERY   CONSTRUCT {?AssetID ?Accesses ?IPAddress} WHERE {{?IPAddress < http://www.w3.org/2000/01/rdf-schema#label > "@IPAddress-IPAddress@";}{?IPAddress < http://www.w3.org/1999/02/22-rdf-syntax-ns#type> < http://Sdb.com/ontologies/Concept/IPAddress>;}{?Accesses < http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
-                < http://Sdb.com/ontologies/Relation/Accesses > ;}{?AssetID < http://www.w3.org/1999/02/22-rdf-syntax-ns#type > < http://Sdb.com/ontologies/Concept/AssetID>;}{?AssetID ?Accesses ?IPAddress}
+                < http://Sdb.com/ontologies/Relation/Accesses > ;}{?AssetID < http://www.w3.org/1999/02/22-rdf-syntax-ns#type > < http
+                ://Sdb.com/ontologies/Concept/AssetID>;}{?AssetID ?Accesses ?IPAddress}
                 </pre>
                 <p>Note that the play sheet specific for a grid (i.e. table-based) sheet is:</p>
                 <pre>SQ1_LAYOUT  prerna.ui.components.GridPlaySheet</pre>
@@ -344,7 +345,7 @@
                 <br></br>
                 <h3 id="SPARQL">3: SPARQL Queries within SEMOSS</h3>
                 <p>SPARQL is the query language used to query different databases within SEMOSS. Querying in SPARQL is a means of retrieving or creating meaningful data from an RDF triple store.</p>
-                <p>This document does not provide in-depth guidance in generating SPARQL queries, for additional guidance, it is suggested to purchase Learning SPRAQL by Bob DuCharme. More information can be found at <a href="www.learningsparql.com">www.learningsparql.com</a>, and the book can be purchased on <a href="http://www.amazon.com/exec/obidos/ISBN=1449306594/bobducharmeA/">Amazon</a> here. More information can be found at <a href="www.SEMOSS.org">www.SEMOSS.org</a>.</p>
+                <p>This document does not provide in-depth guidance in generating SPARQL queries, for additional guidance, it is suggested to purchase Learning SPRAQL by Bob DuCharme. More information can be found at <a href="http://www.learningsparql.com">www.learningsparql.com</a>, and the book can be purchased on <a href="http://www.amazon.com/exec/obidos/ISBN=1449306594/bobducharmeA/">Amazon</a> here. More information can be found at <a href="http://www.SEMOSS.org">www.SEMOSS.org</a>.</p>
                 <p>In the semantics-based RDF ontology, this high-level framework provides the context through which data is structured. The Resource Description Framework (RDF) is a data model for encoding, gathering, and representing information about resources. Elements in RDF are stored as Uniform Resource Identifiers (URIs) and are always part of a triple. Constructed like a sentence (with a subject, predicate, and object) the triple structure is relational in form. A triple is defined as <Subject> <Predicate> <Object> where "< >" denotes a URI. For example, an Employee has a UserName (constructed as <Employee><Has><UserName>. These categories (e.g. Employee) are called types, which contain specific instances (e.g. John Smith). Thus, John Smith has J_Smith, or, < John Smith > < John Smith:J_Smith > < J_Smith >.</p>
                 <p>There are multiple types of queries available to SPARQL, however only the SELECT (which results in grids) and CONSTRUCT (which results in graphs) queries are used.</p>
                 <p>A query has three major parts: The Query Type (SELECT or CONSTRUCT), the return variables (what is to be returned from the query), and the pattern that the triples must follow, in other words as structured:</p>
