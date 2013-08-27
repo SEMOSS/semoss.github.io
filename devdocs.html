@@ -1,60 +1,76 @@
 <!DOCTYPE html>
 <!-- saved from url=(0066)http://twitter.github.com/bootstrap/examples/marketing-narrow.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <title>Semoss</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- The styles we are using -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <!--<link href="css/bootstrap-responsive.css" rel="stylesheet">-->
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="../assets/js/html5shiv.js"></script>
-    <![endif]-->
-
-    <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="#">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="#">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="#">
-    <link rel="apple-touch-icon-precomposed" href="#">
-    <link rel="shortcut icon" href="#">
-  </head>
-
-  <body class="docs">
-
-    <div class="container-narrow docs">
-      <div class="masthead">
-        <ul class="nav nav-pills pull-right navigation">
-            <li><a href="index.html"><i class="icon-home"></i> Home</a></li>
-            <li class="dropdown active">
-                      <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-book"></i> Docs <b class="caret"></b></a>
-                      <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                        <li class="unselected"><a href="userdocs.html">User Docs</a></li>
-                        <li class="active"><a href="devdocs.html">Developer Docs</a></li>
-                      </ul>
-            </li>
-          <li><a href="contact.html"><i class="icon-envelope"></i> Contact</a></li>
-          <li><a href="http://blog.Semoss.org" target="_blank"><i class="icon-comment"></i> Blog</a></li>
-          
-        </ul>
-        <a href="index.html"><img src="img/logo.png" id="logo"></a>
-      </div>
-    </div>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Semoss</title>
+        
+        <meta name="description" content="">
+        <meta name="author" content="">
     
-    <div id="bg">
-        <div class="jumbotron docs">
-          <h1>Developer Documentation</h1>
-          <p class="lead">Information regarding Semoss code</p>
+        <!-- Le style -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/shame.css" rel="stylesheet">
+            
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="../assets/js/html5shiv.js"></script>
+        <![endif]-->
+    
+        <!-- Fav and touch icons -->
+        <link rel="shortcut icon" href="img/favicon.ico" />
+    </head>
+
+    <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-2">
+                <nav class="navbar navbar-default" role="navigation">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand brand-docs" id="logo" href="#"><img src="img/logo.png"></a>
+                    </div>
+                  
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+                      <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Docs <b class="caret"></b></a>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">User Docs</a></li>
+                            <li><a href="#">Developer Docs</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div><!-- /.navbar-collapse -->
+                  </nav>
+            </div>
         </div>
     </div>
+        <div class="hero-unit-sm">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-2">
+                        <h1>Developer Documentation</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
     
-    <div class="container-narrow docs">
-        <div class="row">
-            <div id="secondary" class="span3">
+    <div class="container">
+            <div class="row">
+                <div class="col-lg-2 sidebar hidden-xs hidden-sm hidden-md">
                    <h4>Table of Contents</h4>
                    <ul>
                        <a href="#Introduction">Introduction</a>
@@ -97,7 +113,7 @@
         </div>
     
     
-    <div class="container-narrow" class="span10">
+     <div class="col-lg-10 col-lg-offset-2 doc-content">
         <br>
         <h3 id="Introduction">Introduction</h3></a>
         <p>This guide takes an in depth look at the code behind Semoss and should be used as a jumping point for those interested in modifying features or developing additional features for Semoss.</p>
@@ -341,7 +357,7 @@
         <p>Figure 2.1.1 below contains the base metamodel for our sample security metamodel. The metamodel is constructed such that each of the node types and its relationships with other node types is represented by boxes and lines.</p>
         <div class="imageDocs"><img src="img/devDocs/image016.png" alt="016"><div class="caption">Figure 6.1.1: Security Database Metamodel</div></div>
         <hr>
-            <br></br>
+            <br>
             <p class="pull-left license">Licensed under the <a href="http://www.gnu.org/licenses/gpl.html">GNU General Public License</a></p>
         </div>
       </div>
