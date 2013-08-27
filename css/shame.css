@@ -1,0 +1,31 @@
+.navbar-default {
+    background-color: #fff;
+    border: none;   
+}
+
+.navbar {
+    margin-bottom: 0px;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.navbar-nav {
+    margin-top: 0px;
+}
+
+.navbar-nav > li > a {
+    padding: 21px 15px;
+}
+
+.navbar-toggle {
+    margin-top: 13px;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-color: #e7e7e7;
+    color: #555555;
+}
+
+.dropdown-menu {
+    border-top: 1px solid #ccc;
+}
