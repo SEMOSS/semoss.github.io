@@ -29,3 +29,13 @@
 .dropdown-menu {
     border-top: 1px solid #ccc;
 }
+
+.dropdown-menu > .active > a {
+    background-color: #e7e7e7;
+    color: #555;
+}
+
+.dropdown-menu > .active > a:hover {
+    background-color: #e7e7e7;
+    color: #444;
+}
