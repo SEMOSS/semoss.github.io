@@ -35,7 +35,26 @@
     color: #555;
 }
 
-.dropdown-menu > .active > a:hover {
+.active > a:hover {
     background-color: #e7e7e7;
     color: #444;
+}
+
+.dropdown-toggle.active {
+      background-color: #e7e7e7;
+      color: #555;
+}
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+    background-color: #e7e7e7;
+    color: #555;
+}
+
+.navbar-default .navbar-nav > li  > a.active:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #e7e7e7;
+    color: #555;
+}
+
+.dropdown-toggle.active > a:hover {
+    
 }
