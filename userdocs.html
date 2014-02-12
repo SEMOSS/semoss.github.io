@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
-        <title>Semoss</title>
+        <title>SEMOSS</title>
         
         <meta name="description" content="">
         <meta name="author" content="">
@@ -117,27 +117,27 @@
             
                 <div class="col-lg-10 col-lg-offset-2 doc-content">
                     <h3 id="Introduction1">Introduction</h3>
-                    <p>Semoss is a data-driven application that enables users to <em></em>explore relationships and connections in an interactive format through intermediate conduits, i.e. transitive relationships.
-                        This document provides general usage instructions and guidance in deployment of the open source components of Semoss,
+                    <p>SEMOSS is a data-driven application that enables users to <em></em>explore relationships and connections in an interactive format through intermediate conduits, i.e. transitive relationships.
+                        This document provides general usage instructions and guidance in deployment of the open source components of SEMOSS,
                         in contrast to the developer guide, which provides instructions and guidance in terms of development "on top of" the tool.</br>
                     </p>
                     <h3 id="Overview">Overview</h3>
                     
                     <ul>This document contains:
-                        <li><a href="#">An overview of the out-of-the-box Semoss user interface (Section 1).</a></li>
+                        <li><a href="#">An overview of the out-of-the-box SEMOSS user interface (Section 1).</a></li>
                         <li>Instructions for creating and loading a new database and developing the ontological structure (metamodel) for the database (Section 2).</li>
                         <li>Limited guidance in querying databases to understand advanced relationships using the SPARQL query language (Section 3).</li>
-                        <li>A use case in deploying <em>out of the box</em> Semoss to analyze the sample security database (Section 4).</li>
+                        <li>A use case in deploying <em>out of the box</em> SEMOSS to analyze the sample security database (Section 4).</li>
                     </ul>
                     <h3 id="UserInterfaceOverview">1: User Interface Overview</h3>
                     <br><div class="imageDocs"><img src="img/userDocs/image003.png" alt="Image 003" height="" width="265px"><div class="caption">Figure 1.1.1</div></div>
                     <br><div class="imageDocs"><img src="http://semoss.org/img/userDocs/image002.png" alt="Image002"><div class="caption">Figure 1.1.2 Main Tab</div></div> 
-                    <p>The Semoss user interface features the main tab to the left, and a workspace that displays the data outputs in the center of the screen.</p>
+                    <p>The SEMOSS user interface features the main tab to the left, and a workspace that displays the data outputs in the center of the screen.</p>
                     <h5 id="TabsOverview">1.1 Tabs Overview</h5>
                     <p>There are five default tabs that exist on the setup pane. The main tab appears when the application is started; the others (Graph Labels, Graph Cosmetics, SUDOWL, and Graph Filter) can be toggled.</p>
                     <br>
                     <h5 id="MainTab">Main Tab</h5></b></em></p>
-                    <p>The main tab is on the left once the application is started. It provides the core functionality of Semoss. The components of the main tab include:</p>
+                    <p>The main tab is on the left once the application is started. It provides the core functionality of SEMOSS. The components of the main tab include:</p>
                     <p>1. Database Selection<p>
                     <p>2. Perspective Categories</p>
                     <p>3. Question Selections</p>
@@ -148,11 +148,11 @@
                     <p>8. Custom SPARQL Query</p>
                     <em><h5>Database Selection (1)</h5></em>
                     <p>This is the area where the active database is selected. The map sheet contains indexes to the available databases. The map sheet is essentially an index of all of the data and information that is available within the application (more instructions on loading databases and the map sheet are contained in Section 2: Loading a Database).</p>
-                    <p>Semoss allows exploration of data residing in these databases as it is a single database.</p>
+                    <p>SEMOSS allows exploration of data residing in these databases as it is a single database.</p>
                     <em><h5>Perspective Categories (2)</h5></em>
                     <p>This section contains the available perspectives or different "point of views" of the data stored in the databases. A perspective allows a user to examine in detail data from a particular point of view. These details are formulated as questions pertaining to a specific perspective.</p>
                     <em><h5>Question Selection (3)</h5></em>
-                    <p>This is where the specific question is selected to dive into details of a perspective. This question is translated by Semoss into a SPARQL query that will be performed to provide the answer. Section D describes how an advanced user can create a custom SPARQL query to provide an ad hoc report.</p>
+                    <p>This is where the specific question is selected to dive into details of a perspective. This question is translated by SEMOSS into a SPARQL query that will be performed to provide the answer. Section D describes how an advanced user can create a custom SPARQL query to provide an ad hoc report.</p>
                     <em><h5>Constraints (4)</h5></em>
                     <p>Sometimes a question (SPARQL query) requires an input parameter (such as IP Address); in this case a drop-down box will appear allowing the user to select the appropriate constraint. Additional information is deferred to the section on writing SPARQL queries.</p>
                     <em><h5>Create Button (5)</h5></em>
@@ -165,7 +165,7 @@
                     <em><h5>Augment Graph (7)</h5></em>
                     <p>The augment graph function allows the user to overlay components of an additional query onto a graph. This is useful when comparing connections between two comparative objects.</p>
                     <em><h5>Custom SPARQL Query (8)</h5></em>
-                    <em><p>Editor's Note: Additional Analysis surrounding creating SPARQL queries in Semoss is deferred to the 'Writing SPARQL Queries in Semoss' Section.</p></em>
+                    <em><p>Editor's Note: Additional Analysis surrounding creating SPARQL queries in SEMOSS is deferred to the 'Writing SPARQL Queries in SEMOSS' Section.</p></em>
                     <p>This component, when the "Custom" button is toggled, allows the user to (a) modify the current SPARQL query and (b) change the type of play sheet that the data is displayed on.  Not all query types are able to be displayed on all play sheet types, so slight query modifications are often required in order to change the play sheet.</p>
                     <p>Further information about the play sheets can be found in the Developer's Guide.</p>
                     <h5 id="GraphLabels">Graph Labels Tab</h5>
@@ -202,7 +202,7 @@
                     <h5>Extend Graph</h5>
                     <p>Extend graph allows the user to add in additional components based on a given set of constraints.</p>
                     <h5>Perform Algorithms</h5>
-                    <p>Various algorithms are included in the initial open source version of Semoss. These algorithms provide insights into various components of the graph. Currently the following algorithms are included:
+                    <p>Various algorithms are included in the initial open source version of SEMOSS. These algorithms provide insights into various components of the graph. Currently the following algorithms are included:
                      <ul><li>NodeRank Algorithm: Ranks the nodes based on the number of times the node is referenced/used.</li>
                      <li>Distance Downstream: Provides the number of "hops" downstream data travels across systems.</li>
                      <li>Loop Identifier: Identifies instances where certain data is sent to and from the same system.</li>
@@ -229,7 +229,7 @@
                     <img src="img/userDocs/infograph.jpg" class="docs img-responsive" />
                     <ul><p>1. Identify and understand the data and the relationships within the data.</p>
                     <p>2. Develop the metamodel</p>
-                    <p>3. Load the metamodel objects and their relationships into Semoss' properties sheet</p>
+                    <p>3. Load the metamodel objects and their relationships into SEMOSS' properties sheet</p>
                     <p>4. Identify the engine used to generate the database</p>
                     <ul><p>a. If using big data engine, develop the excel-based loading sheets and set up the reader</p></ul>
                     <p>5. Load the loading sheets and generate the database</p>
@@ -422,7 +422,7 @@
                     <h3 id="Additional">Additional Sources</h3>
                     <p>Additional Information surrounding SEMOSS is located here:</p>
                     <p>SEMOSS Blog</p>
-                    <p><a href="http://www.youtube.com/SEMOSSAnalytics">Semoss Youtube Channel</a></p>
+                    <p><a href="http://www.youtube.com/SEMOSSAnalytics">SEMOSS Youtube Channel</a></p>
                     <p>SEMOSS Use Case and Demo Videos</p>
                     <p><a href="http://www.youtube.com/watch?v=J5ruShx4eso">Security Overview</a>
                     <p><a href="http://www.youtube.com/watch?v=1xRlCzI7yjc">Demo</a>
