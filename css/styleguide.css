@@ -1,0 +1,81 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Condensed);
+
+body {
+  background-color: #eee;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 100%;
+}
+
+header {
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+
+h1, h2, h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+  margin-bottom: 0px;
+  color: #333;
+}
+
+ol, ul {
+  margin-top: 5px;
+  color: #444;
+  line-height: 1.6;
+}
+
+p {
+  line-height: 1.6;
+  color: #444;
+  margin-top: 5px;
+}
+ 
+a {
+  color: steelblue;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 1px dotted steelblue;
+}
+
+.logo {
+  display: block;
+  width: 50px;
+  margin: 0 auto;
+}
+
+.center {
+  text-align: center;
+}
+
+blockquote {
+  font-size: 1.5em;
+  border-left:  4px solid #ccc;
+  font-style: italic;
+  color: #aaa;
+}
+
+.content {
+  border-radius: 2px;
+  display: block;
+  background-color: white;
+  width: 600px;
+  margin: 40px auto;
+  padding: 20px 40px;
+}
+
+section {
+  border-bottom: 1px dotted #ccc;
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+code, pre {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  padding: 1px 4px;
+}
