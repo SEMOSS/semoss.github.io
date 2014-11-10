@@ -1,0 +1,31 @@
+body{
+	margin: 0px;
+}
+p{
+color: red}
+ul {
+    list-style-type: none;
+    margin: 7px;
+    padding: 0;
+    overflow: hidden;
+	float:right;
+}
+li {
+    float: left;
+}
+
+a:link, a:visited {
+    display: block;
+    width: 100px;
+	font-family: Calibri;
+	color: navy;
+	text-align: center;
+	padding: 7px;
+	text-decoration: none;
+	
+}
+a:hover {
+	font-weight: bold;
+}
+	
+

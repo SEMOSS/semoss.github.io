@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+
+   
+	<title>SEMOSS</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link type ="css/text" rel = "stylesheet" href= "mystylesheet/expirementstylesheet.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	 <style>
+	<!--INSERT CSS-->
+	body {
+        font-family: 'PT Sans', serif;
+        font-size: 14px;
+      }
+
+
+	  
+/*navbar*/
+.navbar {
+	max-width: 1170px;
+	margin: 0px, auto;
+	border-radius: 0px;
+	margin-bottom: 0px;
+}
+.navbar-brand>img {
+	height:35px;
+}
+
+@media screen and (min-width: 768px){
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+		background-color: transparent;
+	}
+}
+@media screen and (max-width: 767px) {
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+		background-color: darkgray;}
+}
+.navbar-default .navbar-nav>li>a {
+	color:white;
+	font-weight:bold;
+	font-size: 16px;
+}
+.navbar-default {
+	max-width: 100%;
+	margin:0 auto;
+	background-color: rgba(55, 55, 55, 0.3);
+	border-color: transparent;
+}
+.container-fluid {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.navbar-toggle{
+	margin-top:15px;
+}
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: white;
+}
+
+/*Rest of screen*/
+
+/*JUMBO*/
+/*homepage jumbo color*/
+.jumbotron{
+	margin-top:-65px;
+	background-color: rgb(49, 132, 147);
+}
+/*About  jumbo color*/
+div.aboutjumbo   {
+	background-color: pink;
+}
+/*Capabilities jumbo color*/
+div.capabilitiesjumbo   {
+	background-color: #9BB0DB;
+}
+/*Solutions Jumbo color*/
+div.solutionsjumbo {
+	background-color: rgb(36, 32, 94);
+}
+
+@media screen and (min-width: 768px){
+	.jumbotron {
+		padding: 0px 0px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.jumbotron {
+		padding:0px 0px;
+	}
+}
+h3.jumbo {
+	text-align:left;
+	color:white;
+	margin-top:10px;
+		
+}
+h4.jumbo {
+	color:white;
+	text-align:left;
+}
+.btn-primary {
+	background-color:#9CA2B6;
+	border-color:#9CA2B6;
+	margin-top:15px;
+	
+}
+.btn-primary:hover {
+	background-color:#72788E;
+	border-color:#787A81;
+	
+}
+
+/*homepage columns*/
+.col-md-6 {
+	text-align:center;
+	margin-top:0px;
+	
+}
+.circles {
+	padding-bottom: 60px;
+}
+.img-circle {
+	margin: 0 auto;
+	display:block;
+}
+h2.circle {
+	text-align: center;
+}
+p.circle {
+	text-align: center;
+}
+
+.container {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+div.navbar-header {
+	margin-top: -5px;
+}
+div.rowHome {
+	margin-top:50px;
+	margin-bottom:4px;
+}
+
+h2.featurette-heading {
+	font-size:28px;
+}
+p.lead {
+	font-size: 16px;
+}
+
+/*About Us Page Images*/
+
+.imgBox1{
+    width: 191px; 
+	height: 191px; 
+	background: url(../images/puppy.jpg) no-repeat;
+}
+.imgBox1:hover {
+    width: 191px; 
+	height: 191px; 
+	background: url(../images/dog.jpg) no-repeat;
+}
+.imgBox2{
+    width: 191px; 
+	height: 191px; 
+	background: url(../images/puppy.jpg) no-repeat;
+}
+.imgBox2:hover {
+    width: 191px; 
+	height: 191px; 
+	background: url(../images/dog.jpg) no-repeat;
+}
+.imgBox3{
+    width: 191px; 
+	height: 191px; 
+	background: url(../images/puppy.jpg) no-repeat;
+}
+.imgBox3:hover {
+    width: 191px; 
+	height: 191px; 
+	background: url(../images/dog.jpg) no-repeat;
+}
+/*centering images in columns*/
+.imgBox3, .imgBox2, .imgBox1 {
+	margin: 0 auto;
+	display:block;
+}
+
+/*small image boxes- hover change*/
+.smImgBox1 {
+	width: 91px; 
+	height: 91px; 
+	background: url(../images/puppy.jpg) no-repeat;
+}
+.smImgBox1:hover {
+	width: 91px; 
+	height: 91px; 
+	background: url(../images/dog.jpg) no-repeat;
+}
+/*small image boxes- center*/
+.smImgBox1 {
+	margin: 0 auto;
+	display: block;
+}
+/* SOLUTIONS PAGE*/
+.col-lg-4 {
+	text-align: center;
+}
+.col-md-5 {
+	text-align:center;
+}
+.solutionsOptions {
+	margin: 0 auto;
+	display: block;
+	width:50px;
+}
+.img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+	display: inline;
+	margin: 0 auto;
+	
+}
+
+/*CAPABILITIES PAGE*/
+h2.capa, h4.capa, p.capa {
+	text-align:left;
+}
+
+.capa {
+	text-align:left;
+}
+.capa-right{
+	text-align:right;
+}
+
+
+/*FOOTER*/
+.footerlinks {
+	display:inline;
+
+}
+p.footerlinks {
+	font-size: 16px;
+	
+}
+
+
+/*hover NAV STUFF
+@media (max-width: 767px){
+	.sidebar-nav {
+		padding: 9px 0;
+	}
+
+	.dropdown-menu .sub-menu {
+		left: 100%;
+		position: absolute;
+		top: 0;
+		visibility: visible;
+		margin-top: -1px;
+	}
+
+	/*.dropdown-menu li:hover .sub-menu {
+		visibility: visible;
+	}
+
+	.dropdown:hover .dropdown-menu {
+		display: block;
+		background-color: rgba(255, 255, 255, 0.7);
+	}
+
+	.nav-tabs .dropdown-menu, .nav-pills .dropdown-menu, .navbar .dropdown-menu {
+		margin-top: 0;
+	}
+
+	.navbar .sub-menu:before {
+		border-bottom: 7px solid transparent;
+		border-left: none;
+		border-right: 7px solid rgba(0, 0, 0, 0.2);
+		border-top: 7px solid transparent;
+		left: -7px;
+		top: 10px;
+	}
+	.navbar .sub-menu:after {
+		border-top: 6px solid transparent;
+		border-left: none;
+		border-right: 6px solid #fff;
+		border-bottom: 6px solid transparent;
+		background-color: rgba(55, 55, 55, 0.3);
+		left: 10px;
+		top: 11px;
+		left: -6px;
+	}
+}*/
+
+@media (min-width: 768px) {
+	.sidebar-nav {
+    padding: 9px 0;
+	}
+
+	.dropdown-menu .sub-menu {
+		left: 100%;
+		position: absolute;
+		top: 0;
+		visibility: hidden;
+		margin-top: -1px;
+	}
+
+	.dropdown-menu li:hover .sub-menu {
+		visibility: visible;
+	}
+
+	.dropdown:hover .dropdown-menu {
+		display: block;
+		background-color: rgba(255, 255, 255, 0.7);
+	}
+
+	.nav-tabs .dropdown-menu, .nav-pills .dropdown-menu, .navbar .dropdown-menu {
+		margin-top: 0;
+	}
+
+	.navbar .sub-menu:before {
+		border-bottom: 7px solid transparent;
+		border-left: none;
+		border-right: 7px solid rgba(0, 0, 0, 0.2);
+		border-top: 7px solid transparent;
+		left: -7px;
+		top: 10px;
+	}
+	.navbar .sub-menu:after {
+		border-top: 6px solid transparent;
+		border-left: none;
+		border-right: 6px solid #fff;
+		border-bottom: 6px solid transparent;
+		background-color: rgba(55, 55, 55, 0.3);
+		left: 10px;
+		top: 11px;
+		left: -6px;
+	}
+	
+	.navbar-right .dropdown-menu {
+		right: auto;
+		left: 0;
+	}
+}
+
+.bold {
+	font-weight:bold;
+	font-size: 25px;
+	}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+	color:#D7D6D6;
+}
+.dropdown-menu{
+	border:0px;
+}
+	</style>
+  </head>
+<body>
+
+	<nav class="navbar navbar-default" role="navigation">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="index.html"><img src= "images/whitelogo.png" style = "height: 35px; "/></a>
+		</div>
+
+<!--NAVBAR-->	
+    <!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		<!--<form class="navbar-form navbar-left" role="search">
+			<div class="form-group">
+			  <input type="text" class="form-control" placeholder="Search">
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+		  </form>-->
+		  <ul class="nav navbar-nav navbar-right">
+			<li class="dropdown">
+			  <a href="solutions.html" class="dropdown-toggle" data-toggle="dropdown">Solutions <span class="caret"></span></a>
+			  <ul class="dropdown-menu" role="menu">
+				<li><a style="font-weight:bold; font-size:16px;" href="solutions.html">All Solutions</a></li>
+				<li><a href="semossdesktop.html">&nbsp;&nbsp;&nbsp;SEMOSS</a></li>
+				<li><a href="#">&nbsp;&nbsp;&nbsp;SEMOSS Web</a></li>
+			  </ul>
+			</li>
+			<li class="dropdown">
+			  <a href="capabilities.html" class="dropdown-toggle" data-toggle="dropdown">Capabilities<span class="caret"></span></a>
+			  <ul class="dropdown-menu" role="menu">
+				
+				<li><a style="font-weight:bold; font-size:16px;"href="capabilities.html">By Industry</a></li>
+				<li><a href="#">&nbsp;&nbsp;&nbsp;Government</a></li>
+				<li><a href="#">&nbsp;&nbsp;&nbsp;Healthcare</a></li>
+				<li><a href="#">&nbsp;&nbsp;&nbsp;Science</a></li>
+				<li><a href="#">&nbsp;&nbsp;&nbsp;Environment</a></li>
+				<li><a style="font-weight:bold; font-size:16px;" href="capabilities.html">By Function</a></li>
+				<li><a href="#">&nbsp;&nbsp;&nbsp;Portfolio Rationalization</a></li>
+				<li><a href="#">&nbsp;&nbsp;&nbsp;Legacy Modernization (SOA)</a></li>
+				<li><a href="#">&nbsp;&nbsp;&nbsp;CIO Strategy</a></li>
+				<li><a style="font-weight:bold; font-size:16px;" href="capabilities.html">Custom Solution</a></li>
+			  </ul>
+			</li>
+			<li class="dropdown">
+			  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Support<span class="caret"></span></a>
+			  <ul class="dropdown-menu" role="menu">
+				<li><a href="#">User Guides</a></li>
+				<li><a href="#">Developer</a></li>
+			  </ul>
+			</li>
+			<li><a href="about.html">About Us</a></li>
+			<li><a href="#">Community</a></li>
+		  </ul>
+		</div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+
+  </nav>
+
+	
+<!--JUMBOTRON-->
+		<div class="jumbotron">
+			<div class="container-fluid">
+					<img src = "images/blueprint.jpg"  style="
+						min-width: 100%;
+						min-height: 300px;
+						width: 100%;
+						height: auto;
+						top: 55px;
+						left: 0px;
+						"/>
+			</div>
+			<!--Buttons underneath-->
+			<div class = "container">
+				<div class="row">
+					<div class="col-md-6"><h3 class="jumbo"> What can you learn from your data?</h3><h4 class="jumbo"> Context aware analytics to get more from what you already have.</h4><!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Free Download</a></p>--></div>
+					<div class="col-md-6"><p><a class="btn btn-primary btn-lg" href="#" role="button">Free Download</a>  <a class="btn btn-primary btn-lg" href="#" role="button">View Source</a></p></div>			
+				</div>
+			</div>
+		</div>
+	
+	<div class="container marketing">
+
+<!--THREE COLUMNS-->
+      <!-- Three columns of text  -->
+      <p> </p>
+	  <p></p>
+	  <div class="rowHome">
+        <div class="col-lg-4">
+			<div class = "circles" >
+			  <img class="img-circle" src="images/timesaver2.png" alt="Generic placeholder image" style="width: 90px; height: 90px;">
+			  <h2 class="circle">Engage Data</h2>
+			  <p class= "circle">Elastic data integration from multiple sources that can link across databases makes it easy to extract conclusions from large datasets.</p>
+			  <p class = "circle"><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+			</div>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+			<div class= "circles">
+			  <img class="img-circle" src="images/timesaver3.png" alt="Generic placeholder image" style="width: 90px; height: 90px;">
+			  <h2 class = "circle">Uncover Connections</h2>
+			  <p class = "circle">Optimize linear and non-linear algorithms across integrated databases to solve equations and graph those solutions.</p>
+			  <p class = "circle"><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+			 </div>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+			<div class = "circles">
+			  <img class="img-circle" src="images/timesaver1.png" alt="Generic placeholder image" style="width: 90px; height: 90px;">
+			  <h2 class = "circle">Visualize Impact</h2>
+			  <p class = "circle">Rich library of visualizations including parallel coordinates, heat maps, as well as network and overlay visualizations.</p>
+			  <p class = "circle"><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+			 </div>
+        </div><!-- /.col-lg-4 -->
+      </div>
+	  
+	  
+	   <!-- START THE FEATURETTES -->
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Solutions to fit your needs. <a href = "solutions.html"><span class="text-muted">View Options.</a></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="images/desk.jpg" >
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="images/healthcare.jpg" >
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Varied industry experience. <a href = "capabilities.html"><span class="text-muted">See for yourself.</span></a></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">We're here to help. <a href = "support.html"><span class="text-muted">Go to user guides and developer tools.</span></h2></a>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="images/tools.jpg" alt="Generic placeholder image">
+        </div>
+      </div>
+
+     
+	
+	</div>
+
+	<hr class="featurette-divider" style = "padding-top:20px; padding-bottom: 20px;">
+	
+
+	<!--FOOTER-->
+	<div class= "container" >	
+	<div class="row featurette">
+				<div class="col-md-11">
+					<div class = "footerlinks">
+							<p class = "footerlinks"><a href = "index.html">Home</a>	&nbsp;&nbsp;
+								<a href = "about.html">About</a> &nbsp;&nbsp;
+								<a href = "capabilities.html">Industries</a> &nbsp;&nbsp;
+								<a href = "capabilities.html">Functions</a> &nbsp;&nbsp;
+								<a href = "home.html">User Guides</a> &nbsp;&nbsp;
+								<a href = "home.html">Developer</a> &nbsp;&nbsp;
+								<a href = "home.html">Blog</a> &nbsp;&nbsp;
+								<a href = "about.html">Contact Us</a> &nbsp;&nbsp;
+					</div>
+				</div>
+				<div class="col-md-1">
+				  <img src = "images/graylogo.png" style = "display: 0 auto; width:100px; float:right;"/>
+				</div>
+			 </div>
+	</div>	
+	
+	
+	<div class= "container-fluid">
+		<img src = "images/footerbw.png"  style="
+					min-width: 100%;
+					width: 100%;
+					height: 80px;
+					top: 55px;
+					left: 0px;
+					margin-top:20px;
+					"/>
+	</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
