@@ -1,10 +1,8 @@
-body {
+﻿body {
         font-family: 'PT Sans', serif;
         font-size: 14px;
       }
-
-
-	  
+  
 /*navbar*/
 .navbar {
 	max-width: 1170px;
@@ -13,7 +11,7 @@ body {
 	margin-bottom: 0px;
 }
 .navbar-brand>img {
-	height:35px;
+	height:21px;
 }
 
 @media screen and (min-width: 768px){
@@ -40,19 +38,31 @@ body {
 	padding-left: 0px;
 	padding-right: 0px;
 }
-.navbar-toggle{
-	margin-top:15px;
-}
 .navbar-default .navbar-toggle .icon-bar {
 	background-color: white;
 }
-
+img.coverimage {
+	width: 100%;
+	margin-top: -65px;
+	min-height:300px;
+	max-height: 600px;
+	z-index:0;
+}
+img.seeforyourself {
+	width: 100%;
+	min-height:300px;
+	max-height: 600px;
+	z-index:0;
+}
+.boldnav {
+	font-weight:bold; 
+	font-size:16px;
+}
 /*Rest of screen*/
 
 /*JUMBO*/
 /*homepage jumbo color*/
 .jumbotron{
-	margin-top:-65px;
 	background-color: rgb(49, 132, 147);
 }
 /*About  jumbo color*/
@@ -112,6 +122,12 @@ h4.jumbo {
 .img-circle {
 	margin: 0 auto;
 	display:block;
+	width: 90px; 
+	height: 90px;
+}
+hr.footer {
+	padding-bottom:20px;
+	padding-top:20px;
 }
 h2.circle {
 	text-align: center;
@@ -125,11 +141,12 @@ p.circle {
 	padding-bottom: 5px;
 }
 div.navbar-header {
-	margin-top: -5px;
+	
 }
 div.rowHome {
 	margin-top:50px;
-	margin-bottom:4px;
+	margin-bottom:40px;
+	
 }
 
 h2.featurette-heading {
@@ -140,35 +157,33 @@ p.lead {
 }
 
 /*About Us Page Images*/
-
+.aboutleads {
+	background-color:pink;
+	max-width: 350px;
+}
+.imgBox1, .imgBox1:hover, .imgBox2, .imgBox2:hover, .imgBox3, .imgBox3:hover {
+	height:250px;
+}
 .imgBox1{
-    width: 191px; 
-	height: 191px; 
-	background: url(../images/puppy.jpg) no-repeat;
+	background: url(../images/puppy2.jpg) no-repeat;
+	background-size:100%;
 }
 .imgBox1:hover {
-    width: 191px; 
-	height: 191px; 
 	background: url(../images/dog.jpg) no-repeat;
+	background-size:100%;
 }
 .imgBox2{
-    width: 191px; 
-	height: 191px; 
 	background: url(../images/puppy.jpg) no-repeat;
+	background-size:100%;
 }
 .imgBox2:hover {
-    width: 191px; 
-	height: 191px; 
 	background: url(../images/dog.jpg) no-repeat;
+	background-size:100%;
 }
 .imgBox3{
-    width: 191px; 
-	height: 191px; 
 	background: url(../images/puppy.jpg) no-repeat;
 }
 .imgBox3:hover {
-    width: 191px; 
-	height: 191px; 
 	background: url(../images/dog.jpg) no-repeat;
 }
 /*centering images in columns*/
@@ -210,6 +225,8 @@ p.lead {
 	margin: 0 auto;
 	
 }
+/*SEMOSS DESKTOP*/
+
 
 /*CAPABILITIES PAGE*/
 h2.capa, h4.capa, p.capa {
@@ -218,6 +235,8 @@ h2.capa, h4.capa, p.capa {
 
 .capa {
 	text-align:left;
+	
+	
 }
 .capa-right{
 	text-align:right;
