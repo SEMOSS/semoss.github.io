@@ -2,7 +2,35 @@
         font-family: 'PT Sans', serif;
         font-size: 14px;
       }
-  
+
+@media (min-width: 1200px) {
+	.container {
+		width: 998px;
+	}
+}
+ .bigimage {
+	background: url(../images/semossweb2.jpg) no-repeat;
+	margin-top:-65px;
+	background-size:cover;
+	background-position:center;
+ }
+.seeforyourself {
+	background: url(../images/desk.jpg) no-repeat;
+	background-size:cover;
+	background-position:top;
+}
+.videobanner {
+	text-align:center;
+	padding-top: 75px;
+	padding-bottom: 450px;
+}
+.indexbuttons {
+	margin-top:30px;
+}
+.indexvideo {
+	width:100%;
+	height:auto;
+}
 /*navbar*/
 .navbar {
 	max-width: 1170px;
@@ -12,6 +40,12 @@
 }
 .navbar-brand>img {
 	height:21px;
+}
+a.videolink {
+	text-decoration:none;
+}
+a.videolink:hover {
+	font-weight:bold;
 }
 
 @media screen and (min-width: 768px){
@@ -31,7 +65,7 @@
 .navbar-default {
 	max-width: 100%;
 	margin:0 auto;
-	background-color: rgba(55, 55, 55, 0.3);
+	background-color: rgba(55, 55, 55, 0.5);
 	border-color: transparent;
 }
 .container-fluid {
@@ -41,18 +75,106 @@
 .navbar-default .navbar-toggle .icon-bar {
 	background-color: white;
 }
-img.coverimage {
-	width: 100%;
-	margin-top: -65px;
-	min-height:300px;
-	max-height: 600px;
-	z-index:0;
+.homecaption {
+	margin-top: 250px;
+	text-align:center;
+	margin-bottom:200px
 }
-img.seeforyourself {
-	width: 100%;
-	min-height:300px;
-	max-height: 600px;
-	z-index:0;
+
+/*BUTTTONS*/
+.btn-primary {
+	background-color: rgba(45, 101, 165, 1);
+	border-color: #1E5786;
+	margin-top: 15px;
+	border-bottom-color: rgba(7, 47, 68, 1);
+	border-radius: 5px;
+	border-bottom-width: medium;
+	font-weight:bold;
+	width:175px;
+	margin-right:5px;
+	margin-left:5px;	
+}
+.btn-primary:hover {
+	background-color:rgba(9, 33, 61, 1);
+	border-color:#0C1338;
+	border-bottom-color: rgba(2, 10, 24, 1);
+	border-radius: 5px;
+	border-bottom-width: medium;	
+}
+.btn-secondary {
+	background-color: rgba(95, 95, 95, 1);
+	color:white;
+	border-color: #3E404A;
+	margin-top: 15px;
+	border-bottom-color: rgba(49, 53, 55, 1);
+	border-radius: 5px;
+	border-bottom-width: medium;
+	font-weight:bold;
+	width:175px;
+	margin-right:5px;
+	margin-left:5px;	
+}
+.btn-secondary:hover {
+	background-color:rgba(54, 54, 56, 1);
+	color:white;
+	border-color:#2C2D34;
+	border-bottom-color: rgba(31, 33, 34, 1);
+	border-radius: 5px;
+	border-bottom-width: medium;	
+}
+.coolgreenbutton{
+	color: rgba(114, 114, 119, 1);
+	font-size: 20px;
+	font-weight:bold;
+	width:175px;
+	margin-top:30px;
+	margin-right:10px;
+	margin-left: 10px;	
+}
+.coolgreenbutton:hover {
+	color: #19BB84;
+	text-decoration: none;
+}
+.coolbluebutton{
+	color: white;
+	font-size: 24px;
+
+	width:175px;
+	margin-right:10px;
+	margin-left: 10px;	
+}
+.coolbluebutton:hover {
+	color: rgba(60, 136, 200, 1);
+	text-decoration: none;	
+	font-weight:bold;
+}
+.footerlink {
+	color:rgb(97, 99, 103);
+	font-size:16px;
+}
+
+.footerlink:hover {
+	text-decoration:none;
+	font-weight:bold;
+}
+
+
+
+
+h1.jumbo, h3.jumbo {
+	color:White;
+}
+h1.jumbo, h1.main {
+	font-weight:bold;
+}
+.indexmain {
+	margin-top:80px;
+	text-align: center;
+}
+
+div.rowHome {
+	margin-top:50px;
+	margin-bottom:40px;
 }
 .boldnav {
 	font-weight:bold; 
@@ -63,7 +185,7 @@ img.seeforyourself {
 /*JUMBO*/
 /*homepage jumbo color*/
 .jumbotron{
-	background-color: rgb(49, 132, 147);
+	background-color: rgb(40, 42, 71);
 }
 /*About  jumbo color*/
 div.aboutjumbo   {
@@ -88,33 +210,22 @@ div.solutionsjumbo {
 		padding:0px 0px;
 	}
 }
-h3.jumbo {
+/*h3.jumbo {
 	text-align:left;
 	color:white;
 	margin-top:10px;
 		
-}
+}*/
 h4.jumbo {
 	color:white;
 	text-align:left;
 }
-.btn-primary {
-	background-color:#9CA2B6;
-	border-color:#9CA2B6;
-	margin-top:15px;
-	
-}
-.btn-primary:hover {
-	background-color:#72788E;
-	border-color:#787A81;
-	
-}
+
 
 /*homepage columns*/
 .col-md-6 {
 	text-align:center;
 	margin-top:0px;
-	
 }
 .circles {
 	padding-bottom: 60px;
@@ -122,8 +233,8 @@ h4.jumbo {
 .img-circle {
 	margin: 0 auto;
 	display:block;
-	width: 90px; 
-	height: 90px;
+	width: 200px; 
+	height: 200px;
 }
 hr.footer {
 	padding-bottom:20px;
@@ -143,11 +254,7 @@ p.circle {
 div.navbar-header {
 	
 }
-div.rowHome {
-	margin-top:50px;
-	margin-bottom:40px;
-	
-}
+
 
 h2.featurette-heading {
 	font-size:28px;
@@ -247,10 +354,6 @@ h2.capa, h4.capa, p.capa {
 .footerlinks {
 	display:inline;
 
-}
-p.footerlinks {
-	font-size: 16px;
-	
 }
 
 
