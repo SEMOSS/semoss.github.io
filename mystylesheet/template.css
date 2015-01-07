@@ -177,6 +177,9 @@ p.large {
 	font-size:18px;
 	line-height:1.3em;
 }
+.lineheight {
+	line-height:1.2;
+}
 a.navscroll {
 	padding:2px 5px;
 	border-left:2px solid transparent;
@@ -362,6 +365,22 @@ a.active {
 .footerlink:hover {
 	text-decoration:none;
 	color:rgba(50, 120, 212, 1);
+}
+.graybutton{
+	transition: all 0.25s linear;
+	padding: 10px 20px;
+	border: 2px solid gray;
+	color: gray;
+	background: transparent;
+	border-radius: 6px;
+	font-size: 18px;
+	margin:10px;
+}
+.graybutton:hover {
+	min-width:50px;
+	background: gray;
+	color: white;
+	text-decoration: none;
 }
 .graybuttonaction {
 	transition: all 0.25s linear;
@@ -879,7 +898,9 @@ nav#nav-mobile {
     filter: none; /* IE6-9*/
     -webkit-filter: grayscale(0); /* Google Chrome & Safari 6+ */
 }
-
+.opacity:hover {
+	opacity:.6;
+}
 
 /*img sources!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 .img-thumbnail {
@@ -1155,13 +1176,14 @@ ul#list li {
 	list-style-type:disc;
 	list-style:disc;
 	margin-left:20px;
+	
 }
 ul#list {
 	list-style-type:disc;
 	list-style:disc;
 	display:list-item;
-
-
+	line-height:1.2;
+	padding:2px 5px;
 	width:100%;
 	margin-left:20px;
 }

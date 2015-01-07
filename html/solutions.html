@@ -7,8 +7,6 @@
 		<title>Semoss Solutions</title>
 		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 		<script src="../js/jquery-1.11.1.js"></script>
-		<script src="../js/script.js"></script>
-		<script src="../js/d3.v3.min.js"></script>
 		<script src="../js/template.js"></script>
 		<link rel="stylesheet" href="../mystylesheet/template.css" type="text/css">
 	</head>
@@ -52,7 +50,18 @@
 	</div>
 <!--end Navbar-->
 	<div class="display-table container">
-					<div class="div-padding-sm display-table" >
+		<div class="centeredgrid" style="padding-top:40px;">
+			<a href="#heatmap"><img  class="opacity" style="height:80px; margin-right:30px;" src="../images/heatmap.svg" /></a>
+			<a href="#network"><img class="opacity" style="height:80px; margin-right:30px;" src="../images/network.svg" /></a>
+			<a href="#healthgrid"><img class="opacity" style="height:80px; margin-right:30px;" src="../images/healthgrid.svg" /></a>
+			<a href="#parallel"><img class="opacity" style="height:80px; margin-right:30px;" src="../images/parallel.svg" /></a>
+			<a href="#bargraph"><img class="opacity" style="height:80px; margin-right:30px;" src="../images/bar.svg" /></a>
+		</div>
+		<!--<div class="centeredgrid" style="padding-top:50px;">
+			<a href="#downloadinfo" id="optionlink-scroll" class="graybuttonaction">Download Options</a>
+		</div>-->
+		</div>
+					<!--<div class="div-padding-sm display-table" >
 						<div class="grid2">
 							<a href="#!" onclick="FirstPic()" class="img-link"><img src="../images/metamodel.png" name="pic1" class="img-thumbnail"></a><div class="item-footer" style="position:absolute; bottom:5; left:5; right:-4; z-index:1000;"></div>
 							<a href="#!" onclick="SecPic()" class="img-link"><img src="../images/app-healthgrid.png" name="pic2" class="img-thumbnail"></a>
@@ -63,29 +72,77 @@
 						<div class="grid10">
 							<img src="../images/metamodel.png" name="Mainpic" id="img-thumbnail-lg"/>
 						</div>
-					</div>
-					<div  style="display:table;">
-						<div class="grid12 div-padding-side">
-							<h3>Parallel coordinates </h4>
-							<p class="large" name="readme">Parallel Coordinates provide a simple way to visualize relationships that exist between qualitative and quantitative parameters. They are especially useful in understanding networks and relationships across complex data. The following view is an example of parallel coordinates visualization with the capabilities outlined in the table below.</p>
-							<h3>Heat Map</h4>
-							<p class="large">Heat Maps provide an easy way to compare quantitative data and allows you to see variations in data based on color. They are constructed as a table and use colored squares that represent the data value.  The following is a view of a heat map visualization with the capabilities outlined in the table below.</p>
-							<h3>Network Graph</h4>
-							<p class="large">The Network Graph allows users to freely explore the structure and interconnectedness of their portfolios. The following is a network graph visualization with the capabilities outlined in the table below.</p>
-							<h3>Application Healthgrids</h4>
-							<p class="large">Application healthgrids allow users to visualize and compare the health of their different application based on business value, technical maturity, and the financial coordinate.
-								<ul id="list">Business value is measured based on Dynamic Business Capability Mapping (DBCM). DBCM is based on Theory of Constraints normalized to eliminate bias</ul>
-								<ul id="list">Technical maturity of a legacy program, plan, and / or initiative (PPI) reflects its level of system availability, maintainability, vulnerability, flexibility, etc.</ul>
-								<ul id="list">Financial coordinate is based on the sustainment budget of an application</ul>
-							</p>
-						</div>
-					</div>
+					</div>-->
+
 	</div>
-	<div class="container div-padding-md">
+	<div id="heatmap" class="container display-table div-padding-sm">
+		<div>
+			<div class="grid12" style="margin-bottom:25px;">
+				<h3>Heat Map</h3>
+				<p class="large">Heat Maps provide an easy way to compare quantitative data and allows you to see variations in data based on color. They are constructed as a table and use colored squares that represent the data value.  The following is a view of a heat map visualization with the capabilities outlined in the table below.</p>
+			</div>
+		</div>
+			<div class="grid12">
+				<iframe style='border: 1px solid #ccc;' frameborder='0' width='1000' height='500' src='https://localhost/SemossWeb/app/#/insights?engine=Movie_DB&perspective=Overview&insight=Domestic%20Revenue%20by%20Studio%20categorized%20by%20Genre&navbar=false&sidebar=false&toolbar=true'></iframe>
+			</div>
+	</div>
+	<div id="network" class="container display-table div-padding-sm">
+		<div>
+			<div class="grid12" style="margin-bottom:25px;">
+				<h3>Network Graph</h3>
+				<p class="large">The Network Graph allows users to freely explore the structure and interconnectedness of their portfolios. The following is a network graph visualization with the capabilities outlined in the table below.</p>
+			</div>
+		</div>
+			<div class="grid12">
+				<iframe style='border: 1px solid #ccc;' frameborder='0' width='1000' height='500' src='https://localhost/SemossWeb/app/#/insights?engine=Movie_DB&perspective=Generic-Perspective&insight=Explore%20an%20instance%20of%20a%20selected%20node%20type&params=%7B%22Instance%22:%5B%22http:%2F%2Fwww.semoss.org%2Fontologies%2FConcept%2FDirector%2FClint_Eastwood%22%5D,%22Concept%22:%22http:%2F%2Fsemoss.org%2Fontologies%2FConcept%2FDirector%22%7D&navbar=false&sidebar=false&toolbar=true'></iframe>
+			</div>
+	</div>
+	<div id="healthgrid" class="container display-table div-padding-sm">
+		<div>
+			<div class="grid12" style="margin-bottom:25px;">
+				<h3>Application Healthgrids</h3>
+				<p class="large">Application healthgrids allow users to visualize and compare the health of their different application based on business value, technical maturity, and the financial coordinate.
+					<ul id="list">Business value is measured based on Dynamic Business Capability Mapping (DBCM). DBCM is based on Theory of Constraints normalized to eliminate bias</ul>
+					<ul id="list">Technical maturity of a legacy program, plan, and / or initiative (PPI) reflects its level of system availability, maintainability, vulnerability, flexibility, etc.</ul>
+					<ul id="list">Financial coordinate is based on the sustainment budget of an application</ul>
+				</p>
+			</div>
+		</div>
+			<div class="grid12">
+				<iframe style='border: 1px solid #ccc;' frameborder='0' width='1000' height='500' src='https://localhost/SemossWeb/app/#/insights?engine=Movie_DB&perspective=Generic-Perspective&insight=Explore%20an%20instance%20of%20a%20selected%20node%20type&params=%7B%22Instance%22:%5B%22http:%2F%2Fwww.semoss.org%2Fontologies%2FConcept%2FDirector%2FClint_Eastwood%22%5D,%22Concept%22:%22http:%2F%2Fsemoss.org%2Fontologies%2FConcept%2FDirector%22%7D&navbar=false&sidebar=false&toolbar=true'></iframe>
+			</div>
+	</div>
+	<div id="parallel" class="container display-table div-padding-sm">
+		<div>
+			<div class="grid12" style="margin-bottom:25px;">
+				<h3>Parallel Coordinates</h3>
+				<p class="large">Parallel Coordinates provide a simple way to visualize relationships that exist between qualitative and quantitative parameters. They are especially useful in understanding networks and relationships across complex data. The following view is an example of parallel coordinates visualization with the capabilities outlined in the table below.</p>
+			</div>
+		</div>
+			<div class="grid12">
+				<iframe style='border: 1px solid #ccc;' frameborder='0' width='1000' height='600' src='https://localhost/SemossWeb/app/#/insights?engine=Movie_DB&perspective=Generic-Perspective&insight=Explore%20an%20instance%20of%20a%20selected%20node%20type&params=%7B%22Instance%22:%5B%22http:%2F%2Fwww.semoss.org%2Fontologies%2FConcept%2FDirector%2FClint_Eastwood%22%5D,%22Concept%22:%22http:%2F%2Fsemoss.org%2Fontologies%2FConcept%2FDirector%22%7D&navbar=false&sidebar=false&toolbar=true'></iframe>
+			</div>
+	</div>
+	<div id="bargraph" class="container display-table div-padding-sm">
+		<div >
+			<div class="grid12 display-table" style="margin-bottom:25px;">
+				<h3>Bar graph</h3>
+				<p class="large">Heat Maps provide an easy way to compare quantitative data and allows you to see variations in data based on color. They are constructed as a table and use colored squares that represent the data value.  The following is a view of a heat map visualization with the capabilities outlined in the table below.</p>
+			</div>
+		</div>
+			<div class="grid12">
+				<iframe style='border: 1px solid #ccc;' frameborder='0' width='1000' height='500' src='https://localhost/SemossWeb/app/#/insights?engine=StateData&perspective=Overview&insight=Change%20in%20state%20population%20from%202008%20to%202013&navbar=false&sidebar=false&toolbar=true'></iframe>
+			</div>
+	</div>
+			
+
+
+
+	<div id="downloadinfo" class="container div-padding-md">
 		<div class="div-padding-sm">
 			<div class="grid1 offset">
 			</div>
-			<div class="grid5 ">
+			<div class="grid5 " style="border-left:1px solid gray; border-right:1px solid gray; padding:20px 20px;">
 				<img src="../images/animated.png" style="width:50px;">
 				<h3>Semoss Web</h3>
 				<p class="large margin">&#10003; Flexible privacy settings</p>
@@ -98,14 +155,13 @@
 					<a class="bigbluebuttonaction" href="#" role="button" style="margin:0;">Download Semoss Web &#8615;</a>
 				</div>
 			</div>
-			<div class="grid5">
+			<div class="grid5" style=" border-right:1px solid gray;  padding:20px 20px;">
 				<img src="../images/animated.png" style="width:50px;">
 				<h3>Semoss Desktop</h3>
 				<p class="large margin">&#10003; Save secure data locally</p>
 				<p class="large">&#10003; Share data on a local network</p>
 				<p class="large">&#10003; Save secure data locally</p>
-				<p class="large">&#10003; Share data on a local network</p>
-				<p class="large">&#10003; Everything you need right here on your desktop</p>
+				
 				<div class="div-padding-sm display-table">
 					<a class="bigbluebuttonaction" href="#" role="button" style="margin:0;">Download Semoss Desktop &#8615;</a>
 				</div>
