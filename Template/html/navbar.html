@@ -1,0 +1,132 @@
+<html lang="en">
+<head>
+ 
+    <meta charset="utf-8">
+    <title>Mobile First Responsive Navigation</title>
+    <meta name="description" content="CSS only mobile first navigation">
+    <meta name="author" content="Ian Yates">
+ 
+    <!--Mobile specific meta goodness :)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+ 
+    <!--css-->
+    <link rel="stylesheet" href="navbar.css">
+ 
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+		/*$(document).ready(function(){
+		  $("a.to_nav").click(function(){
+			$("nav").toggle();
+		  });
+		});
+		*/
+		
+	$(document).ready(function(){
+		$("#nav-mobile").html($("#nav-main").html());
+		$("#nav-trigger span").click(function(){
+			if ($("nav#nav-mobile ul").hasClass("expanded")) {
+				$("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
+				$(this).removeClass("open");
+			} else {
+				$("nav#nav-mobile ul").addClass("expanded").slideDown(250);
+				$(this).addClass("open");
+			}
+		});
+	});
+		</script>
+    <!-- Favicons-->
+ 
+</head>
+<body id="home">
+	
+		<div class="container-fluid">
+			<div class="navcolor">
+				<div class="wrapper">
+					<header>					
+						<h1 class="logo"><a href="#"><img src="images/whitelogo.png" style="width:125px; height:25px;"></a></h1>
+					
+						<nav id="nav-main">
+							<ul>
+								<li><a href="#">Solutions</a></li>
+								<li><a href="#">Industries</a></li>
+								<li><a href="#">Capabilities</a></li>
+								<li><a href="#">Support</a></li>
+								<li><a href="#">About</a></li>
+							</ul>		
+						</nav>
+						<div id="nav-trigger"><span>Menu</span>
+						</div>
+						<nav id="nav-mobile"></nav>
+				
+					</header>
+				</div>	
+			</div>	
+		</div>
+			<div class="container">
+				
+			
+				<svg width="150" height="150">
+					<circle cx="85" cy="85" r="50" fill="pink" stroke="gray" stroke-width="2"/>
+					<line x1="0" y1="30" x2="500" y2="50" stroke="black"/>
+				</svg>
+				<svg width="350" height="150">
+					<ellipse cx="165" cy="85" rx="150" ry="50" fill="yellow" stroke="gray" stroke-width="1"/>
+					<text x="150" y="85" font-family="serif" font-size="18" fill="gray">Easy-peasy</text>
+					
+				</svg>
+				<svg>
+					<circle cx="25" cy="25" r="20" fill="rgba(128, 0, 128, 1.0)"/>
+					<circle cx="50" cy="25" r="20" fill="rgba(0, 0, 255, 0.75)"/>
+					<circle cx="75" cy="25" r="20" fill="rgba(0, 255, 0, 0.5)"/>
+					<circle cx="100" cy="25" r="20" fill="rgba(255, 255, 0, 0.25)"/>
+					<circle cx="125" cy="25" r="20" fill="rgba(255, 0, 0, 0.1)"/>
+				</svg>
+				<svg>
+					<circle cx="75" cy="75" r="50" fill="rgba(128, 0, 128, 0.75)"
+							stroke="rgba(0, 255, 0, 0.25)" stroke-width="10"/>
+					<circle cx="125" cy="75" r="50" fill="rgba(0, 255, 0, 0.8)"
+							stroke="rgba(0, 0, 255, 0.55)" stroke-width="10"/>
+					<circle cx="175" cy="75" r="50" fill="rgba(255, 255, 0, 1)"
+							stroke="rgba(255, 0, 0,1)" stroke-width="10"/>
+				</svg>
+				<article>
+				 
+					<h2>Blue. No, yel&hellip;</h2> 
+					 
+					<p>Shut up! Will you shut up?! But you are dressed as one&hellip; Camelot! You don't vote for kings.</p> 
+				 
+				</article>
+				 
+				<article>
+					 
+					<h2>We want a shrubbery!!</h2> 
+					 
+					<p>Look, my liege! Shut up! But you are dressed as one&hellip;</p> 
+					 
+					<ul> 
+						<li>The nose?</li> 
+						<li>Shh! Knights, I bid you welcome to your new home. Let us ride to Camelot!</li> 
+						<li>Look, my liege!</li> 
+					</ul> 
+				 
+				</article>
+				</div>
+				
+			
+		
+	</div>
+	
+
+
+<footer>
+	Hey this is a website Copyright @c@ 2014
+</footer>
+
+
+
+</body>
+</html>
+

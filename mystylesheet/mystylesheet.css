@@ -1,13 +1,22 @@
-﻿body {
+﻿/* General 
+-----------------------------------------------*/
+body {
         font-family: 'PT Sans', serif;
         font-size: 14px;
       }
-
 @media (min-width: 1200px) {
 	.container {
 		width: 998px;
 	}
 }
+
+
+
+/*
+---------------End General------------
+------------------------------------------------*/
+
+
  .bigimage {
 	background: url(../images/semossweb2.jpg) no-repeat;
 	margin-top:-65px;
@@ -18,6 +27,7 @@
 	background: url(../images/desk.jpg) no-repeat;
 	background-size:cover;
 	background-position:top;
+
 }
 .videobanner {
 	text-align:center;
@@ -26,6 +36,9 @@
 }
 .indexbuttons {
 	margin-top:30px;
+}
+.divheretohelp {
+	margin-top:60px;
 }
 .indexvideo {
 	width:100%;
@@ -55,13 +68,15 @@ h3.buttonh3 {
 	font-size: 20px;
 	text-align:center;
 	margin-top:0px;
-	font-weight:bold;
+	
 }
 p.buttonp {
 	text-align:center;
 	font-size:16px;	
  }
-/*navbar*/
+
+/*----------Navbar
+---------------------------------*/
 .navbar {
 	max-width: 1170px;
 	margin: 0px, auto;
@@ -104,46 +119,41 @@ p.buttonp {
 	margin-bottom:200px
 }
 
-/*BUTTTONS*/
+/*------------BUTTTONS
+----------------------------------------*/
 .btn-primary {
-	background-color: rgba(45, 101, 165, 1);
-	border-color: #2A6CA1;
-	margin-top: 15px;
-	border-bottom-color: rgba(7, 47, 68, 1);
-	border-radius: 5px;
-	border-bottom-width: medium;
+	background-color: rgba(50, 120, 212, 1);
+	border: 2px solid rgba(50, 120, 212, 1);
+	border-radius: 6px;
 	font-weight:bold;
 	width:175px;
-	margin-right:5px;
-	margin-left:5px;	
+	margin:10px;
 }
 .btn-primary:hover {
-	background-color:rgba(9, 33, 61, 1);
-	border-color:#123652;
-	border-bottom-color: rgba(2, 10, 24, 1);
+	background-color:rgba(46, 136, 255, 1);
+	border-color:rgba(46, 136, 255, 1);
+	/*border-bottom-color: rgba(2, 10, 24, 1);
 	border-radius: 5px;
-	border-bottom-width: medium;	
+	border-bottom-width: medium;	*/
 }
 .btn-secondary {
-	background-color: rgba(95, 95, 95, 1);
+	background-color: rgba(110 , 110, 110, 1);
 	color:white;
-	border-color: #3E404A;
-	margin-top: 15px;
-	border-bottom-color: rgba(49, 53, 55, 1);
-	border-radius: 5px;
-	border-bottom-width: medium;
+	border-color: rgba(110 , 110, 110, 1);
+	margin: 10px;
+	/*border-bottom-color: rgba(49, 53, 55, 1);
+	border-bottom-width: medium;*/
+	border-radius: 6px;
 	font-weight:bold;
 	width:175px;
-	margin-right:5px;
-	margin-left:5px;	
 }
 .btn-secondary:hover {
-	background-color:rgba(54, 54, 56, 1);
+	background-color:rgba(140, 140, 140, 1);
 	color:white;
-	border-color:#2C2D34;
-	border-bottom-color: rgba(31, 33, 34, 1);
+	border-color:rgba(140, 140, 140, 1);
+	/*border-bottom-color: rgba(31, 33, 34, 1);
 	border-radius: 5px;
-	border-bottom-width: medium;	
+	border-bottom-width: medium;	*/
 }
 .btn-capa {
 	background-color: rgba(45, 101, 165, 1);
@@ -164,17 +174,33 @@ p.buttonp {
 	border-radius: 5px;
 	border-bottom-width: medium;	
 }
-.coolgreenbutton{
-	color: rgba(114, 114, 119, 1);
-	font-size: 20px;
-	font-weight:bold;
-	width:175px;
-	margin-top:30px;
-	margin-right:10px;
-	margin-left: 10px;	
+.bigbluebutton{
+	padding: 10px 20px;
+	border: 2px solid rgba(50, 120, 212, 1);
+	color: rgba(50, 120, 212, 1);
+	background: transparent;
+	border-radius: 6px;
+	font-size: 18px;
+	margin:10px;
 }
-.coolgreenbutton:hover {
-	color: #19BB84;
+.bigbluebutton:hover {
+	background: rgba(50, 120, 212, 1);
+	color: white;
+	text-decoration: none;
+}
+.bigbluebuttonaction{
+	padding: 10px 20px;
+	border: 2px solid rgba(50, 120, 212, 1);
+	color: white;
+	background: rgba(50, 120, 212, 1);
+	border-radius: 6px;
+	font-size: 18px;
+	margin:10px;
+}
+.bigbluebuttonaction:hover {
+	background: rgba(46, 136, 255, 1);
+	border: 2px solid rgba(46, 136, 255, 1);
+	color: white;
 	text-decoration: none;
 }
 .coolbluebutton{
@@ -198,6 +224,7 @@ p.buttonp {
 .footerlink:hover {
 	text-decoration:none;
 	font-weight:bold;
+	color:rgba(50, 120, 212, 1);
 }
 .solutionbutton {
 	color: rgba(135, 135, 137, 1);
@@ -214,7 +241,8 @@ p.buttonp {
 .homebutton {
 	color: rgba(34, 34, 34, 1);
 	margin-right:10px;
-	margin-left: 10px;	
+	margin-left: 10px;
+	font-weight:regular;
 }
 .homebutton:hover {
 	color: rgba(152, 152, 152, 1);
@@ -243,8 +271,23 @@ p.buttonp {
 	left: 0px;
 	margin-top:20px;
 }
+.circlelink {
+	color:rgba(50, 120, 212, 1); 
+	padding-left:5px;
 
-/*HEADERS*/
+	padding-right:5px;
+}
+.circlelink:hover {
+	text-decoration:none;
+	
+	color:rgba(96, 164, 255, 1);
+}
+/*------------------------------End Buttons-------
+----------------------------------------------------------------*/
+
+
+/*==============================HEADERS
+================================================================*/
 h1.jumbo, h3.jumbo {
 	color:White;
 	text-align:center;
@@ -271,7 +314,7 @@ div.rowHome {
 	margin-top:50px;
 }
  .bigimagesolutions {
-	background: url(../images/screen.jpg) no-repeat;
+	background: rgba(33, 84, 73, 1);
 	margin-top:-65px;
 	background-size:cover;
 	background-position:top center;
@@ -292,7 +335,7 @@ div.rowHome {
 	height:250px;
 }
 .solutionOptions {
-	width:200px;
+	width:100px;
 }
 .solutions {
 	margin-bottom:40px;
@@ -310,8 +353,8 @@ div.rowHome {
 .icons {
 	margin: 0 auto;
 	display:block;
-	width: 100px; 
-	height: 100px;
+	width: 75px; 
+	height: 75px;
 }
  
  /*CAPABILITIES*/
@@ -349,23 +392,7 @@ p.simple {
 	border-width:2px;
 	border-radius:10px;
 }
-.aboutlead {
-}
 
-/*Rest of screen*/
-
-/*JUMBO*/
-/*homepage jumbo color*/
-
-
-
-
-/*h3.jumbo {
-	text-align:left;
-	color:white;
-	margin-top:10px;
-		
-}*/
 h4.jumbo {
 	color:white;
 	text-align:left;
@@ -383,28 +410,28 @@ h4.jumbo {
 .img-circle {
 	margin: 0 auto;
 	display:block;
-	width: 150px; 
-	height: 150px;
+	width: 120px; 
+	height: 120px;
 }
 hr.footer {
 	padding-bottom:20px;
 	padding-top:20px;
+}
+h4.circle {
+	font-weight:bold;
 }
 h2.circle {
 	text-align: center;
 }
 p.circle {
 	text-align: center;
+	font-size:14px;
 }
 
 .container {
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
-div.navbar-header {
-	
-}
-
 
 h2.featurette-heading {
 	font-size:28px;
@@ -440,6 +467,8 @@ p.lead {
 }
 .imgBox3:hover {
 	background: url(../images/dog.jpg) no-repeat;
+	
+	
 	background-size:100%;
 }
 /*centering images in columns*/
