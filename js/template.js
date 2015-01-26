@@ -12,31 +12,8 @@
 		});
 	});
 	
-//Solutions image switch
-function FirstPic(){
-    	document.Mainpic.src = document.pic1.src
-    	return
-    }
-function SecPic(){
-    	document.Mainpic.src = document.pic2.src;
-		document.readme.innerhtml = 'Heat Maps provide an easy way to compare quantitative data and allows you to see variations in data based on color. They are constructed as a table and use colored squares that represent the data value.  The following is a view of a heat map visualization with the capabilities outlined in the table below.';
-    	return
-    }
-function ThiPic(){
-    	document.Mainpic.src = document.pic3.src
-    	return
-    }
-function ForPic(){
-    	document.Mainpic.src = document.pic4.src
-    	return false;
-		preventDefault();
-    }
-function FifPic(){
-    	document.Mainpic.src = document.pic5.src
-    	return false;
-		preventDefault();
-    }
-	
+
+
 //Tab Scrolling Animation	
 $(document).ready(function (){
             $("#click1").click(function (){
@@ -75,16 +52,89 @@ $(document).ready(function (){
             });
         });
 
-//Healthcarepage
-/*$(document).ready(function (){
-            $("#optionlink-scroll").click(function (){
-                $(this).animate(function(){
+		
+		$(document).ready(function(){
+			   $(window).bind('scroll', function() {
+			   var stickyHeight = window.innerHeight - 300 ;
+			   console.log("scrollTop: " + $(window).scrollTop());
+				if ($(window).scrollTop() > stickyHeight) {
+					 $('#sticky').addClass('fixed');
+				 }
+				 else {
+					 $('#sticky').removeClass('fixed');
+				 }
+				});
+			});
+
+$(document).ready(function (){
+            $("#optionlink-scroll0").click(function (){
+				
+                //$(this).animate(function(){
                     $('html, body').animate({
-                        scrollTop: $(href).offset().top
+                        scrollTop: $("#section1").offset().top - $('#sticky').height()
                     });
-                });
+                //});
             });
-        });*/
+			
+			$("#optionlink-scroll").click(function (){
+                //$(this).animate(function(){
+                    $('html, body').animate({
+                        scrollTop: $("#section2").offset().top - $('#sticky').height()
+                    });
+                //});
+            });
+			
+			$("#optionlink-scroll2").click(function (){
+                //$(this).animate(function(){
+                    $('html, body').animate({
+                        scrollTop: $("#section3").offset().top - $('#sticky').height()
+                    });
+                //});
+            });
+			$("#optionlink-scroll3").click(function (){
+                //$(this).animate(function(){
+                    $('html, body').animate({
+                        scrollTop: $("#section4").offset().top- $('#sticky').height()
+                    });
+                //});
+            });
+
+			$("#question-link1").click(function (){
+				
+                //$(this).animate(function(){
+                    $('html, body').animate({
+                        scrollTop: $("#section1").offset().top - $('#sticky').height()
+                    });
+                //});
+            });
+			$("#question-link2").click(function (){
+				
+                //$(this).animate(function(){
+                    $('html, body').animate({
+                        scrollTop: $("#section2").offset().top - $('#sticky').height()
+                    });
+                //});
+            });
+			$("#question-link3").click(function (){
+				
+                //$(this).animate(function(){
+                    $('html, body').animate({
+                        scrollTop: $("#section3").offset().top - $('#sticky').height()
+                    });
+                //});
+            });
+			$("#question-link4").click(function (){
+				
+                //$(this).animate(function(){
+                    $('html, body').animate({
+                        scrollTop: $("#section4").offset().top - $('#sticky').height()
+                    });
+                //});
+            });
+			
+	});
+// USE CASE QUESTIONS Switching fixed/absolute
+
 
 		
 //SUPPORT PAGE		

@@ -1,6 +1,0 @@
-.custom #fixed-social-icons { background:transparent; width:32px; position:fixed; top:50px; left:0px; }
- .custom #fixed-social-icons a { display:block; height:32px; width:32px; }
-  .custom #fixed-social-icons a.social-twitter { background: url('../images/twitter.png') 0 0 no-repeat; }
-  .custom #fixed-social-icons a.social-rss { background: url('../images/youtubeicon.png') 0 0 no-repeat; }
-  .custom #fixed-social-icons a.social-linkedin { background: url('images/YOUR_LINKEDIN_IMAGE_FILENAME') 0 0 no-repeat; }
-  .custom #fixed-social-icons a.social-facebook { background: url('../images/FBlogo.png') 0 0 no-repeat; }
