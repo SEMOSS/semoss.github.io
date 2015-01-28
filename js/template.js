@@ -11,7 +11,18 @@ $(document).ready(function(){
                                                 }
                                 });
                 });
-                
+  $(document).ready(function(){
+                                $("#nav-mobile-white").html($("#nav-main-white").html());
+                                $("#nav-trigger-white span").click(function(){
+                                                if ($("nav#nav-mobile-white ul").hasClass("expanded")) {
+                                                                $("nav#nav-mobile-white ul.expanded").removeClass("expanded").slideUp(250);
+                                                                $(this).removeClass("open");
+                                                } else {
+                                                                $("nav#nav-mobile-white ul").addClass("expanded").slideDown(250);
+                                                                $(this).addClass("open");
+                                                }
+                                });
+                });              
 
 
 //Tab Scrolling Animation             
