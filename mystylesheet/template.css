@@ -100,7 +100,7 @@ h2 {
   margin-top:5px
 }
 h3{
-  color: rgb(125, 125, 125);
+  color: rgb(107, 107, 107);
   font-size: 1.7em;
   line-height:1.1;
   margin-bottom:1px;
@@ -171,7 +171,7 @@ p.highlight {
 	color:white;
 }
 .blue {
-	color:rgba(50, 120, 212, 1);
+	color:rgba(13, 83, 255, 1);
 }
 .gray {
 	color:#565656;
@@ -215,7 +215,7 @@ p.speech:after
 }
 h6.jumbo-label {
 	font-size:16px;
-	margin-bottom:12px;
+	margin-bottom: 13px;
 }
 .jumbo-label {
 	
@@ -289,64 +289,12 @@ a.active {
 
 /*------------BUTTTONS
 ----------------------------------------*/
-.btn-large {
 
-}
-.btn-action {
-	transition: all 0.15s linear;
-	background-color: rgba(50, 120, 212, 1);
-	border: 2px solid rgba(50, 120, 212, 1);
-	border-radius: 5px;
-	color:white;
-	margin:5px;
-	padding:5px 10px;
-	overflow:hidden;
-}
-.btn-action:hover {
-	background-color:rgba(54, 132, 234, 1);
-	border-color:rgba(54, 132, 234, 1);
-}
-.btn-primary {
-	transition: all 0.15s ease;
-	background-color: rgba(50, 120, 212, 1);
-	border: 2px solid rgba(50, 120, 212, 1);
-	border-radius: 5px;
-	font-weight:bold;
-	width:175px;
-	height:auto;
-	margin:10px;
-	color:white;
-	font-size:18px;
-	padding: 10px 20px;
-}
-.btn-primary:hover {
-	background-color:rgba(54, 132, 234, 1);
-	border-color:rgba(54, 132, 234, 1);
-}
-.btn-secondary {
-	/*transition: all 0.15s linear;*/
-	background-color: rgba(110 , 110, 110, 1);
-	color:white;
-	border-color: rgba(110 , 110, 110, 1);
-	margin: 10px;
-	border-radius: 5px;
-	font-weight:bold;
-	width:175px;
-	height:auto;
-	color:white;
-	font-size:18px;
-	padding: 10px 20px;
-}
-.btn-secondary:hover {
-	background-color:rgba(140, 140, 140, 1);
-	color:white;
-	border-color:rgba(140, 140, 140, 1);
-}
 .bigbluebutton{
 	transition: all 0.25s linear;
 	padding: 10px 20px;
-	border: 2px solid rgba(50, 120, 212, 1);
-	color: rgba(50, 120, 212, 1);
+	border: 2px solid rgba(47, 107, 255, 1);
+	color: rgba(47, 107, 255, 1);
 	background: transparent;
 	border-radius: 6px;
 	font-size: 18px;
@@ -355,8 +303,8 @@ a.active {
 }
 .bigbluebutton:hover {
 	min-width:50px;
-	background: rgba(54, 132, 234, 1);
-	border: 2px solid rgba(54, 132, 234, 1);
+	background: rgba(47, 107, 255, 1);
+	border: 2px solid rgba(47, 107, 255, 1);
 	color: white;
 	text-decoration: none;
 }
@@ -381,22 +329,29 @@ a.active {
 .smbluebutton {
 	transition: all 0.25s linear;
 	padding: 0px 12px;
-	color: rgba(100, 100, 100, 1);
+	color: rgba(76, 76, 76, 1);
+	background: transparent;
+	/* font-weight: bold; */
+	font-size: 16px;
+	margin:10px 0px;
+	display:inline-block;
+	line-height: 1.1;
+}
+.smbluebutton:hover {
+	transition: all 0.25s linear;
+	padding: 0px 12px;
+	color: rgba(140, 140, 140, 1) ;
 	background: transparent;
 	font-size: 16px;
 	margin:10px 0px;
 	display:inline-block;
 }
-.smbluebutton:hover {
-	transition: all 0.25s linear;
-	padding: 0px 12px;
-
-	color: rgba(140, 140, 140, 1) ;
-	background: transparent;
-	
-	font-size: 16px;
-	margin:10px 0px;
-	display:inline-block;
+.question-active {
+	border-bottom: 3px solid rgba(47, 107, 255, 1);
+	opacity: .75;
+}
+.div-padding-exsm {
+	padding:10px 0px;
 }
 .bluebutton-md {
 	transition: all 0.25s linear;
@@ -417,9 +372,9 @@ a.active {
 .bigbluebuttonaction{
 	transition: all 0.25s linear;
 	padding: 10px 20px;
-	border: 2px solid rgba(50, 120, 212, 1);
+	border: 2px solid rgba(47, 107, 255, 1);
 	color: white;
-	background: rgba(50, 120, 212, 1);
+	background: rgba(47, 107, 255, 1);
 	border-radius: 6px;
 	font-size: 18px;
 	margin:10px;
@@ -427,14 +382,14 @@ a.active {
 	white-space: nowrap; 
 }
 .bigbluebuttonaction:hover {
-	background: rgba(54, 132, 234, 1);
-	border: 2px solid rgba(54, 132, 234, 1);
+	background: rgba(47, 107, 255, 1);
+	border: 2px solid rgba(47, 107, 255, 1);
 	color: white;
 	text-decoration: none;
 }
 .bigbluebuttonaction:active {
-	background: rgba(54, 132, 234, 1);
-	border: 2px solid rgba(54, 132, 234, 1);
+	background: rgba(47, 107, 255, 1);
+	border: 2px solid rgba(47, 107, 255, 1);
 	color: white;
 	text-decoration: none;
 }
@@ -478,6 +433,7 @@ a.active {
 	border-top:4px solid white;
 	background:white;
 	
+	border-radius: 15px;
 	border-right:4px solid white;
 	border-left:4px solid white;
 	border-bottom:4px solid white;
@@ -503,15 +459,16 @@ a.active {
 	border-right:4px solid rgba(50, 120, 212, 1);
 	border-left:4px solid rgba(50, 120, 212, 1);
 	border-bottom:4px solid rgba(50, 120, 212, 1);
+	border-radius: 15px;
 	border-right:4px solid white;
 	border-left:4px solid white;
 	border-bottom:4px solid white;
 	border-top:4px solid white;
-	background:rgba(50, 120, 212, 1);
+	background: rgba(47, 107, 255, 1);
 }
 .footerlink:hover {
 	text-decoration:none;
-	color:rgba(50, 120, 212, 1);
+	color:rgba(13, 83, 255, 1);
 }
 .graybutton{
 	transition: all 0.25s linear;
@@ -679,11 +636,10 @@ a.active {
 	margin:20px 0px;	
 }
 .feature-takeaway {
-	background:  ;
 	padding: 15px 20px;
 	margin-bottom:20px;
 	width:100%;
-	border:1px solid rgba(54, 132, 234, 1) ;
+	border: 1px solid rgba(47, 107, 255, 1);
 	border-radius:6px;
 }
 .fix-search {
@@ -711,7 +667,7 @@ a.active {
 	margin:0 auto;
 }
 div#sticky.container-fluid.scroll-to-fixed-fixed {
-	border-bottom:1px solid rgb(220, 220, 220);
+	border-bottom: 1px solid rgb(220, 220, 220);
 }
 .fullscreenimage {
 	position:relative;
@@ -1159,7 +1115,7 @@ nav#nav-mobile-white {
 	height:95px; 
 	margin:0 auto; 
 	padding:15px 0px;
-	margin-top:12px;
+	margin-top: 10px;
 }
 .feature-img {
 	width:100%;
@@ -1298,13 +1254,14 @@ nav#nav-mobile-white {
 	background-size:100%;
 }
 .aboutleads {
-	background-color:rgba(195, 195, 195, 0.17);
+	/* background-color:rgba(195, 195, 195, 0.17); */
 	padding:10px;
 	
-	min-height:500px;
+	min-height: 450px;
 	border-radius:10px;
 	margin:10px 0px;
-	text-align:center;	
+	/* text-align:center; */	
+	/* border: 1px solid rgba(47, 107, 255, 1); */
 }
 .div-explore, .div-connections, .div-insights {
 	
@@ -1526,7 +1483,7 @@ ul#list {
 	
 }
 .optiontab label:hover {
-	background: rgba(243, 243, 243, .41);
+	background: rgba(243, 243, 243, .99);
 	padding:15px 20px;
 }
 

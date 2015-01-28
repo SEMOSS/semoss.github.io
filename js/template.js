@@ -106,32 +106,27 @@ $(document).ready(function (){
     }*/
 	
 $(document).ready(function (){
-                                                function goToTarget(target) {
-                                                                var currentPosition = $(document).scrollTop();
+    function goToTarget(target) {
+        var currentPosition = $(document).scrollTop();
 
-                                                                if(currentPosition < 300) {
-                                                                                var currentStickyHeight = $("#send-height").height();
-                                                                } else {
-                                                                                var currentStickyHeight = 0;
-                                                                }
+            if(currentPosition < 300) {
+                var currentStickyHeight = $("#send-height").height();
+            } else {
+                var currentStickyHeight = 0;
+            }
 
-                                                                var moveTo = (($(target).offset().top - $('#send-height').height()) );
+            var moveTo = (($(target).offset().top - $('#send-height').height()) );
                                                                 
-                                                                                $('html, body').animate({
-                                                                                                scrollTop: moveTo
-                                                                                });
-                                                }
-
-
-	
+            $('html, body').animate({
+                scrollTop: moveTo
+            });
+    }
     $("#optionlink-scroll0").click(function (){
-		
         goToTarget("#section1")
     });                                          
     $("#optionlink-scroll").click(function (){
         goToTarget("#section2")
 	});
-                                                
     $("#optionlink-scroll2").click(function (){
         goToTarget("#section3")
     });
@@ -209,7 +204,7 @@ $(document).ready(function () {
 
 function onScroll(event){
     var scrollPos = $(document).scrollTop();
-                var scrollBottom = $('#topbar').height() ;
+    var scrollBottom = $('#topbar').height() ;
     $('#nav-scroll a').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
@@ -221,7 +216,7 @@ function onScroll(event){
             currLink.removeClass("scroll-active");
         }
     });
-                $('#nav-scroll2 a').each(function () {
+       $('#nav-scroll2 a').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
         if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
@@ -232,6 +227,41 @@ function onScroll(event){
             currLink.removeClass("scroll-active");
         }
     });
+	if (scrollPos > (($('#section1').offset().top - $('#send-height').height()) - $('#optionlink-scroll0').height())){
+		$('#sticky1').addClass("question-active");
+	}
+	else {
+		$('#sticky1').removeClass("question-active");
+	}
+	if (scrollPos > (($('#section2').offset().top - $('#send-height').height()) - $('#optionlink-scroll0').height())){
+		$('#sticky2').addClass("question-active");
+	}
+	else {
+		$('#sticky2').removeClass("question-active");
+	}
+	if (scrollPos > (($('#section3').offset().top - $('#send-height').height()) - $('#optionlink-scroll0').height())){
+		$('#sticky3').addClass("question-active");
+	}
+	else {
+		$('#sticky3').removeClass("question-active");
+	}
+	if (scrollPos > (($('#section4').offset().top - $('#send-height').height()) - $('#optionlink-scroll0').height())){
+		$('#sticky4').addClass("question-active");
+	}
+	else {
+		$('#sticky4').removeClass("question-active");
+	}
+	/*$('#send-height div a').each(function () {
+		var currLink = $(this);
+		var refElement = $(currLink.attr("href"));
+		if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('#send-height div a').removeClass("question-active");
+            currLink.addClass("question-active");
+		}
+		else{
+            currLink.removeClass("question-active");
+        }
+	)};*/
 }
 
 $(document).ready(function (){
