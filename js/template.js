@@ -1,20 +1,20 @@
-//Menu collapse bar (top nav)	
-	$(document).ready(function(){
-		$("#nav-mobile").html($("#nav-main").html());
-		$("#nav-trigger span").click(function(){
-			if ($("nav#nav-mobile ul").hasClass("expanded")) {
-				$("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
-				$(this).removeClass("open");
-			} else {
-				$("nav#nav-mobile ul").addClass("expanded").slideDown(250);
-				$(this).addClass("open");
-			}
-		});
-	});
-	
+//Menu collapse bar (top nav)   
+$(document).ready(function(){
+                                $("#nav-mobile").html($("#nav-main").html());
+                                $("#nav-trigger span").click(function(){
+                                                if ($("nav#nav-mobile ul").hasClass("expanded")) {
+                                                                $("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
+                                                                $(this).removeClass("open");
+                                                } else {
+                                                                $("nav#nav-mobile ul").addClass("expanded").slideDown(250);
+                                                                $(this).addClass("open");
+                                                }
+                                });
+                });
+                
 
 
-//Tab Scrolling Animation	
+//Tab Scrolling Animation             
 $(document).ready(function (){
             $("#click1").click(function (){
                 //$(this).animate(function(){
@@ -52,95 +52,105 @@ $(document).ready(function (){
             });
         });
 
+$(document).ready(function() {
+    $('#sticky').scrollToFixed( { marginTop: 0, limit: 7000 } );
+
+});		
 		
-		$(document).ready(function(){
-			   $(window).bind('scroll', function() {
-			   var stickyHeight = window.innerHeight - 300 ;
-			   console.log("scrollTop: " + $(window).scrollTop());
-				if ($(window).scrollTop() > stickyHeight) {
-					 $('#sticky').addClass('fixed');
-				 }
-				 else {
-					 $('#sticky').removeClass('fixed');
-				 }
-				});
-			});
+/*                                
+$(document).ready(function(){
+    $(window).bind('scroll', function() {
+		var stickyHeight = ((window.innerHeight - $('#topbar').height()) - $('#scrolltotabs').height());
+	//console.log("scrollTop: " + $(window).scrollTop());
+	//console.log($("#section1").offset().top);
+		if ($(window).scrollTop() > stickyHeight) {
+			$('#sticky').addClass('fixed');
+		}
+		else {
+			$('#sticky').removeClass('fixed');
+		}
+    });
+});
+
+*/
+/*var current_Position = $(document).scrollTop();
 
 $(document).ready(function (){
-            $("#optionlink-scroll0").click(function (){
-				
-                //$(this).animate(function(){
-                    $('html, body').animate({
-                        scrollTop: $("#section1").offset().top - $('#sticky').height()
-                    });
-                //});
-            });
-			
-			$("#optionlink-scroll").click(function (){
-                //$(this).animate(function(){
-                    $('html, body').animate({
-                        scrollTop: $("#section2").offset().top - $('#sticky').height()
-                    });
-                //});
-            });
-			
-			$("#optionlink-scroll2").click(function (){
-                //$(this).animate(function(){
-                    $('html, body').animate({
-                        scrollTop: $("#section3").offset().top - $('#sticky').height()
-                    });
-                //});
-            });
-			$("#optionlink-scroll3").click(function (){
-                //$(this).animate(function(){
-                    $('html, body').animate({
-                        scrollTop: $("#section4").offset().top- $('#sticky').height()
-                    });
-                //});
-            });
+    function goToTarget(target) {
+        
+		
+		
+	if(/*currentPosition < $('sticky').hasClass('scroll-to-fixed-fixed') === true) {
+        var currentStickyHeight = 0;
+    } 
+	else {
+        var currentStickyHeight = $("#send-height").height();
+    }
 
-			$("#question-link1").click(function (){
-				
-                //$(this).animate(function(){
-                    $('html, body').animate({
-                        scrollTop: $("#section1").offset().top - $('#sticky').height()
-                    });
-                //});
-            });
-			$("#question-link2").click(function (){
-				
-                //$(this).animate(function(){
-                    $('html, body').animate({
-                        scrollTop: $("#section2").offset().top - $('#sticky').height()
-                    });
-                //});
-            });
-			$("#question-link3").click(function (){
-				
-                //$(this).animate(function(){
-                    $('html, body').animate({
-                        scrollTop: $("#section3").offset().top - $('#sticky').height()
-                    });
-                //});
-            });
-			$("#question-link4").click(function (){
-				
-                //$(this).animate(function(){
-                    $('html, body').animate({
-                        scrollTop: $("#section4").offset().top - $('#sticky').height()
-                    });
-                //});
-            });
-			
+    var moveTo = (($(target).offset().top - $('#sticky').height()) - currentStickyHeight);
+                                                                
+    $('html, body').animate({
+        scrollTop: moveTo
+    });
+    }*/
+	
+$(document).ready(function (){
+                                                function goToTarget(target) {
+                                                                var currentPosition = $(document).scrollTop();
+
+                                                                if(currentPosition < 300) {
+                                                                                var currentStickyHeight = $("#send-height").height();
+                                                                } else {
+                                                                                var currentStickyHeight = 0;
+                                                                }
+
+                                                                var moveTo = (($(target).offset().top - $('#send-height').height()) );
+                                                                
+                                                                                $('html, body').animate({
+                                                                                                scrollTop: moveTo
+                                                                                });
+                                                }
+
+
+	
+    $("#optionlink-scroll0").click(function (){
+		
+        goToTarget("#section1")
+    });                                          
+    $("#optionlink-scroll").click(function (){
+        goToTarget("#section2")
 	});
+                                                
+    $("#optionlink-scroll2").click(function (){
+        goToTarget("#section3")
+    });
+    $("#optionlink-scroll3").click(function (){
+        goToTarget("#section4")
+    });
+    $("#question-link1").click(function (){
+        goToTarget("#section1")
+    });
+	$("#question-link2").click(function (){
+        goToTarget("#section2")
+    });
+    $("#question-link3").click(function (){
+        goToTarget("#section3")
+    });
+    $("#question-link4").click(function (){
+        goToTarget("#section4")
+    });
+ });
+ 
+ 
+ 
 // USE CASE QUESTIONS Switching fixed/absolute
 
 
-		
-//SUPPORT PAGE		
+                                
+//SUPPORT PAGE                            
 //Navscroll
 
-		
+                                
 //nav scrollbar
 $(document).ready(function () {
     $(document).on("scroll", onScroll);
@@ -165,7 +175,7 @@ $(document).ready(function () {
             $(document).on("scroll", onScroll);
         });
     });
-	$('a.navscroll2[href^="#"]').on('click', function (e) {
+                $('a.navscroll2[href^="#"]').on('click', function (e) {
         e.preventDefault();
         $(document).off("scroll");
         
@@ -188,7 +198,7 @@ $(document).ready(function () {
 
 function onScroll(event){
     var scrollPos = $(document).scrollTop();
-	var scrollBottom = $('#topbar').height() ;
+                var scrollBottom = $('#topbar').height() ;
     $('#nav-scroll a').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
@@ -200,7 +210,7 @@ function onScroll(event){
             currLink.removeClass("scroll-active");
         }
     });
-	$('#nav-scroll2 a').each(function () {
+                $('#nav-scroll2 a').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
         if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
@@ -221,7 +231,7 @@ $(document).ready(function (){
                     });
                 //});
             });
-			$("#navscroll2").click(function (){
+                                                $("#navscroll2").click(function (){
                 //$(this).animate(function(){
                     $('html, body').animate({
                         scrollTop: $(href).offset().top
@@ -231,4 +241,4 @@ $(document).ready(function (){
         });
 
 
-	
+                
