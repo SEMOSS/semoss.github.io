@@ -67,7 +67,15 @@ $(document).ready(function() {
     $('#sticky').scrollToFixed( { marginTop: 0, limit: 7000 } );
 
 });		
-		
+$(document).ready(function() {
+    $('#nav-scroll').scrollToFixed( { marginTop: 15  } );
+	$('#nav-scroll2').scrollToFixed( { marginTop: 15 } );
+});		
+
+$(document).ready(function() {
+    $('#fixit').scrollToFixed( { marginTop: 85  } );
+	
+});	
 /*                                
 $(document).ready(function(){
     $(window).bind('scroll', function() {
@@ -227,6 +235,7 @@ function onScroll(event){
             currLink.removeClass("scroll-active");
         }
     });
+	
 	if (scrollPos > (($('#section1').offset().top - $('#send-height').height()) - $('#optionlink-scroll0').height())){
 		$('#sticky1').addClass("question-active");
 	}

@@ -1,0 +1,240 @@
+<html lang="en">
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Gudea' rel='stylesheet' type='text/css'>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">  
+		<title>Developer Doc - SEMOSS</title>
+		
+		<script src="../lib/jquery.js"></script>
+		<script src="../lib/scrolltofixed.js"></script>
+		<script src="../js/template.js"></script>
+		<style>
+
+			
+		</style>
+		<link rel="stylesheet" href="../mystylesheet/template.css" type="text/css">
+	</head>
+  
+<body>
+	<!--Navbar --------------------------->
+	<div class="container-fluid" id="topbar">
+		<div class="navcolor" style="position:relative; z-index:100;">
+			<div class="container-lg" id="wrapper">
+				<header>					
+					<h1 class="logo"><a href="index.html"><img src="../images/graylogo.png" style="width:125px; height:25px; padding:0px;"></a></h1>		
+						<nav id="nav-main">
+							<ul>
+								<li><a href="usecase1.html">Use Cases</a></li>
+								
+								<li><a href="about.html">About</a></li>
+								<li><a href="support.html" class="navselected">Support</a></li>
+							</ul>		
+						</nav>
+						<div id="nav-trigger"><span>Menu</span>
+						</div>
+						<nav id="nav-mobile"></nav>
+				</header>
+			</div>	
+		</div>
+		<div class = "fullscreen-image" style="background: url(../myimages/nightsky.jpg) no-repeat ; background-size:cover; background-position: bottom center; position:relative; z-index:0; height:40%;">
+			<div class = "container-lg">
+				<div class = "caption-md">
+					
+					
+				</div>
+			</div>
+		</div>
+		
+	</div>
+<!--end Navbar-->
+	<div class="container-lg" id="scrolltotabs display-table" >
+		<div style="margin-top:15px;">
+			
+			<a href="support.html" ><div class="grid4 bordertop" style="text-align:center;">
+					
+					<h6 class="div-padding-exsm ">User Guide</h6>
+			</div></a>
+			<a href="#" ><div class="grid4 bordertop-active" style="text-align:center;">
+				
+					<h6 class="div-padding-exsm jumbo">Developer Docs</h6>
+			</div></a>
+			<a href="api.html" ><div class="grid4 bordertop" style="text-align:center;">
+					<h6 class="div-padding-exsm">API</h6>
+			</div></a>
+		</div>
+	</div>
+	<div class="container-lg display-table" style="line-height:1.4">
+		<div class="grid9" style="padding-top:10px;">
+			<div id="introduction">
+									<h4 class="margin">Introduction</h4>
+									<p class="feature">This guide takes an in depth look at the code behind SEMOSS and should be used as a jumping point for those interested in modifying features or developing additional features for SEMOSS.</p>
+									<p class="feature margin">This guide highlights the pieces that are most crucial to the functioning of SEMOSS as well as those that are of most interest to a potential user/developer. Note that this is not a comprehensive look at all of the code that makes up SEMOSS but rather a way of explaining the most critical pieces of code and describing how interacts with each other.</p>
+									<p class="feature margin">This guide should be used in conjunction with the SEMOSS User Guide as well as supporting documents such as Javadocs, all of which can be found on SEMOSS.org.</p>
+								</div>
+								<div id="overview">
+									<h4 class="margin">Overview</h4>
+									<p class="feature">Throughout this page you will find various types of resources, such as:</p>
+									<p class="feature margin">A complete list of steps that must be taken to begin working on the code of SEMOSS as well as other important information to consider when working with the code.</p>
+									<p class="feature margin">A set of sequence and component diagrams depicting how SEMOSS processes various actions and outlining the interactions of its different components (Sections 1 and 2).</p>
+									<p class="feature margin">An overview of how SEMOSS is able to take in data and the engine classes used to access, process, and update these data sources (Section 3).</p>
+									<p class="feature margin">An introduction to the SEMOSS "Play Sheet" used for data visualization, including the different forms that it can currently take as well as some of its possible future forms (Section 4).</p>
+								</div>
+								<div id="gettingstarted">
+									<h4 class="margin">Getting Started</h4>
+									<p class="feature">In order to begin working on SEMOSS, there are a number of files that must be downloaded and programs that must be installed. This section lays out what each of the steps are that must be taken to begin editing the code.</p>
+									<h6 class="darkgray">Installation</h6>
+									<p class="feature">SEMOSS has been built using the Eclipse integrated development environment and it is therefore advisable to use the latest version of Eclipse for editing the code. Eclipse is available for download<a class="learnmore-link" href="http://www.eclipse.org/downloads/index-developer.php">here.</a>A Java Development Kit (JDK) is also necessary to open SEMOSS for editing.</p>
+									<p class="feature margin">While most of the SEMOSS functionality works with a 64-bit JDK, it is recommended to use 32-bit to ensure all of the features work correctly.</p>
+									<p class="feature margin">The latest JDK is available for download<a class="learnmore-link" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">here.</a></p>
+									<p class="feature margin">The source code of SEMOSS is available for download from GitHub which can be accessed through<a class="learnmore-link" href="https://github.com/semoss/semoss">our github repository.</a></p>
+									<h6 class="darkgray">Source code directory structure</h6>
+									<p class="feature">The following lays out the hierarchy used to organize the directory of SEMOSS and gives a brief overview of what each folder contains.</p>
+									<h6 class="darkgray">src/</h6>
+									<p class="feature">Java source folders that SEMOSS uses to build the user interface and handle most of the functionality. There are a number of packages within the src folder to further organize the code. To better understand the organization of the various packages, please consult the Javadoc that can be found<a class="learnmore-link" href="#">here.</a></p>
+									<h6 class="darkgray">db/</h6>
+									<p class="feature">All database information, including how to access a given database and the data itself. The data generally takes the form of a .jnl file (though many other file types can be used such as .xml, .rdf, and .ttl) while the properties of the database are stored in a .properties file. The files in this folder are referenced in the RDF_Map.prop file.</p>
+									<h6 class="darkgray">help/</h6>
+									<p class="feature">Version information displayed on the Help tab of SEMOSS.</p>
+									<h6 class="darkgray">pictures/</h6>
+									<p class="feature">Images used throughout the application.</p>
+									<h6 class="darkgray">questions/</h6>
+									<p class="feature">Properties files that contain all information surrounding the perspectives and questions that are displayed for a given engine (database). This information includes what perspectives and questions to display for an engine as well as details about how to process a given question such as what SPARQL query to run and what play sheet to display it on. The files in this folder also are referenced in the RDF_Map.prop file.</p>
+									<h6 class="darkgray">RDFGraphLib/</h6>
+									<p class="feature">All of the JAR files that are referenced in the source code.</p>
+									<h6 class="darkgray">training/</h6>
+									<p class="feature">All of the training material displayed on the Help tab of SEMOSS is contained in this folder.</p>
+									<h6 class="darkgray">External Dependencies</h6>
+									<p class="feature">SEMOSS uses numerous JAR files from a wide variety various sources, including Apache, Jena, Sesame, and Jung. All of the JAR files can be found in the RDFGraphLib folder of the SEMOSS source code.</p>
+									<h6 class="darkgray">Configuration Files</h6>
+									<p class="feature">Directly in the main directory there are also a couple of important files regarding the configuration of SEMOSS. These files get run on Startup and play a crucial role in determining how the application functions.</p>
+									<h6 class="darkgray">RDF_Map.prop</h6>
+									<p class="feature">This is the central properties sheet that is read by the Starter class on startup. All of the information contained in this file is critical to the loading of data into SEMOSS and its general functioning. Many of the pieces of this file can be found referenced in Section 6 of this document, but the following is a high level overview of what this file contains:</p>
+									<p class="bold">Engine information</p>
+									<p class="feature">This section of the Map file specifies what engines should be started when the application is first run as well as what other files (questions file, database properties file) are related to that specific engine.</p>
+									<p class="bold">Model-view conroller bindings</p>
+									<p class="feature">Lays out what listeners are connected to what Java Swing components on the main PlayPane. This section also details some default settings for the listeners, such as their view and right panel components. All of this information is read on startup and is necessary for the correct functioning of the buttons.</p>
+									<p class="bold">Shape and color maps</p>
+									<p class="feature">Contains information regarding how different node types are displayed by default on the graph play sheet, including the nodes' shape and color.</p>
+									<p class="bold">Base Objects and Base Predicates</p>
+									<p class="feature">Lays out how SEMOSS should translate Excel data to RDF. This section specifies the full RDF URI to be used for each of the different node and relationship types. More information on this can be found in Section 6 of this document.</p>
+									<p class="bold">Meta and core data</p>
+									<p class="feature">This section contains additional RDF triples that are included in every RDF database created through SEMOSS. These triples specify mainly subclass relationships of the node and relationship types and are used for SPARQL inference.</p>
+									<h6 class="darkgray">log4.prop</h6>
+									<p class="feature">This file contains initiation information for the logger that is used throughout the application.</p>
+								</div>
+								<div id="sequencediagrams">
+									<h4 class="margin" >Sequence Diagrams</h4>
+									<p class="feature">This section contains a number of sequence diagrams that lay out some of the most critical processes of SEMOSS.</p>
+									<h6 class="darkgray">Starter Process</h6>
+									<p class="feature">This lays out the sequence of events that occur when the SEMOSS starter is run which calls perna.ui.main.Starter.main(String[]).</p>
+									<p class="feature margin">A PDF version of this diagram is available for download.</p>
+									<h6 class="darkgray">Query Processing</h6>
+									<p class="feature">This lays out the sequence of steps that are taken to process a query. This action occurs when the Create button is pushed and the function exists in perna.ui.main.listener.imple.ProcessQueryListener.actionPerformed(ActionEvent). A PDF version of this diagram is available for download.</p>
+								</div>
+								<div id="component-diagrams">
+									<h4 class="margin">Component Diagrams</h4>
+									<p class="feature">This section lays out the component diagrams for some of the most critical components of SEMOSS.</p>
+									<h6 class="darkgray">Play sheets</h6>
+									<p class="feature">This is the component diagrams of the current play sheets in SEMOSS. There are three implementing classes — GraphPlaySheet, GridPlaySheet, and GridRAWPlaySheet — of the interface IPlaySheet. A PDF version of this diagram is available for download.</p>
+									<h6 class="darkgray">Swing layout</h6>
+									<p class="feature">This component diagram lays out how our current Java Swing UI components are currently laid out. This is the foundation of the applications interface. A PDF version of this diagram is available for download.</p>
+									<h6 class="darkgray">Graph poput</h6>
+									<p class="feature">This diagram lays out the layout of the popup that is used currently by the GraphPlaySheet. A PDF version of this diagram is available for download.</p>
+								</div>
+								<div id="databases-engines">
+									<h4 class="margin">Databases and engines</h4>
+									<p class="feature">SEMOSS has the ability to perform analysis across multiple databases at runtime through the use of various engines. Each engine is connected to a specific RDF triple store and has the ability to extract, import, or update the data connected to it.</p>
+									<p class="feature margin">The specific type of engine to connect to a given RDF triple store depends on a number of attributes, including size and format, but the functionality of all engine types is similar. The interface IEngine is used to standardize the core functionalities of an engine and allows them to be used without first considering their specific types. This section will give an overview of this functionality that has been included in IEngine as well as explain the different types of engines that SEMOSS currently uses to access various triple stores.</p>
+									<h6 class="darkgray">IEngine</h6>
+									<p class="feature">The IEngine.java class is the interface class of SEMOSS used to standardize the functionality of the unique engine classes. As of version 1.0, SEMOSS has only implemented engines that connect to RDF triple stores, but an engine in SEMOSS can be written to take in any database.</p>
+									
+									<h6 class="darkgray">Types of engines</h6>
+									<p class="feature">Version 1.0 of SEMOSS contains a number of different engine types that provide the ability to handle data in a number of different formats. The biggest differentiator between the engine classes is that some support local data repositories while others connect to remote repositories.</p>
+									<h6 class="darkgray">Local data repository</h6>
+									<p class="feature">Version 1.0 of SEMOSS contains a number of different engine types that provide the ability to handle data in a number of different formats. The biggest differentiator between the engine classes is that some support local data repositories while others connect to remote repositories.Local repositories are databases that reside in the "db" folder of the SEMOSS tool. There are a few local repository engine classes that are supported as of Version 1.0. SEMOSS at any given time can have multiple engines running of the same type, but each engine must connect to a unique data store. The data stores that these local data engine classes connect to must be local to a given user's application.</p>
+									
+									<h6 class="darkgray">Remote server repository</h6>
+									<p class="feature">Remote repositories are databases that reside on another server and require a live connection for the engine to access it. These databases usually require a REST API on the remote Apache server and there can be multiple access entries. The following table lays out the current engines that connect to remote data stores:</p>
+									<p> enter table!!</p>
+								</div>
+								<div id="playsheets">
+									<h2 class="margin">Play Sheets</h2>
+									<p class="feature">Play sheets in SEMOSS are the components that filter, analyze and visualize data. There are a number of different play sheets with unique visualization components, allowing for the same data to be displayed and manipulated in very different ways.</p>
+									<p class="feature margin">Play sheets are setup similarly to the way engines are set up. The following section takes an in-depth look at the play sheet interface as well as each of the play sheet classes currently implemented in SEMOSS.</p>
+									<h6 class="darkgray">IPlaySheet</h6>
+									<p class="feature">The IPlaySheet.java class is the play sheet interface for SEMOSS. All play sheets implement this interface which includes the basic functions of a data visualizer.</p>
+									
+									<h6 class="darkgray">GridPlaySheet</h6>
+									<p class="feature">GridPlaySheet.java is the component class that generates a table as the means of visualizing the data. This play sheet currently requires a SELECT SPARQL query to process the data correctly.</p>
+									<p class="feature margin">The table can be sorted by clicking on a column header and the data can easily be copied and pasted into Excel. More information on this play sheet's functionality can be found in the SEMOSS User Guide.</p>
+									<p class="feature margin">The following is a print screen of what the results look like in a GridPlaySheet.</p>
+									<img src="../images/gridplaysheet.png">
+									<p class="feature margin">Grid Play Sheet Output</p>
+									<h6 class="darkgray">GridRAWPlaySheet</h6>
+									<p class="feature">GridRAWPlaySheet.java is similar to GridPlaySheet in that they both generate tables as data visualization.</p>
+									<p class="feature margin">The main distinction is in the processing of the data—GridRAWPlaySheet stores and displays full URI's whereas GridPlaySheet only deals with the instance level of each RDF component.</p>
+									<p class="feature margin">Like GridPlaySheet, this play sheet requires a SPARQL SELECT query to correctly process the data.</p>
+									<p class="feature margin">The following is a print screen of what the results look like in a GridPlaySheet.</p>
+									<img src="../images/gridplaysheet.png">
+									<h6 class="darkgray">GridPlaySheet</h6>
+									<p class="feature">GraphPlaySheet.java is the play sheet class that generates a graph network for its data visualization.</p>
+									<p class="feature margin">This play sheet processes the data very differently than the grid play sheets because it must get the data into a format that is recognized by the graphing component, Jung. This play sheet generally uses a CONSTRUCT SPARQL query. GraphPlaySheet has a lot of peripheral functionality as well that is accessible through the right click menu. Please reference the SEMOSS User Guide for further information on these functionalities.</p>
+									<p class="feature margin">The following is a print screen of what the results look like in a GraphPlaySheet:</p>
+									<img src="../images/graphplaysheet3.jpg">
+									<p class="feature">Graph Play Sheet Output</p>
+								</div>
+								<div id="understandingontology">
+									<h2 class="margin">Understanding Ontology</h2>
+									<p class="feature">The value of insights derived from SEMOSS is directly correlated to properness of the semantic ontologies that has been developed for the structure of the data. Ontologies are the structural frameworks for organizing the pieces of information in a database.</p>
+									<p class="feature margin">A proper domain-specific metamodel can be an ontology. Creating metamodels involve the construction of concepts (data) and their relationships (how data pieces relate to each other).</p>
+									<p class="feature margin">By learning how to effectively create and use metamodels, analysts can explore databases and identify meaningful insights inside SEMOSS. Usually, a metamodel is displayed as a map, as shown below for our security database in Figure 6.1.1.</p>
+									<p class="feature margin">Development of the metamodel is one of the most important and complex task that needs to be completed in order to be able to efficiently and effectively extract data from the engine.</p>
+									<p class="feature margin">If the metamodel is not thorough, straightforward, and comprehensive, it will be very difficult to extract insights from any set of data. The most important paradigm to consider is that the metamodel should be constructed based on the fundamental relationships between the data, as opposed to a structure that is based on answering specific, known, questions from the data.</p>
+									<p class="feature margin">This allows the database to be queried based on prospective insights (as opposed to modifying the database to allow for this to happen).</p>
+									<p class="feature margin">Figure 2.1.1 below contains the base metamodel for our sample security metamodel. The metamodel is constructed such that each of the node types and its relationships with other node types is represented by boxes and lines.</p>
+									<img src="../images/securitydatabasemetamodel.png">
+									<p class="feature">Figure 6.1.1: Security Database Metamodel</p>
+								</div>
+								<div class="div-padding-sm" style="clear:both;">
+									<div class = "footerlinks">
+										<a class = "footerlink" href = "index.html">Home</a>
+										<a class = "footerlink" href = "usecase1.html">Use Cases</a>
+										
+										<a class = "footerlink" href = "about.html">About</a> 
+										<a class = "footerlink" href = "support.html">Support</a>
+										<a href="https://twitter.com/semossanalytics"><img class="social-icon" src = "../images/twitter.png"/></a>
+										<a href="#"><img class="social-icon" src = "../images/FBlogo.png" /></a>
+										<a href="https://github.com/semoss"><img class="social-icon" src = "../images/github.png"/></a>
+										<a href="http://blog.semoss.org/"><img class="social-icon" src = "../images/blogger.png" /></a>
+										<a href="https://www.youtube.com/user/SEMOSSAnalytics"><img class="social-icon" src = "../images/youtubeicon.png"/></a>
+									</div>
+								</div>
+							</div>
+							<div class="grid3 offset">
+								<div id="nav-scroll">
+										<a id="navscroll" class="navscroll" href="#introduction">Introduction</a>
+										<a id="navscroll" class="navscroll" href="#overview">Overview</a>
+										<a id="navscroll" class="navscroll" href="#gettingstarted">Getting Started</a>
+										<a id="navscroll" class="navscroll" href="#sequencediagrams">Sequence Diagrams</a>
+										<a id="navscroll" class="navscroll" href="#component-diagrams">Component Diagrams</a>
+										<a id="navscroll" class="navscroll" href="#databases-engines">Databases and Engines</a>
+										<a id="navscroll" class="navscroll" href="#playsheets">Play Sheets</a>
+										
+										<a id="navscroll" class="navscroll" href="#understandingontology">Understanding Ontology</a>
+										<a id="navscroll" class="navscroll" style="border-left:white; color:gray;"href="#wrapper">Back to top</a>
+								</div>
+							</div>
+							
+					</div>
+					
+
+
+
+
+	
+	
+	
+</body>
+</html>

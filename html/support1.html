@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">  
-		<title>User Guide - SEMOSS</title>
+		<title>Semoss Support</title>
 		
 		<script src="../lib/jquery.js"></script>
 		<script src="../lib/scrolltofixed.js"></script>
@@ -38,7 +38,7 @@
 				</header>
 			</div>	
 		</div>
-		<div class = "fullscreen-image" style="background: url(../myimages/nightsky.jpg) no-repeat ; background-size:cover; background-position: bottom center; position:relative; z-index:0; height:40%;">
+		<div class = "fullscreen-image" style="background: url(../myimages/car-sky2.jpg) no-repeat ; background-size:cover; background-position: bottom center; position:relative; z-index:0; height:40%;">
 			<div class = "container-lg">
 				<div class = "caption-md">
 					
@@ -52,13 +52,13 @@
 	<div class="container-lg" id="scrolltotabs display-table" >
 		<div style="margin-top:15px;">
 			
-			<a href="support.html" ><div class="grid4 bordertop-active" style="text-align:center;">
+			<a href="support.html" ><div class="grid4 bordertop" style="text-align:center;">
 					
-					<h6 class="div-padding-exsm  jumbo">User Guide</h6>
+					<h6 class="div-padding-exsm ">User Guide</h6>
 			</div></a>
-			<a href="devdoc.html" ><div class="grid4 bordertop" style="text-align:center;">
+			<a href="#" ><div class="grid4 bordertop-active" style="text-align:center;">
 				
-					<h6 class="div-padding-exsm">Developer Docs</h6>
+					<h6 class="div-padding-exsm jumbo">Developer Docs</h6>
 			</div></a>
 			<a href="api.html" ><div class="grid4 bordertop" style="text-align:center;">
 					<h6 class="div-padding-exsm">API</h6>
@@ -68,10 +68,10 @@
 	<div class="container-lg display-table" style="line-height:1.4">
 		<div class="grid9" style="padding-top:10px;">
 			<div id="userintroduction">
-				<h4 class="margin">Introduction</h4>
-				<p class="feature">SEMOSS is a data-driven application that enables users to explore relationships and connections in an interactive format through intermediate conduits, i.e. transitive relationships. This document provides general usage instructions and guidance in deployment of the open source components of SEMOSS, in contrast to the developer guide, which provides instructions and guidance in terms of development "on top of" the tool.</p>
-			</div>
-			<div id="useroverview">
+								<h4 class="margin">Introduction</h4>
+								<p class="feature">SEMOSS is a data-driven application that enables users to explore relationships and connections in an interactive format through intermediate conduits, i.e. transitive relationships. This document provides general usage instructions and guidance in deployment of the open source components of SEMOSS, in contrast to the developer guide, which provides instructions and guidance in terms of development "on top of" the tool.</p>
+							</div>
+							<div id="useroverview">
 								<h4 class="margin">User interface overview</h4>
 								<h6 class="feature darkgray large margin"><em>Database selection</em></h6>
 								<p class="feature ">This is the area where the active database is selected. The map sheet contains indexes to the available databases. The map sheet is essentially an index of all of the data and information that is available within the application (more instructions on loading databases and the map sheet are contained in Section 2: Loading a Database).</p>
@@ -110,8 +110,8 @@
 								<p class="feature">This feature allows the user to connect to various upstream and downstream nodes that are connected to this particular instance in the RDF store. This will connect only the selected instance to its respective node instances.</p>
 								<img src="../myimages/support-images/exploreselectedNode.png" style="max-width:100%" class="margin">
 								<p class="feature">Figure 1.1.6</p>	
-			</div>
-			<div id="newdatabaseengine">
+							</div>
+							<div id="newdatabaseengine">
 								<h4 class="margin">Creating a new database engine</h4>
 								<p class="feature">This is the set of steps that must be completed in order to create a new database engine and to load new data to the engine from Excel. Note that some of these steps may be done simultaneously, but all of the steps must be completed to create a fully functional engine.</p>
 								<p class="feature margin">There are other ways to create an engine and connect it to a data store, but this is the easiest way, assuming that the data is not already structured and formatted.</p>
@@ -128,7 +128,7 @@
 									<p class="feature margin">Development of the metamodel is one of the most important and complex tasks that needs to be completed in order to be able to efficiently and effectively extract data from the engine. If the metamodel is not thorough, straightforward, and comprehensive, it will be very difficult to extract insights from any set of data. The most important paradigm to consider is that the metamodel should be constructed based on the fundamental relationships between the data, as opposed to a structure that is based on answering specific, known, questions from the data.</p>
 									<p class="feature margin">This allows the database to be queried based on prospective insights (as opposed to modifying the database to allow for this to happen).</p>
 									<p class="feature margin">Figure 2.1.1 below contains the base metamodel for our sample security database. The metamodel is constructed such that each of the node types and its relationships with other node types is represented by boxes and lines.</p>
-									<img src="../images/ui-img5.png" style="max-width:100%">
+									<img src="../images/ui-img5.png">
 									<p class="feature"> Figure 2.1.1 Security Database Model</p>
 									<h6 class="darkgray">Load the Metamodel relationships into the map sheet</h6>
 									<p class="feature italic">Note: This section only applies if loading from an Excel loading sheet.</p>
@@ -137,8 +137,8 @@
 									<p class="darkgray margin">Base Objects</p>
 									<p class="feature">Here all of the base objects are added (i.e. the individual nodes in the metamodel that represent a node type within SEMOSS).</p>
 									<p class="feature">First, Navigate to the ##Base Objects## Section of the map sheet.</p>
-										<p class="feature">Then, for each new base object (e.g. type AssetID) enter the name, tab over, and enter the URI for the base object. The base objects for the security database (based on the metamodel identified above) would be:</p>
-								<div class="code">
+									<p class="feature">Then, for each new base object (e.g. type AssetID) enter the name, tab over, and enter the URI for the base object. The base objects for the security database (based on the metamodel identified above) would be:</p>
+									<div class="code">
 										<p>##Base Objects##</p>
 										<p>AssetID http://Sdb.com/ontologies/Concept/AssetID</p>
 										<p>IPAddress http://Sdb.com/ontologies/Concept/IPAddress</p>
@@ -163,9 +163,14 @@
 									</div>
 									<p class="darkgray margin">Base Relationships</p>
 									<p class="feature">For each of the new node types and verbs, the base relationship is added to denote what type of object it is. For this first component, BaseMetaRelationships, all of the nodes that are of type concept (i.e. a node) are added. The structure is such that the node types in question (http://Sdb.com/ontologies/Concept/IPAddress) are first, the standards-based predicate (http://www.w3.org/2000/01/rdf-schema#subClassOf) to denote the subclass is second, and the class (http://Sdb.com/ontologies/Concept) is the final component.</p>
-									
-									<p class="feature margin">The same task is then completed for BaseMetaProperties, thus, each of the new relationships is loaded into the prop sheets. The structure is such that the node types in question (http://Sdb.com/ontologies/Relation/AssignedTo) are first, the standards-based predicate (http://www.w3.org/2000/01/rdf-schema#subPropertyOf) to denote the subclass is second, and the property (http://Sdb.com/ontologies/Relation) is the final component. </p>
-									
+									<p class="feature margin">In our example, the addition of all of the base meta relationships necessary to create the security database are shown.</p>
+									<div class="code">
+										<p>BaseMetaRelationships=http://Sdb.com/ontologies/Concept+http://www.w3.org/1999/02/22-rdf-syntax-ns#type+http://www.w3.org/2000/01/rdf-schema#Class;http://Sdb.com/ontologies/Concept/AssetID+http://www.w3.org/2000/01/rdf-schema#subClassOf+http://Sdb.com/ontologies/Concept;http://Sdb.com/ontologies/Concept/IPAddress+http://www.w3.org/2000/01/rdf-schema#subClassOf+http://Sdb.com/ontologies/Concept;http://Sdb.com/ontologies/Concept/UserName+http://www.w3.org/2000/01/rdf-schema#subClassOf+http://Sdb.com/ontologies/Concept;http://Sdb.com/ontologies/Concept/Employee+http://www.w3.org/2000/01/rdf-schema#subClassOf+http://Sdb.com/ontologies/Concept;http://Sdb.com/ontologies/Concept/Site+http://www.w3.org/2000/01/rdf-schema#subClassOf+http://Sdb.com/ontologies/Concept;http://Sdb.com/ontologies/Concept/Server+http://www.w3.org/2000/01/rdf-schema#subClassOf+http://Sdb.com/ontologies/Concept;</p>
+									</div>
+									<p class="feature margin">The same task is then completed for BaseMetaProperties, thus, each of the new relationships is loaded into the prop sheets. The structure is such that the node types in question (http://Sdb.com/ontologies/Relation/AssignedTo) are first, the standards-based predicate (http://www.w3.org/2000/01/rdf-schema#subPropertyOf) to denote the subclass is second, and the property (http://Sdb.com/ontologies/Relation) is the final component. This is the example for the security database:</p>
+									<div class="code">
+										<p>BaseMetaProperties=http://Sdb.com/ontologies/Relation+http://www.w3.org/1999/02/22-rdf-syntax-ns#type+http://www.w3.org/1999/02/22-rdf-syntax-ns#Property; http://Sdb.com/ontologies/Relation/AssignedTo+http://www.w3.org/2000/01/rdf-schema#subPropertyOf+http://Sdb.com/ontologies/Relation;http://Sdb.com/ontologies/Relation/Accesses+http://www.w3.org/2000/01/rdf-schema#subPropertyOf+http://Sdb.com/ontologies/Relation; http://Sdb.com/ontologies/Relation/Has+http://www.w3.org/2000/01/rdf-schema#subPropertyOf+http://Sdb.com/ontologies/Relation;</p>
+									</div>
 									<p class="darkgray margin">Setting the Engine</p>
 									<p class="feature">The final task that needs to be completed is the engine setup. Completion of this step requires a decision to be made in identification of the engine to be used and creation of the questions sheet; explanation of this process is deferred to their respective process step sections.</p>
 									<p class="feature margin">The code that needs to be added simply specifies the engine and database locations that are used to setup the database to be shown, so once decided, this can be added.</p>
@@ -200,12 +205,12 @@
 									<p class="feature">The Loader tab essentially contains the name of the sheets that are read into the database. The name of the tab must be "Loader", and adjacent in column B to each of the tabs that are loaded should be the text "Usual."</p>
 									<p class="feature margin">Cell A1 should contain the text "SheetName" and Cell B1 must contain the text "Type."</p>
 									<p class="feature margin">The tab should be constructed as follows (example for the security database):</p>
-									<img src="../images/ui-img6.png" style="width:100%;">
+									<img src="../images/ui-img6.png">
 									<p class="feature">Figure 2.3.1 Loader Tab</p>
 									<p class="darkgray margin">Relation Tabs: Loading Triples</p>
 									<p class="feature">The other tabs should individually contain specific information surrounding an individual triple store that is to be loaded into the database. For example, . Cell A1 should contain the text "Relation", Cell A2 should contain the predicate (AssignedTo in this case), Cell B1 should contain the first node type (e.g. UserName), and cell C1 should contain the second node type (e.g. AssetID).</p>
 									<p class="feature margin">Column B should contain the actual first node instances, and column C should contain the second node instances. Properties on the edges (e.g. not triples, but data that may be relevant as a property such as a cost) can be attached in adjacent columns. Note that the property is not added to the node, but rather, the edge. To add properties to nodes a separate type of sheet is required (as documented below). Properties do not need to be added in the prop sheet, but are more difficult to visualize and query (example shown in figure 2.3.2 for the security database).</p>
-									<img src="../images/ui-img7.png" style="width:100%;">
+									<img src="../images/ui-img7.png">
 									<p class="feature">Figure 2.3.2 Sample Triple Loading Sheet</p>
 									<p class="darkgray margin">Node Property Tabs: Loading Properties</p>
 									<p class="feature">In the case where a property is desired to be added onto a node as opposed to a node edge (as above), a separate tab is necessary to be created to show this information. The structure of the sheet is displayed below for the Site property sheet for the security database, where city and state are denoted as properties of an individual site name.</p>
@@ -228,8 +233,9 @@
 									<ul id="list"> .jnl. This file will be created in the db folder and is the triple store with all of the new created triples.</ul>
 									<ul id="list"> _Questions.properties. This file will be created in the questions folder. It specifies what perspectives, questions, and associated queries are populated when the new engine is selected. It uses the basic default question sheet, and provides the user with the capability to add in additional questions on top of this database.</ul>
 									<p class="feature margin">In addition, the map sheet is edited directly in the project folder to contain the new databases such that when the new db is created, it will appear in the navigation menu.</p>
-			</div>	
-			<div id="sparqlqueries">
+									
+							</div>
+							<div id="sparqlqueries">
 									<h4 class="margin">SPARQL Queries within SEMOSS</h4>
 									<p class="feature">SPARQL is the query language used to query different databases within SEMOSS. Querying in SPARQL is a means of retrieving or creating meaningful data from an RDF triple store.</p>
 									<p class="feature margin">This document does not provide in-depth guidance in generating SPARQL queries, for additional guidance, it is suggested to purchase Learning SPRAQL by Bob DuCharme. More information can be found <a class="learnmore-link" href="www.learningsparql.com">here</a>, and the book can be purchased on Amazon <a class="learnmore-link" href="http://www.amazon.com/Learning-SPARQL-Bob-DuCharme/dp/1449306594">here</a>. More information can be found <a class="learnmore-link" href="solutions.html">here.</a></p>
@@ -256,8 +262,8 @@
 									</div>
 									<p class="feature margin">Again, this document does not include extensive SPARQL instructions or details.</p>
 									<p class="feature margin">Additional documentation surrounding writing SPARQL queries can be found at SEMOSS.org and through Bob DuCharme's book, Learning SPARQL.</p>
-			</div>				
-			<div id="security-usecase">
+							</div>
+							<div id="security-usecase">
 									<h4 class="margin">Security Use-Case</h4>
 									<p class="feature">The Security use-case example is meant to show how a network security analyst can identify meaningful insights surrounding a potential network infiltration by a malicious host. The scenario envisioned is that an employee likely visited a malicious website and that site infected the computer, and then a number of servers that support the enterprise.</p>
 									<p class="feature margin">The security analyst is interested in identifying the employee that went to the site, and identifying the potential impact to the enterprise of the malicious traffic.</p>
@@ -265,35 +271,35 @@
 									<h6 class="darkgray">4.1 Concept</h6>
 									<p class="feature">Like most enterprises this data is located in disparate, disconnected data sets. Likely, there is a PeopleSoft Oracle solution which manages HR information for the company, an active-directory based asset database that contains all of the assets connected to the enterprise, and a web traffic log provided by the network support team. These databases are likely disconnected, and on-face, do not communicate with each other.</p>
 									<p class="feature margin">In order to identify information about the security breach, however, these databases will need to communicate to connect information surrounding the attack.</p>
-									<img src="../images/ui-img12.png" style="width:100%">
+									<img src="../images/ui-img12.png">
 									<p class="feature">Figure 4.1.1 Disparate Databases</p>
 									<p class="feautre margin">The SEMOSS team has extracted specific, relevant components from these databases and generated a metamodel (more information surrounding metamodels can be found in section 2.1).</p>
 									<p class="feautre margin">However, this data is unfiltered and it must be processed and connected in SEMOSS for actionable insights to be generated. The Security metamodel is located in figure 4.1.2 below.</p>
 									<p class="feautre margin">Essentially, the three disparate databases are connected through the metamodel and can be combined to generate insights surrounding the attack that occurred.</p>
-									<img src="../images/ui-img13.png" style="width:100%">
+									<img src="../images/ui-img13.png">
 									<p class="feature">Figure 4.1.2 Security Database Metamodel</p>
 									<h6 class="darkgray">4.2 Generating Insights</h6>
 									<p class="feature">Traversing through the database is relatively straightforward. Let's imagine that the IP Address is known (for our demo we have used IAmAVirus.Com), and we want to identify insights surrounding what employees have accessed this host.</p>
 									<p class="feature margin">First select the (1) WebLog database (since the initial connection surrounds web traffic), then select the (2) Security Perspective, and then select a (3) Specific Question. In this case, the analyst is interested in identifying what workstations (assets) have accessed the particular IP Address.</p>
-									<img src="../images/ui-img14.jpg" style="width:100%">
+									<img src="../images/ui-img14.jpg">
 									<p class="feature">Figure 4.1.2 Security Database Metamodel</p>
 									<p class="feature margin">Once the query is created, the available parameters are selected, in this case the IP Address, and then the create button is pressed to generate the initial graph (figure 4.2.2 below).</p>
-									<img src="../images/ui-img15.jpg" style="width:100%">
+									<img src="../images/ui-img15.jpg">
 									<p class="feature">Figure 4.2.2 Workstation IP Address Query</p>
 									<p class="feature margin">Once the query is created, the available parameters are selected, in this case the IP Address, and then the create buttonNow, all of the workstation assets that have accessed that particular IP address have been identified.</p>
 									<p class="feature margin">Next, the analyst might be interested in the usernames associated with those particular asset identifiers. By first selecting the database to traverse to (e.g. the Asset Database) and then by right clicking on the individual node in question, the user can traverse to another node. In this case, the analyst will traverse through to username (figure 4.2.4 below).</p>
-									<img src="../images/ui-img16.jpg" style="width:100%">
+									<img src="../images/ui-img16.jpg">
 									<p class="feature margin">Next, the user may be interested in identifying the names of the employees involved, so by switching to the PeopleSoft database perspective the analyst can traverse through to this question.</p>
 									<p class="feature margin">Next, the user may be interested in where these individuals are located (perhaps the security breach has occurred at a specific location), so the user can traverse through to these locations to identify the specific area where the breach has occurred (as in figure 4.2.5 below).</p>
-									<img src="../images/ui-img17.jpg" style="width:100%">
+									<img src="../images/ui-img17.jpg">
 									<p class="feature">Figure 4.2.5 Security Database Metamodel</p>
 									<p class="feature margin">Finally, the analyst may be interested in what servers those assets have accessed, so by switching back to the traffic log, the user can traverse through to server. In addition, highlight adjacent functionality can be used to identify the specific nodes that a particular instance touches;</p>
 									<p class="feature margin">in this case, it appears as if a particular asset has touched an extraordinary amount of servers; possibly suggesting that that particular asset has infected the entire enterprise (as below).</p>
-									<img src="../images/ui-img18.png" style="width:100%">
+									<img src="../images/ui-img18.png">
 									<p class="feature">Figure 4.2.6: Traverse Freely to identify malicuous host and highlight adjacent.</p>
 									<p class="feature margin">Through this analysis, we have identified that this particular user has likely gone to a malicious website, identified the party respinsible, as well as all of the servers this particular user has touched to identify what actions need to be taken to reduce the impact to the enterprise. In addition, this analysis has been performed by merging three separate, disparate databases that ordinarily would not communicate with each other.</p>
-			</div>					
-			<div id="usersrc">
+							</div>
+							<div id="usersrc">
 									<h4 class="darkgray">Additional Sources</h4>
 									<p class="feature">Additional information surrounding SEMOSS is located here:</p>
 									<!--<p class="feature margin"><a class="learnmore-link" href="blog.semoss.com">SEMOSS Blog</a></p>
@@ -302,35 +308,37 @@
 									<p class="feature margin"><a class="learnmore-link" href="https://www.youtube.com/watch?v=1xRlCzI7yjc">Security Demo</a></p>
 									<p class="feature margin"><a class="learnmore-link" href="https://www.youtube.com/watch?v=rY1aOGH7VU4">Creating a database Demo</a></p>
 									
-			</div>					
-			<div class="div-padding-sm" style="clear:both;">
+							</div>
+								
+							<div class="div-padding-sm" style="clear:both;">
 									<div class = "footerlinks">
 										<a class = "footerlink" href = "index.html">Home</a>
 										<a class = "footerlink" href = "usecase1.html">Use Cases</a>
 										
 										<a class = "footerlink" href = "about.html">About</a> 
 										<a class = "footerlink" href = "support.html">Support</a>
-										<a href="https://twitter.com/semossanalytics"><img class="social-icon" src = "../images/twitter.png"/></a>
+										<a href="#"><img class="social-icon" src = "../images/twitter.png"/></a>
 										<a href="#"><img class="social-icon" src = "../images/FBlogo.png" /></a>
-										<a href="https://github.com/semoss"><img class="social-icon" src = "../images/github.png"/></a>
-										<a href="http://blog.semoss.org/"><img class="social-icon" src = "../images/blogger.png" /></a>
-										<a href="https://www.youtube.com/user/SEMOSSAnalytics"><img class="social-icon" src = "../images/youtubeicon.png"/></a>
+										<a href="#"><img class="social-icon" src = "../images/github.png"/></a>
+										<a href="#"><img class="social-icon" src = "../images/blogger.png" /></a>
+										<a href="#"><img class="social-icon" src = "../images/youtubeicon.png"/></a>
 									</div>
-			</div>
+							</div>
 		</div>
 		<div class="grid3 offset">
-			<div id="nav-scroll2">
+			<div id="nav-scroll">
 				<a id="navscroll2" class="navscroll2" href="#userintroduction">Introduction</a>
-					<a id="navscroll2" class="navscroll2" href="#useroverview">Overview</a>
-					<a id="navscroll2" class="navscroll2" href="#newdatabaseengine">Creating New Database Engine</a>
-					<a id="navscroll2" class="navscroll2" href="#sparqlqueries">SPARQL Queries within SEMOSS</a>
-					<a id="navscroll2" class="navscroll2" href="#security-usecase">Security Use-Case</a>
-					<a id="navscroll2" class="navscroll2" href="#usersrc">Additional Sources</a>
-					<a id="navscroll2" class="navscroll2" href="#wrapper" style="border-left: 2px solid white; color: gray;">Back to top</a>
+				<a id="navscroll2" class="navscroll2" href="#useroverview">Overview</a>
+				<a id="navscroll2" class="navscroll2" href="#newdatabaseengine">Creating New Database Engine</a>
+				<a id="navscroll2" class="navscroll2" href="#sparqlqueries">SPARQL Queries within SEMOSS</a>
+				<a id="navscroll2" class="navscroll2" href="#security-usecase">Security Use-Case</a>
+				<a id="navscroll2" class="navscroll2" href="#usersrc">Additional Sources</a>
+				<a id="navscroll2" class="navscroll2" href="#wrapper" style="border-left: 2px solid white; color: gray;">Back to top</a>
 			</div>
 		</div>
 							
-					</div>
+	</div>
+	</div>
 					
 
 
