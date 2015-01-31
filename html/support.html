@@ -75,11 +75,11 @@
 								<h4 class="margin">User interface overview</h4>
 								<h6 class="feature darkgray large margin"><em>Database selection</em></h6>
 								<p class="feature ">This is the area where the active database is selected. The map sheet contains indexes to the available databases. The map sheet is essentially an index of all of the data and information that is available within the application (more instructions on loading databases and the map sheet are contained in Section 2: Loading a Database).</p>
-								<img src="../myimages/support-images/selectDatabase.png" class="margin" style="max-width:100%">
+								<img src="../myimages/support-images/selectDatabase.png" class="margin sizing">
 								<p class="feature">Figure 1.1.1</p>
 								<h6 class="feature darkgray large margin"><em>Perspective categories</em></h6>
 								<p class="feature">This section contains the available perspectives or different "point of views" of the data stored in the databases. A perspective allows a user to examine in detail data from a particular point of view. These details are formulated as questions pertaining to a specific perspective.</p>
-								<img src="../myimages/support-images/selectPerspective.png" class="margin" style="max-width:100%">
+								<img src="../myimages/support-images/selectPerspective.png" class="margin sizing">
 								<p class="feature">Figure 1.1.2 </p>
 								<h6 class="feature darkgray large margin"><em>Question selection</em></h6>
 								<p class="feature">This is where you select a question and visualization you would like to create.</p>	
@@ -200,12 +200,12 @@
 									<p class="feature">The Loader tab essentially contains the name of the sheets that are read into the database. The name of the tab must be "Loader", and adjacent in column B to each of the tabs that are loaded should be the text "Usual."</p>
 									<p class="feature margin">Cell A1 should contain the text "SheetName" and Cell B1 must contain the text "Type."</p>
 									<p class="feature margin">The tab should be constructed as follows (example for the security database):</p>
-									<img src="../images/ui-img6.png" style="width:100%;">
+									<img src="../images/ui-img6.png" class="sizing">
 									<p class="feature">Figure 2.3.1 Loader Tab</p>
 									<p class="darkgray margin">Relation Tabs: Loading Triples</p>
 									<p class="feature">The other tabs should individually contain specific information surrounding an individual triple store that is to be loaded into the database. For example, . Cell A1 should contain the text "Relation", Cell A2 should contain the predicate (AssignedTo in this case), Cell B1 should contain the first node type (e.g. UserName), and cell C1 should contain the second node type (e.g. AssetID).</p>
 									<p class="feature margin">Column B should contain the actual first node instances, and column C should contain the second node instances. Properties on the edges (e.g. not triples, but data that may be relevant as a property such as a cost) can be attached in adjacent columns. Note that the property is not added to the node, but rather, the edge. To add properties to nodes a separate type of sheet is required (as documented below). Properties do not need to be added in the prop sheet, but are more difficult to visualize and query (example shown in figure 2.3.2 for the security database).</p>
-									<img src="../images/ui-img7.png" style="width:100%;">
+									<img src="../images/ui-img7.png" class="sizing">
 									<p class="feature">Figure 2.3.2 Sample Triple Loading Sheet</p>
 									<p class="darkgray margin">Node Property Tabs: Loading Properties</p>
 									<p class="feature">In the case where a property is desired to be added onto a node as opposed to a node edge (as above), a separate tab is necessary to be created to show this information. The structure of the sheet is displayed below for the Site property sheet for the security database, where city and state are denoted as properties of an individual site name.</p>
@@ -265,35 +265,35 @@
 									<h6 class="darkgray">4.1 Concept</h6>
 									<p class="feature">Like most enterprises this data is located in disparate, disconnected data sets. Likely, there is a PeopleSoft Oracle solution which manages HR information for the company, an active-directory based asset database that contains all of the assets connected to the enterprise, and a web traffic log provided by the network support team. These databases are likely disconnected, and on-face, do not communicate with each other.</p>
 									<p class="feature margin">In order to identify information about the security breach, however, these databases will need to communicate to connect information surrounding the attack.</p>
-									<img src="../images/ui-img12.png" style="width:100%">
+									<img src="../images/ui-img12.png" class="sizing">
 									<p class="feature">Figure 4.1.1 Disparate Databases</p>
 									<p class="feautre margin">The SEMOSS team has extracted specific, relevant components from these databases and generated a metamodel (more information surrounding metamodels can be found in section 2.1).</p>
 									<p class="feautre margin">However, this data is unfiltered and it must be processed and connected in SEMOSS for actionable insights to be generated. The Security metamodel is located in figure 4.1.2 below.</p>
 									<p class="feautre margin">Essentially, the three disparate databases are connected through the metamodel and can be combined to generate insights surrounding the attack that occurred.</p>
-									<img src="../images/ui-img13.png" style="width:100%">
+									<img src="../images/ui-img13.png" class="sizing">
 									<p class="feature">Figure 4.1.2 Security Database Metamodel</p>
 									<h6 class="darkgray">4.2 Generating Insights</h6>
 									<p class="feature">Traversing through the database is relatively straightforward. Let's imagine that the IP Address is known (for our demo we have used IAmAVirus.Com), and we want to identify insights surrounding what employees have accessed this host.</p>
 									<p class="feature margin">First select the (1) WebLog database (since the initial connection surrounds web traffic), then select the (2) Security Perspective, and then select a (3) Specific Question. In this case, the analyst is interested in identifying what workstations (assets) have accessed the particular IP Address.</p>
-									<img src="../images/ui-img14.jpg" style="width:100%">
+									<img src="../images/ui-img14.jpg" class="sizing">
 									<p class="feature">Figure 4.1.2 Security Database Metamodel</p>
 									<p class="feature margin">Once the query is created, the available parameters are selected, in this case the IP Address, and then the create button is pressed to generate the initial graph (figure 4.2.2 below).</p>
-									<img src="../images/ui-img15.jpg" style="width:100%">
+									<img src="../images/ui-img15.jpg" class="sizing">
 									<p class="feature">Figure 4.2.2 Workstation IP Address Query</p>
 									<p class="feature margin">Once the query is created, the available parameters are selected, in this case the IP Address, and then the create buttonNow, all of the workstation assets that have accessed that particular IP address have been identified.</p>
 									<p class="feature margin">Next, the analyst might be interested in the usernames associated with those particular asset identifiers. By first selecting the database to traverse to (e.g. the Asset Database) and then by right clicking on the individual node in question, the user can traverse to another node. In this case, the analyst will traverse through to username (figure 4.2.4 below).</p>
-									<img src="../images/ui-img16.jpg" style="width:100%">
+									<img src="../images/ui-img16.jpg" class="sizing">
 									<p class="feature margin">Next, the user may be interested in identifying the names of the employees involved, so by switching to the PeopleSoft database perspective the analyst can traverse through to this question.</p>
 									<p class="feature margin">Next, the user may be interested in where these individuals are located (perhaps the security breach has occurred at a specific location), so the user can traverse through to these locations to identify the specific area where the breach has occurred (as in figure 4.2.5 below).</p>
-									<img src="../images/ui-img17.jpg" style="width:100%">
+									<img src="../images/ui-img17.jpg" class="sizing">
 									<p class="feature">Figure 4.2.5 Security Database Metamodel</p>
 									<p class="feature margin">Finally, the analyst may be interested in what servers those assets have accessed, so by switching back to the traffic log, the user can traverse through to server. In addition, highlight adjacent functionality can be used to identify the specific nodes that a particular instance touches;</p>
 									<p class="feature margin">in this case, it appears as if a particular asset has touched an extraordinary amount of servers; possibly suggesting that that particular asset has infected the entire enterprise (as below).</p>
-									<img src="../images/ui-img18.png" style="width:100%">
+									<img src="../images/ui-img18.png" class="sizing">
 									<p class="feature">Figure 4.2.6: Traverse Freely to identify malicuous host and highlight adjacent.</p>
 									<p class="feature margin">Through this analysis, we have identified that this particular user has likely gone to a malicious website, identified the party respinsible, as well as all of the servers this particular user has touched to identify what actions need to be taken to reduce the impact to the enterprise. In addition, this analysis has been performed by merging three separate, disparate databases that ordinarily would not communicate with each other.</p>
 			</div>					
-			<div id="usersrc">
+			<div id="usersrc" class="div-padding-sm">
 									<h4 class="darkgray">Additional Sources</h4>
 									<p class="feature">Additional information surrounding SEMOSS is located here:</p>
 									<!--<p class="feature margin"><a class="learnmore-link" href="blog.semoss.com">SEMOSS Blog</a></p>
@@ -303,7 +303,7 @@
 									<p class="feature margin"><a class="learnmore-link" href="https://www.youtube.com/watch?v=rY1aOGH7VU4">Creating a database Demo</a></p>
 									
 			</div>					
-			<div class="div-padding-sm" style="clear:both;">
+			<div class="div-padding-md" style="clear:both;">
 									<div class = "footerlinks">
 										<a class = "footerlink" href = "index.html">Home</a>
 										<a class = "footerlink" href = "usecase1.html">Use Cases</a>

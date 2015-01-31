@@ -1518,7 +1518,9 @@ ul#list {
 	padding:15px 20px;
 }
 
-
+.sizing {
+	max-width:100%;
+}
 /*NAV SCROLL */
 #nav-scroll {
 	
