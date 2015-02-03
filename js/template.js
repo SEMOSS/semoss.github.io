@@ -64,7 +64,7 @@ $(document).ready(function (){
         });
 
 $(document).ready(function() {
-    $('#sticky').scrollToFixed( { marginTop: 0, limit: 7000 } );
+    $('#sticky').scrollToFixed( { marginTop: 0, limit: 7000} );
 
 });		
 $(document).ready(function() {
@@ -73,8 +73,7 @@ $(document).ready(function() {
 });		
 
 $(document).ready(function() {
-    $('#fixit').scrollToFixed( { marginTop: 85  } );
-	
+    $('#fixit').scrollToFixed( { marginTop: 85 } );
 });	
 /*                                
 $(document).ready(function(){
@@ -259,6 +258,12 @@ function onScroll(event){
 	}
 	else {
 		$('#sticky4').removeClass("question-active");
+	}
+	if (scrollPos > ($('#scrolltotabs').offset().top )){
+		$('#up-arrow').removeClass("visible");
+	}
+	else {
+		$('#up-arrow').addClass("visible");
 	}
 	/*$('#send-height div a').each(function () {
 		var currLink = $(this);

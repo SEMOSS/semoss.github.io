@@ -21,7 +21,7 @@
 	<!--Navbar --------------------------->
 	<div class="container-fluid" id="topbar">
 		<div class="navcolor" style="position:relative; z-index:100;">
-			<div class="container-lg" id="wrapper">
+			<div class="wrapper" id="wrapper">
 				<header>					
 					<h1 class="logo"><a href="index.html"><img src="../images/graylogo.png" style="width:125px; height:25px; padding:0px;"></a></h1>		
 						<nav id="nav-main">
@@ -38,7 +38,7 @@
 				</header>
 			</div>	
 		</div>
-		<div class = "fullscreen-image" style="background: url(../myimages/nightsky.jpg) no-repeat ; background-size:cover; background-position: bottom center; position:relative; z-index:0; height:40%;">
+		<div class = "fullscreen-image" style="background: url(../myimages/sky2.jpg) no-repeat ; background-size:cover; background-position: top center; position:relative; z-index:0; height:40%;">
 			<div class = "container-lg">
 				<div class = "caption-md">
 					
@@ -65,7 +65,7 @@
 			</div></a>
 		</div>
 	</div>
-	<div class="container-lg display-table" style="line-height:1.4">
+	<div class="container-lg " style="line-height:1.4">
 		<div class="grid9" style="padding-top:10px;">
 			<div id="introduction">
 									<h4 class="margin">Introduction</h4>
@@ -131,7 +131,7 @@
 									<p class="feature">This lays out the sequence of events that occur when the SEMOSS starter is run which calls perna.ui.main.Starter.main(String[]).</p>
 									<p class="feature margin">A PDF version of this diagram is available for download.</p>
 									<h6 class="darkgray">Query Processing</h6>
-									<p class="feature">This lays out the sequence of steps that are taken to process a query. This action occurs when the Create button is pushed and the function exists in perna.ui.main.listener.imple.ProcessQueryListener.actionPerformed(ActionEvent). A PDF version of this diagram is available for download.</p>
+									<p class="feature">This lays out the sequence of steps that are taken to process a query. This action occurs when the Create button is pushed and the function exists in perna. ui. main. listener. imple. ProcessQueryListener. actionPerformed(ActionEvent). A PDF version of this diagram is available for download.</p>
 								</div>
 								<div id="component-diagrams">
 									<h4 class="margin">Component Diagrams</h4>
@@ -170,19 +170,19 @@
 									<p class="feature">GridPlaySheet.java is the component class that generates a table as the means of visualizing the data. This play sheet currently requires a SELECT SPARQL query to process the data correctly.</p>
 									<p class="feature margin">The table can be sorted by clicking on a column header and the data can easily be copied and pasted into Excel. More information on this play sheet's functionality can be found in the SEMOSS User Guide.</p>
 									<p class="feature margin">The following is a print screen of what the results look like in a GridPlaySheet.</p>
-									<img src="../images/gridplaysheet.png">
+									<img src="../images/gridplaysheet.png" style="max-width:100%;>
 									<p class="feature margin">Grid Play Sheet Output</p>
 									<h6 class="darkgray">GridRAWPlaySheet</h6>
 									<p class="feature">GridRAWPlaySheet.java is similar to GridPlaySheet in that they both generate tables as data visualization.</p>
 									<p class="feature margin">The main distinction is in the processing of the data—GridRAWPlaySheet stores and displays full URI's whereas GridPlaySheet only deals with the instance level of each RDF component.</p>
 									<p class="feature margin">Like GridPlaySheet, this play sheet requires a SPARQL SELECT query to correctly process the data.</p>
 									<p class="feature margin">The following is a print screen of what the results look like in a GridPlaySheet.</p>
-									<img src="../images/gridplaysheet.png">
+									<img src="../images/gridplaysheet.png" class="sizing">
 									<h6 class="darkgray">GridPlaySheet</h6>
 									<p class="feature">GraphPlaySheet.java is the play sheet class that generates a graph network for its data visualization.</p>
 									<p class="feature margin">This play sheet processes the data very differently than the grid play sheets because it must get the data into a format that is recognized by the graphing component, Jung. This play sheet generally uses a CONSTRUCT SPARQL query. GraphPlaySheet has a lot of peripheral functionality as well that is accessible through the right click menu. Please reference the SEMOSS User Guide for further information on these functionalities.</p>
 									<p class="feature margin">The following is a print screen of what the results look like in a GraphPlaySheet:</p>
-									<img src="../images/graphplaysheet3.jpg">
+									<img src="../images/graphplaysheet3.jpg" class="sizing">
 									<p class="feature">Graph Play Sheet Output</p>
 								</div>
 								<div id="understandingontology" >
@@ -194,7 +194,7 @@
 									<p class="feature margin">If the metamodel is not thorough, straightforward, and comprehensive, it will be very difficult to extract insights from any set of data. The most important paradigm to consider is that the metamodel should be constructed based on the fundamental relationships between the data, as opposed to a structure that is based on answering specific, known, questions from the data.</p>
 									<p class="feature margin">This allows the database to be queried based on prospective insights (as opposed to modifying the database to allow for this to happen).</p>
 									<p class="feature margin">Figure 2.1.1 below contains the base metamodel for our sample security metamodel. The metamodel is constructed such that each of the node types and its relationships with other node types is represented by boxes and lines.</p>
-									<img src="../images/securitydatabasemetamodel.png">
+									<img src="../images/securitydatabasemetamodel.png" class="sizing">
 									<p class="feature">Figure 6.1.1: Security Database Metamodel</p>
 								</div>
 								<div class="div-padding-md" style="clear:both;">

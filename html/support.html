@@ -38,7 +38,7 @@
 				</header>
 			</div>	
 		</div>
-		<div class = "fullscreen-image" style="background: url(../myimages/nightsky.jpg) no-repeat ; background-size:cover; background-position: bottom center; position:relative; z-index:0; height:40%;">
+		<div class = "fullscreen-image" style="background: url(../myimages/sky2.jpg) no-repeat ; background-size:cover; background-position: top center; position:relative; z-index:0; height:40%;">
 			<div class = "container-lg">
 				<div class = "caption-md">
 					
@@ -65,7 +65,7 @@
 			</div></a>
 		</div>
 	</div>
-	<div class="container-lg display-table" style="line-height:1.4">
+	<div class="container-lg " style="line-height:1.4">
 		<div class="grid9" style="padding-top:10px;">
 			<div id="userintroduction">
 				<h4 class="margin">Introduction</h4>
@@ -162,9 +162,9 @@
 										<p>AssetID_Accesses_Server       http://Sdb.com/ontologies/Relation/Accesses</p>
 									</div>
 									<p class="darkgray margin">Base Relationships</p>
-									<p class="feature">For each of the new node types and verbs, the base relationship is added to denote what type of object it is. For this first component, BaseMetaRelationships, all of the nodes that are of type concept (i.e. a node) are added. The structure is such that the node types in question (http://Sdb.com/ontologies/Concept/IPAddress) are first, the standards-based predicate (http://www.w3.org/2000/01/rdf-schema#subClassOf) to denote the subclass is second, and the class (http://Sdb.com/ontologies/Concept) is the final component.</p>
+									<p class="feature">For each of the new node types and verbs, the base relationship is added to denote what type of object it is. For this first component, BaseMetaRelationships, all of the nodes that are of type concept (i.e. a node) are added. The structure is such that the node types in question (http://Sdb.com/ ontologies/ Concept/ IPAddress) are first, the standards-based predicate (http://www.w3.org/2000/01/rdf-schema#subClassOf) to denote the subclass is second, and the class (http://Sdb.com/ontologies/Concept) is the final component.</p>
 									
-									<p class="feature margin">The same task is then completed for BaseMetaProperties, thus, each of the new relationships is loaded into the prop sheets. The structure is such that the node types in question (http://Sdb.com/ontologies/Relation/AssignedTo) are first, the standards-based predicate (http://www.w3.org/2000/01/rdf-schema#subPropertyOf) to denote the subclass is second, and the property (http://Sdb.com/ontologies/Relation) is the final component. </p>
+									<p class="feature margin">The same task is then completed for BaseMetaProperties, thus, each of the new relationships is loaded into the prop sheets. The structure is such that the node types in question (http://Sdb.com/ ontologies/ Relation/ AssignedTo) are first, the standards-based predicate (http://www.w3.org/2000/01/ rdf-schema#subPropertyOf) to denote the subclass is second, and the property (http://Sdb.com/ontologies/Relation) is the final component. </p>
 									
 									<p class="darkgray margin">Setting the Engine</p>
 									<p class="feature">The final task that needs to be completed is the engine setup. Completion of this step requires a decision to be made in identification of the engine to be used and creation of the questions sheet; explanation of this process is deferred to their respective process step sections.</p>
@@ -209,7 +209,7 @@
 									<p class="feature">Figure 2.3.2 Sample Triple Loading Sheet</p>
 									<p class="darkgray margin">Node Property Tabs: Loading Properties</p>
 									<p class="feature">In the case where a property is desired to be added onto a node as opposed to a node edge (as above), a separate tab is necessary to be created to show this information. The structure of the sheet is displayed below for the Site property sheet for the security database, where city and state are denoted as properties of an individual site name.</p>
-									<img src="../images/ui-img8.png">
+									<img src="../images/ui-img8.png" class="sizing">
 									<p class="feature">Figure 2.3.3 Sample Property Loading Sheet</p>
 									<h6 class="darkgray">Building the Database</h6>
 									<p class="feature">Once the excel files are generated, the database needs to be created.</p>
@@ -236,7 +236,7 @@
 									<p class="feature margin">In the semantics-based RDF ontology, this high-level framework provides the context through which data is structured. The Resource Description Framework (RDF) is a data model for encoding, gathering, and representing information about resources. Elements in RDF are stored as Uniform Resource Identifiers (URIs) and are always part of a triple. Constructed like a sentence (with a subject, predicate, and object) the triple structure is relational in form. A triple is defined as where "< >" denotes a URI. For example, an Employee has a UserName (constructed as . These categories (e.g. Employee) are called types, which contain specific instances (e.g. John Smith). Thus, John Smith has J_Smith, or, < John Smith > < John Smith:J_Smith > < J_Smith >.</p>
 									<p class="feature margin">There are multiple types of queries available to SPARQL, however only the SELECT (which results in grids) and CONSTRUCT (which results in graphs) queries are used.</p>
 									<p class="feature margin">A query has three major parts: The Query Type (SELECT or CONSTRUCT), the return variables (what is to be returned from the query), and the pattern that the triples must follow, in other words as structured:</p>
-									<img src="../images/ui-img11.jpg">
+									<img src="../images/ui-img11.jpg" class="sizing">
 									<p class="feature margin">To query the database it is important to note the URI (Uniform Resource Index) of the particular types(s) that are to be queried. The query below is a simple query for the Security database, which traverses from the Asset ID to IP Address, based on a specified IP Address. This query would be used to identify what assets (computers) have visited a particular website, in identification of the cause of a particular virus. Additionally, the user can then extend from that particular object (traverse freely) through to other nodes to identify additional insights. This is performed by right clicking on the node in question and traversing to the desired additional node.</p>
 									<p class="feature margin">Here, a CONSTRUCT query is used because a graph is generated. Second, since only one relationship is traversed, from AccessID to IP Address, the result set is:</p>
 									<div class="code">

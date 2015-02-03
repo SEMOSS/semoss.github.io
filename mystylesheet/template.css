@@ -1,9 +1,6 @@
 * {
 	box-sizing:border-box;
 }
-
-
-
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure, 
@@ -17,7 +14,6 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
-
 .clearfix:before, .clearfix:after, .dl-horizontal dd:before, .dl-horizontal dd:after, .container:before, .container:after, .container-fluid:before, .container-fluid:after, .row:before, .row:after, .form-horizontal .form-group:before, .form-horizontal .form-group:after, .btn-toolbar:before, .btn-toolbar:after, .btn-group-vertical > .btn-group:before, .btn-group-vertical > .btn-group:after, .nav:before, .nav:after, .navbar:before, .navbar:after, .navbar-header:before, .navbar-header:after, .navbar-collapse:before, .navbar-collapse:after, .pager:before, .pager:after, .panel-body:before, .panel-body:after, .modal-footer:before, .modal-footer:after {
     display: table;
     content: " ";}
@@ -47,7 +43,6 @@ ins {
 del {
     text-decoration: line-through;
 }
- 
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -56,11 +51,8 @@ h1,h2,h3,h4,h5, h6 {
 	line-height:100%;
 	padding:5px 0px 4px 0px;
 }
-
-
-
 /*------------My Styles
-==================================*/
+===================================================*/
 body {
 	font-family: 'PT Sans', serif;
     font-size: 14px;
@@ -79,9 +71,7 @@ a {
     color: gray;
 	text-decoration:none;
 }
-
-
-/*============HEADERS
+/*------------------HEADERS
 =======================================*/
 body {
         font-family: 'PT Sans', serif;
@@ -179,7 +169,6 @@ p.highlight {
 p.speech
 {
 	position: relative;
-	
 	height: 80px;
 	text-align: center;
 	line-height: 70px;
@@ -188,8 +177,6 @@ p.speech
 	-webkit-border-radius: 30px;
 	-moz-border-radius: 30px;
 	border-radius: 30px;
-
-
 }
 p.speech:before
 {
@@ -272,9 +259,6 @@ a.active {
     /* transform:scale(1.15);*/
 	 overflow:hidden;
 }
-
-/*---hover*/
-
 .jumbo-link{
 	opacity:.6;
 	transition: opacity .5s ease;
@@ -284,9 +268,6 @@ a.active {
 }
 /*----------END HEADERS
 ----------------------------------------*/
-
-
-
 /*------------BUTTTONS
 ----------------------------------------*/
 
@@ -444,11 +425,8 @@ a.active {
 	color:rgb(97, 99, 103);
 	font-size:16px;
 	margin-right:7px;
-
 }
 .bordertop {
-	
-	
 	background: rgb(244, 244, 244);
 	border-top:4px solid white;
 	border-radius: 15px;
@@ -1520,6 +1498,9 @@ ul#list {
 
 .sizing {
 	max-width:100%;
+}
+.visible {
+	visibility:hidden;
 }
 /*NAV SCROLL */
 #nav-scroll {
