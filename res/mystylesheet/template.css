@@ -211,6 +211,9 @@ p.large {
 	font-size:18px;
 	line-height:1.4em;
 }
+.large {
+	line-height:1.4em;
+}
 .inline {
 	display:inline;
 	padding:0px 10px;
