@@ -122,6 +122,11 @@ h6 {
 	font-size:50px; 
 	line-height:1.2;
 }
+@media screen and (max-width:50em) {
+	.important {
+		font-size:40px;
+	}
+}
 .feature {
 	color:gray;
 }
@@ -284,6 +289,11 @@ a.active {
 	font-size: 18px;
 	margin:10px;
 
+	text-overflow: ellipsis;          
+	-o-text-overflow: ellipsis;          
+	white-space: nowrap;
+	overflow: hidden;
+
 }
 .bigbluebutton:hover {
 	min-width:50px;
@@ -291,6 +301,10 @@ a.active {
 	border: 2px solid rgba(47, 107, 255, 1);
 	color: white;
 	text-decoration: none;
+	text-overflow: ellipsis;          
+	-o-text-overflow: ellipsis;          
+	white-space: nowrap;
+	overflow: hidden;
 }
 .whitebutton{
 	transition: all 0.25s linear;
@@ -301,7 +315,10 @@ a.active {
 	border-radius: 6px;
 	font-size: 18px;
 	margin:10px;
-
+	text-overflow: ellipsis;          
+	-o-text-overflow: ellipsis;          
+	white-space: nowrap;
+	overflow: hidden;
 }
 .whitebutton:hover {
 	min-width:50px;
@@ -380,20 +397,30 @@ a.active {
 	border-radius: 6px;
 	font-size: 18px;
 	margin:10px;
-	overflow:hidden;
-	white-space: nowrap; 
+	text-overflow: ellipsis;          
+	-o-text-overflow: ellipsis;          
+	white-space: nowrap;
+	overflow: hidden;
 }
 .bigbluebuttonaction:hover {
 	background: rgba(47, 107, 255, 1);
 	border: 2px solid rgba(47, 107, 255, 1);
 	color: white;
 	text-decoration: none;
+	text-overflow: ellipsis;          
+	-o-text-overflow: ellipsis;          
+	white-space: nowrap;
+	overflow: hidden;
 }
 .bigbluebuttonaction:active {
 	background: rgba(47, 107, 255, 1);
 	border: 2px solid rgba(47, 107, 255, 1);
 	color: white;
 	text-decoration: none;
+	text-overflow: ellipsis;          
+	-o-text-overflow: ellipsis;          
+	white-space: nowrap;
+	overflow: hidden;
 }
 .whitebuttonaction{
 	transition: all 0.25s linear;
@@ -406,12 +433,20 @@ a.active {
 	margin:10px;
 	overflow:hidden;
 	white-space: nowrap; 
+	text-overflow: ellipsis;          
+	-o-text-overflow: ellipsis;          
+	white-space: nowrap;
+	overflow: hidden;
 }
 .whitebuttonaction:hover {
 	background: white;
 	border: 2px solid white;
 	color: black;
 	text-decoration: none;
+	text-overflow: ellipsis;          
+	-o-text-overflow: ellipsis;          
+	white-space: nowrap;
+	overflow: hidden;
 }
 .learnmore-link {
 	transition: all 0.25s linear;
@@ -695,7 +730,7 @@ div.rowHome {
 	margin:15px 0px;
 }
 .div-padding-lg {
-	padding:100px;
+	padding:100px 0px;
 }
 .div-padding-md{
 	padding:50px 0px;
