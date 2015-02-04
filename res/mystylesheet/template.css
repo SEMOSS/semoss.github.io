@@ -464,6 +464,23 @@ a.active {
 	font-size:16px;
 	margin-right:7px;
 }
+.media-links {
+	display:inline;
+}
+@media screen and (max-width:30em) {
+	.media-links {
+		display: table;
+		margin: 0 auto;
+		padding-top:10px;
+	}
+	.footerlinks {
+		display:table;
+		margin:0 auto;
+		
+	
+		/* float: center; */
+}
+}
 .bordertop {
 	background: rgb(244, 244, 244);
 	border-top:4px solid white;
@@ -601,6 +618,11 @@ a.active {
 }
 @media screen and (max-width:35em) {	
 	.caption-large {
+		padding-top:125px;
+	}
+}  
+@media screen and (max-width:25em) {	
+	.caption-large {
 		padding-top:75px;
 	}
 }  
@@ -702,9 +724,9 @@ div#sticky.container-fluid.scroll-to-fixed-fixed {
 }
 .fullscreenimage {
 	position:relative;
-	background: url(../myimages/laptop2.jpg) no-repeat;
+	background: url(../myimages/laptop3.jpg) no-repeat;
 	background-size:cover;
-	background-position:top;
+	background-position:center;
 	height:100%;
 }
 .videobanner {
@@ -1009,7 +1031,7 @@ nav#nav-mobile-white {
     margin-right: auto;
     text-align: center;
 	z-index:100;
-    background-color: rgba(50, 50, 50, .9); }
+    background-color: rgba(47, 47, 47, 0.9); }
   nav#nav-mobile-white li {
     display: block;
     border-bottom: solid 1px rgba(63, 63, 63, 1) }
@@ -1071,13 +1093,45 @@ nav#nav-mobile-white {
 	height:45px;
 	margin-top:10px;
 }
-.grid1, .grid2, .grid3, .grid4, .grid5, .grid6 , .grid7, .grid8, .grid9, .grid10, .grid11 , .grid12{
+.grid1, .grid2, .grid3, .grid4, .grid5, .grid6 , .grid7, .grid8, .grid9, .grid10, .grid11 , .grid12, .grid1-sm{
 	width:100%;	
 	float:left;
 	padding: 0 1%;
 	margin:0 auto;
+	
+}
+@media screen and (min-width:10em) {
+	.grid1-sm {
+		width:50%;
+	}
+}
+@media screen and (min-width:20em) {
+	.grid1-sm {
+		width:33.33333%;
+	}
+}
+@media screen and (min-width:30em) {
+	.grid1-sm {
+		width:25%;
+	}
+}
+@media screen and (min-width:45em) {
+	.grid1-sm {
+		width:20%;
+	}
 }
 @media screen and (min-width:50em) {
+	.grid1-sm {
+		width:16.6666%;
+	}
+}
+@media screen and (min-width:60em) {
+	.grid1-sm {
+		width:10.1%;
+	}
+}
+@media screen and (min-width:50em) {
+	
 	.grid1 {
 		width:8.33333333%;
 	}
@@ -1170,8 +1224,7 @@ nav#nav-mobile-white {
 	width:100%;
 }
 .social-icon {
-	display:0 auto;
-	float:right;
+	float: right;
 	height:20px;
 	max-width:35px;
 	padding:0px 5px;
@@ -1270,7 +1323,7 @@ nav#nav-mobile-white {
 
 /*small image boxes- hover change*/
 .padding-none {
-	padding: 0px 0px;
+	padding: 5px 0px;
 }
 .smImgBox1 {
 	background: url(../images/puppy.jpg) no-repeat;
