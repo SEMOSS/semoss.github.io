@@ -377,52 +377,59 @@ a.active {
 @media screen and (max-width:45em) {
 	
 	#sticky1 a  {
-		margin-top:5px;
+		margin-top:0px;
 		font-size:13px;
 		padding: 0px 6px;
-		padding-left:12px;
+		
 	}
 	#sticky2 a  {
-		margin-top:5px;
+		margin-top:0px;
 		font-size:13px;
 		padding: 0px 6px;
 	}
 	#sticky3 a  {
-		margin-top:5px;
+		margin-top:0px;
 		font-size:13px;
 		padding: 0px 6px;
 	}
 	#sticky4 a  {
-		margin-top:5px;
+		margin-top:0px;
 		font-size:13px;
 		padding: 0px 6px;
 	}
 	.smbluebutton {
-		height:25px;
+		height:20px;
 	}
 }
-@media screen and (max-width:25em) {
+@media screen and (max-width:35em) {
 	
 	#sticky1 a  {
-		margin-top:0px;
-		font-size:12px;
+		margin-top:-5px;
+		font-size:13px;
+		margin-bottom:17px;
+		
 	}
 	#sticky2 a  {
-		margin-top:0px;
-		font-size:12px;
+		margin-top:-5px;
+		font-size:13px;
+		margin-bottom:17px;
 	}
 	#sticky3 a  {
-		margin-top:0px;
-		font-size:12px;
+		margin-top: -5px;
+		font-size:13px;
+		padding: 0px 6px;
+		margin-bottom: 17px;
 	}
 	#sticky4 a  {
-		margin-top:0px;
-		font-size:12px;
+		margin-top:-5px;
+		font-size:13px;
+		margin-bottom:17px;
 	}
 	.smbluebutton {
-		height:25px;
+		height:20px;
 	}
 }
+
 @media screen and (max-width:25em) {
 	
 	#sticky1 a  {
@@ -448,36 +455,66 @@ a.active {
 	.smbluebutton {
 		height:50px;
 	}
+	.icon-tab {
+		height:172px;
+	}
 }
 @media screen and (max-width:20em) {
 	
 	#sticky1 a  {
-		margin-top:-10px;
-		font-size:12px;
-		margin-bottom:30px;
-		padding-left:12px;
+		margin-top:-12px;
+		font-size:11px;
+		margin-bottom:35px;
 	}
 	#sticky2 a  {
-		margin-top:-10px;
-		font-size:12px;
-		margin-bottom:30px;
+		margin-top:-12px;
+		font-size:11px;
+		margin-bottom:35px;
 	}
 	#sticky3 a  {
-		margin-top:-10px;
-		font-size:12px;
-		margin-bottom:30px;
+		margin-top:-12px;
+		font-size:11px;
+		margin-bottom:35px;
 	}
 	#sticky4 a  {
-		margin-top:-10px;
-		font-size:12px;
-		margin-bottom:30px;
-		padding-right:12px;
+		margin-top:-12px;
+		font-size:11px;
+		margin-bottom:35px;
+	
 	}
 	.smbluebutton {
 		height:55px;
 	}
 }
-@media screen and (max-width:55em) {
+@media screen and (max-width:15em) {
+	
+	#sticky1 a  {
+		margin-top:-10px;
+		font-size:10px;
+		margin-bottom:40px;
+		
+	}
+	#sticky2 a  {
+		margin-top:-10px;
+		font-size:10px;
+		margin-bottom:40px;
+	}
+	#sticky3 a  {
+		margin-top:-10px;
+		font-size:10px;
+		margin-bottom:40px;
+	}
+	#sticky4 a  {
+		margin-top:-10px;
+		font-size:10px;
+		margin-bottom:40px;
+		
+	}
+	.smbluebutton {
+		height:65px;
+	}
+}
+@media screen and (max-width:59em) {
 	.smbluebutton {
 		height:50px;
 	}
@@ -760,7 +797,7 @@ a.active {
 }  
 @media screen and (max-width:25em) {	
 	.caption-large {
-		padding-top:75px;
+		padding-top: 60px;
 	}
 }  
 .caption-md {
@@ -1696,7 +1733,8 @@ ul#list {
 	line-height:1.2;
 	padding:2px 5px;
 	width:100%;
-	margin-left:20px;
+	margin-left: 12px;
+	margin-right: -15px;
 }
 @media screen and (max-width:50em) {	
 	.tab-spacer {
