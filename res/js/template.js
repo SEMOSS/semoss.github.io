@@ -64,7 +64,7 @@ $(document).ready(function (){
         });
 
 $(document).ready(function() {
-    $('#sticky').scrollToFixed( { marginTop: 0, limit: 7000} );
+    $('#sticky').scrollToFixed( { marginTop: 0} );
 
 });		
 $(document).ready(function() {
