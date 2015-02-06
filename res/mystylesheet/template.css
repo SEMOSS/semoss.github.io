@@ -169,7 +169,7 @@ p.highlight {
 	color:rgba(13, 83, 255, 1);
 }
 .gray {
-	color:#565656;
+	color: #3D3D3D;
 }
 p.speech
 {
@@ -600,7 +600,7 @@ a.active {
 	transition: all 0.25s linear;
 	padding: 10px 20px;
 	border: 2px solid white;
-	color:black;
+	color: rgb(4, 37, 68);
 	background: white;
 	border-radius: 6px;
 	font-size: 18px;
@@ -615,7 +615,7 @@ a.active {
 .whitebuttonaction:hover {
 	background: white;
 	border: 2px solid white;
-	color: black;
+	color: rgb(83, 108, 144);
 	text-decoration: none;
 	text-overflow: ellipsis;          
 	-o-text-overflow: ellipsis;          
@@ -634,7 +634,7 @@ a.active {
 }
 .footerlink {
 	transition: all 0.15s linear ;
-	color:rgb(97, 99, 103);
+	color: rgb(29, 29, 29);
 	font-size:16px;
 	margin-right:7px;
 }
@@ -755,8 +755,8 @@ a.active {
 .fullscreen-image{	
 	
 	background-size:cover;
-	background-position:center;
-	background-size:100%;
+	background-position:top center;
+	background-size:50%;
  }
  .fullscreen-color {
 
@@ -850,7 +850,7 @@ a.active {
 }
 .feature-div {
 	position:relative;
-	background:  white;
+	/* background:  white; */
 	display:table;
 	padding:20px 20px;
 	margin:30px 0px;
@@ -898,10 +898,11 @@ div#sticky.container-fluid.scroll-to-fixed-fixed {
 }
 .fullscreenimage {
 	position:relative;
-	background: url(../myimages/laptop3.jpg) no-repeat;
+	background: url(../myimages/laptop-dark9.jpg) no-repeat;
 	background-size:cover;
-	background-position:center;
-	height:100%;
+	background-position: top center;
+	
+	
 }
 .videobanner {
 	text-align:center;
@@ -926,7 +927,12 @@ div.rowHome {
 	margin:15px 0px;
 }
 .div-padding-lg {
-	padding:100px 0px;
+	padding:75px;
+}
+@media screen and (max-width:50em) {	
+	.div-padding-lg {
+		padding:75px 0px;
+	}
 }
 .div-padding-md{
 	padding:50px 0px;
