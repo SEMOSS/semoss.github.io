@@ -282,8 +282,8 @@ a.active {
 .bigbluebutton{
 	transition: all 0.25s linear;
 	padding: 10px 20px;
-	border: 2px solid rgba(47, 107, 255, 1);
-	color: rgba(47, 107, 255, 1);
+	border: 2px solid rgba(31, 65, 115, 1);
+	color: rgba(31, 65, 115, 1);
 	background: transparent;
 	border-radius: 6px;
 	font-size: 18px;
@@ -297,8 +297,8 @@ a.active {
 }
 .bigbluebutton:hover {
 	min-width:50px;
-	background: rgba(47, 107, 255, 1);
-	border: 2px solid rgba(47, 107, 255, 1);
+	background: rgba(31, 65, 115, .9);
+	border: 2px solid rgba(31, 65, 115, 1);
 	color: white;
 	text-decoration: none;
 	text-overflow: ellipsis;          
@@ -349,7 +349,7 @@ a.active {
 }
 
 .question-active {
-	border-bottom: 3px solid rgba(47, 107, 255, 1);
+	border-bottom: 3px solid rgba(31, 65, 115, 1);
 	opacity: .75;
 	
 }
@@ -565,9 +565,9 @@ a.active {
 .bigbluebuttonaction{
 	transition: all 0.25s linear;
 	padding: 10px 20px;
-	border: 2px solid rgba(47, 107, 255, 1);
+	border: 2px solid rgba(31, 65, 115, 1);
 	color: white;
-	background: rgba(47, 107, 255, 1);
+	background: rgba(31, 65, 115, 1);
 	border-radius: 6px;
 	font-size: 18px;
 	margin:10px;
@@ -577,8 +577,8 @@ a.active {
 	overflow: hidden;
 }
 .bigbluebuttonaction:hover {
-	background: rgba(47, 107, 255, 1);
-	border: 2px solid rgba(47, 107, 255, 1);
+	background: rgba(31, 65, 115, .9);
+	border: 2px solid rgba(31, 65, 115, 1);
 	color: white;
 	text-decoration: none;
 	text-overflow: ellipsis;          
@@ -663,7 +663,7 @@ a.active {
 	border-left:4px solid white;
 	border-bottom:4px solid white;
 		
-	/* -webkit-transition: all .5s ease; */ /* Safari and Chrome */
+	-webkit-transition: all .5s ease; /* Safari and Chrome */
     -moz-transition: all .5s ease; /* Firefox */
     -ms-transition: all .5s ease; /* IE 9 */
     -o-transition: all .5s ease; /* Opera */
@@ -686,11 +686,11 @@ a.active {
 	border-left:4px solid white;
 	border-bottom:4px solid white;
 	border-top:4px solid white;
-	background: rgba(47, 107, 255, 1);
+	background: rgba(31, 65, 115, 1);
 }
 .footerlink:hover {
 	text-decoration:none;
-	color:rgba(13, 83, 255, 1);
+	color:rgba(31, 65, 115, 1);
 }
 .graybutton{
 	transition: all 0.25s linear;
@@ -866,7 +866,7 @@ a.active {
 	padding: 15px 20px;
 	margin-bottom:20px;
 	width:100%;
-	border: 1px solid rgba(47, 107, 255, 1);
+	border: 1px solid rgba(31, 65, 115, 1);
 	border-radius:6px;
 }
 .fix-search {
@@ -898,7 +898,7 @@ div#sticky.container-fluid.scroll-to-fixed-fixed {
 }
 .fullscreenimage {
 	position:relative;
-	background: url(../myimages/laptop-dark9.jpg) no-repeat;
+	background: url(../myimages/laptop-dark09.jpg) no-repeat;
 	background-size:cover;
 	background-position: top center;
 	
@@ -1372,8 +1372,8 @@ nav#nav-mobile-white {
 .icon-md {
 	margin: 0 auto;
 	display:block;
-	width: 120px; 
-	height: 120px;
+	width: 100px; 
+	height: 100px;
 	padding:20px;	
 }
 .icon-sm {
@@ -1401,8 +1401,8 @@ nav#nav-mobile-white {
 	margin-top:20px;
 }
 .jumbo-img {
-	width:90px; 
-	height:95px; 
+	width: 85px; 
+	height: 85px; 
 	margin:0 auto; 
 	padding:15px 0px;
 	margin-top: 10px;
