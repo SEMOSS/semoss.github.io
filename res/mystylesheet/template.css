@@ -927,11 +927,11 @@ div.rowHome {
 	margin:15px 0px;
 }
 .div-padding-lg {
-	padding:75px;
+	padding:100px;
 }
 @media screen and (max-width:50em) {	
 	.div-padding-lg {
-		padding:75px 0px;
+		padding:100px 0px;
 	}
 }
 .div-padding-md{
