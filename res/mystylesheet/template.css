@@ -1267,11 +1267,7 @@ nav#nav-mobile-white {
   *zoom: 1;
 }
 
-.colortest {
-	background-color:rgb(215, 215, 215);
-	height:45px;
-	margin-top:10px;
-}
+
 .grid1, .grid2, .grid3, .grid4, .grid5, .grid6 , .grid7, .grid8, .grid9, .grid10, .grid11 , .grid12, .grid1-sm{
 	width:100%;	
 	float:left;

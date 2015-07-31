@@ -25,7 +25,7 @@
 							<ul>
 								<li><a href="usecase1.html">Use Cases</a></li>
 								
-								<li><a href="about.html">About</a></li>
+								<!--<li><a href="about.html">About</a></li>-->
 								<li><a href="support.html" class="navselected">Support</a></li>
 							</ul>		
 						</nav>
@@ -35,7 +35,7 @@
 				</header>
 			</div>	
 		</div>
-		<div class = "fullscreen-image" style="background: url(res/myimages/nightsky.jpg) no-repeat ; background-size:cover; background-position: bottom center; position:relative; z-index:0; height:40%;">
+		<div class = "fullscreen-image" style="background: url(res/myimages/outlook-sky2.jpg) no-repeat ; background-size:cover; background-position: bottom center; position:relative; z-index:0; height:40%;">
 			<div class = "container-lg">
 				<div class = "caption-md">
 					
@@ -72,41 +72,34 @@
 								<h4 class="margin">User interface overview</h4>
 								<h6 class="feature darkgray large margin"><em>Database selection</em></h6>
 								<p class="feature ">This is the area where the active database is selected. The map sheet contains indexes to the available databases. The map sheet is essentially an index of all of the data and information that is available within the application (more instructions on loading databases and the map sheet are contained in Section 2: Loading a Database).</p>
-								<img src="res/myimages/support-images/selectDatabase.png" class="margin sizing">
+								<img src="res/images/browse.jpg" class="margin sizing">
 								<p class="feature">Figure 1.1.1</p>
-								<h6 class="feature darkgray large margin"><em>Perspective categories</em></h6>
-								<p class="feature">This section contains the available perspectives or different "point of views" of the data stored in the databases. A perspective allows a user to examine in detail data from a particular point of view. These details are formulated as questions pertaining to a specific perspective.</p>
-								<img src="res/myimages/support-images/selectPerspective.png" class="margin sizing">
-								<p class="feature">Figure 1.1.2 </p>
 								<h6 class="feature darkgray large margin"><em>Question selection</em></h6>
 								<p class="feature">This is where you select a question and visualization you would like to create.</p>	
-								<img src="res/myimages/support-images/selectQuestion.png" class="margin" style="max-width:100%">
-								<p class="feature">Figure 1.1.3</p>	
+								<img src="res/images/browse-deta.jpg" class="margin" style="max-width:100%">
+								<p class="feature">Figure 1.1.2</p>
 								<h6 class="feature darkgray large margin"><em>Parameter selection</em></h6>
 								<p class="feature">Sometimes a question (SPARQL query) requires an input parameter (such as IP Address); in this case a drop-down box will appear allowing the user to select the appropriate constraint. Additional information is deferred to the section on writing SPARQL queries.</p>
-								<img src="res/myimages/support-images/selectParameter.png" class="margin" style="max-width:100%">
-								<p class="feature">Figure 1.1.4</p>	
-								<h6 class="feature large darkgray margin"><em>Create Button</em></h6>
-								<p class="feature">This button executes the constructed SPARQL query and displays the result either as a graph or as a grid.</p>
-								<img src="res/myimages/support-images/selectCreate.png" style="max-width:100%" class="margin">
-								<p class="feature">Figure 1.1.5</p>		
+								<img src="res/images/select.png" class="margin" style="max-width:100%">
+								<p class="feature">Figure 1.1.3</p>
 								<h6 class="feature darkgray large margin"><em>Example Vizualization</em></h6>
 								<p class="feature">This is an example of a 3 coordinate scatterplot vizualization. Hover over different bubbles to see the exact values that are being mapped.</p>
-								<img src="res/myimages/support-images/exampleViz.png" style="max-width:100%" class="margin">
-								<p class="feature">Figure 1.1.6</p>		
+								<img src="res/images/barchart.jpg" style="max-width:100%" class="margin">
+								<p class="feature">Figure 1.1.4</p>
 								<h6 class="darkgray darkgray large margin">Convert to Table</h6>
 								<p class="feature">This feature creates a table of all of the triples that are currently being used to display the graph.</p>
-								<img src="res/myimages/support-images/table.png" style="max-width:100%" class="margin">
-								<p class="feature">Figure 1.1.6</p>	
-								<h6 class="darkgray large margin">Traverse Freely from Node</h6>
-								<p class="feature">This feature allows the user to extend the graph from the selected node(s) to any of the node types that are upstream or downstream of it (them).</p>
+								<img src="res/images/table.jpg" style="max-width:100%" class="margin">
+								<p class="feature">Figure 1.1.5</p>
+
+								<p class="feature">This feature allows the user to connect to various upstream and downstream nodes that are connected to this particular instance. This will connect only the selected instance to its respective node instances.</p>
+
 								<p class="feature margin">This will connect all nodes of the same type to their respective node instances.</p>
-								<img src="res/myimages/support-images/exploreNode.png" style="max-width:100%" class="margin">
-								<p class="feature">Figure 1.1.6</p>	
-								<h6 class="darkgray large margin">Traverse Freely from Selected Instance</h6>
-								<p class="feature">This feature allows the user to connect to various upstream and downstream nodes that are connected to this particular instance in the RDF store. This will connect only the selected instance to its respective node instances.</p>
-								<img src="res/myimages/support-images/exploreselectedNode.png" style="max-width:100%" class="margin">
-								<p class="feature">Figure 1.1.6</p>	
+
+								<img src="res/images/exploreinstance.jpg" style="max-width:100%" class="margin">
+								<p class="feature">Figure 1.1.6</p>
+								<img src="res/images/traverse.jpg" style="max-width:100%" class="margin">
+								<p class="feature">Figure 1.1.7</p>
+
 			</div>
 			<div id="newdatabaseengine">
 								<h4 class="margin">Creating a new database engine</h4>
@@ -305,8 +298,9 @@
 				<div class = "footerlinks">
 							<a class = "footerlink" href = "index.html">Home</a>
 							<a class = "footerlink" href = "usecase1.html">Use Cases</a> 
-							<a class = "footerlink" href = "about.html">About</a>
+							<!--<a class = "footerlink" href = "about.html">About</a>-->
 							<a class = "footerlink" href = "support.html">Support</a>
+					<a class = "footerlink" href="mailto:semossinfo@gmail.com">Contact Us</a>
 						<div class="media-links">
 							<a href="https://twitter.com/semossanalytics" target="_blank"><img class="social-icon" src = "res/images/twitter.png"/></a>
 							<!--<a href="#" target="_blank"><img class="social-icon" src = "res/images/FBlogo.png" /></a>-->
